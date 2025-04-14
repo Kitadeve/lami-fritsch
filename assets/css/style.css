@@ -1,11 +1,12 @@
-
+/* 
 
 @font-face {
   font-family: "Dancing Script";
   src: url('../fonts/DancingScript-VariableFont_wght.ttf') format(truetype);
   font-weight: normal;
   font-style: normal;
-}
+} */
+
 
 /* mobile */
 
@@ -99,10 +100,11 @@
 		font-size: var(--h1-mobile-font-size);
 		font-weight: var(--h1-mobile-font-weight);
 	}
-
-	.plats-du-jour {
-		display: flex;
-	max-width: 100%;
+*/ 
+	.plats-du-jour-mobile {
+    display:none;}
+		/*display: flex;
+	  max-width: 100%;
 		align-items: center;
 		gap: 20px;
 		position: relative;
@@ -114,14 +116,14 @@
 		box-shadow: var(--box-shadow);
 	}
 	
-	.plats-du-jour .bord{
+	.plats-du-jour-mobile .bord{
 		position: relative;
 		align-self: stretch;
 		width: 20px;
 		background-color: #334264f2;
 	}
 	
-	.plats-du-jour .centre{
+	.plats-du-jour-mobile .centre{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -133,7 +135,7 @@
 		background-color: #334264f2;
 	}
 	
-	.plats-du-jour .head {
+	.plats-du-jour-mobile .head {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -144,7 +146,7 @@
 		flex: 0 0 auto;
 	}
 	
-	.plats-du-jour .text-wrapper {
+	.plats-du-jour-mobile .text-wrapper {
 		position: relative;
 		align-self: stretch;
 		margin-top: -1.00px;
@@ -158,7 +160,7 @@
 		font-style: var(--h2-mobile-font-style);
 	}
 	
-	.plats-du-jour .menu-plat-seul {
+	.plats-du-jour-mobile .menu-plat-seul {
 		position: relative;
 		align-self: stretch;
 		font-family: var(--h3-mobile-font-family);
@@ -171,7 +173,7 @@
 		font-style: var(--h3-mobile-font-style);
 	}
 	
-	.plats-du-jour .card-plats {
+	.plats-du-jour-mobile .card-plats {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -182,7 +184,7 @@
 		flex: 0 0 auto;
 	}
 	
-	.plats-du-jour .menu-du-jour-main {
+	.plats-du-jour-mobile .menu-du-jour-main {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -194,7 +196,7 @@
 		flex: 0 0 auto;
 	}
 	
-	.plats-du-jour .jour {
+	.plats-du-jour-mobile .jour {
 		position: relative;
 		align-self: stretch;
 		margin-top: -1.00px;
@@ -208,7 +210,7 @@
 		font-style: var(--carte-jour-mobile-font-style);
 	}
 	
-	.plats-du-jour .frame {
+	.plats-du-jour-mobile .frame {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -220,7 +222,7 @@
 		flex: 0 0 auto;
 	}
 	
-	.plats-du-jour .entree {
+	.plats-du-jour-mobile .entree {
 		position: relative;
 		align-self: stretch;
 		margin-top: -1.00px;
@@ -234,14 +236,14 @@
 		font-style: var(--elements-menu-mobile-font-style);
 	}
 	
-	.plats-du-jour .trait{
+	.plats-du-jour-mobile .trait{
 		position: relative;
 		width: 13px;
 		height: 1px;
 		background-color: #ffffff;
 	}
 	
-	.plats-du-jour .plat {
+	.plats-du-jour-mobile .plat {
 		position: relative;
 		align-self: stretch;
 		font-family: var(--elements-menu-mobile-font-family);
@@ -260,6 +262,13 @@
 
   body {
     background-color: var(--bleu-pale);
+  }
+
+  h1{
+    text-align: center;
+    font-family: var(--h1-font-family);
+    font-weight: var(--h1-font-weight);
+    font-size: var(--h1-font-size)
   }
 
   h2 {
@@ -318,10 +327,10 @@
     align-self: stretch;
   }
 
-  main p {
-    font-family: var(--paragraphes-font-family);
-    font-weight: var(--paragraphes-font-weight);
-    font-size: var(--paragraphes-font-size);
+    p {
+      font-family: var(--paragraphes-font-family);
+      font-weight: var(--paragraphes-font-weight);
+      font-size: var(--paragraphes-font-size);
   }
 
   .about {
@@ -544,9 +553,86 @@
     align-self: stretch;
     border-radius: 50px;
     background: var(--bleu-moyen);
+    stroke: white;
   }
 
   .pastille a:hover {
     background: var(--bleu-pale);
-    fill: black;
+    stroke: black;
+    transform: scale(1.1);
+    transition: all 0.6s;
   }
+
+  /* carte et menus */
+
+  .plats-du-jour {
+    display: flex;
+    width: 1720px;
+    height: 1147px;
+    padding: 64px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    border-radius: 25px;
+    background: var(--bleu-fritsch);
+    box-shadow: var(--box-shadow);
+  }
+
+  
+  .plats-du-jour .head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+    color: white;
+  }
+
+  .plats-du-jour span{
+    font-family: "Lato";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    align-self: center;
+  }
+
+  .plats-du-jour .card-pdj{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+  }
+
+  .plats-du-jour .card-pdj .menu-du-jour {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    align-self: stretch;
+  }
+
+  .plats-du-jour .card-pdj .menu-du-jour .elements-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+  }
+
+  .plats-du-jour .jour{
+    color: #FFF;
+    text-align: center;
+
+    font-family: "Dancing Script";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+
+ 
