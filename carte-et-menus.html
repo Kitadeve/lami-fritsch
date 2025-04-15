@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>L'ami Fritsch</title>
@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="./assets/css/styleguide.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="icon" type="image/x-icon" href="./assets/icons/Favicon.svg">
-    
-</head>
+  </head>
+
   <body>
     <header>
-      <img class="logo-desktop vertical" src="./assets/img/logo-vertical.svg" alt="le logo du restaurant, cicogne à gauche et 'L'ami Fritshc à droite'">
-      <img class="logo-mobile" width="400px" src="./assets/img/logo-horizontal-petit.svg" alt="le logo du restaurant, cicogne à gauche et 'L'ami Fritshc à droite'">
+      <img class="logo-desktop-vertical" src="./assets/img/logo-vertical.svg" alt="le logo du restaurant, cicogne à gauche et 'L'ami Fritshc à droite'">
+      <img class="logo-mobile" width="400" src="./assets/img/logo-horizontal-petit.svg" alt="le logo du restaurant, cicogne à gauche et 'L'ami Fritshc à droite'">
       <button class="burger"><span class="bar"></span></button>
       <div class="menu-navigation">
         <ul>
@@ -45,28 +45,28 @@
         <div class="bord"></div>
         <div class="centre">
           <div class="head">
-            <div class="text-wrapper">Les plats du jour</div>
+            <h2 class="text-wrapper">Les plats du jour</h2>
             <p class="menu-plat-seul">Menu - 11,50 €<br />Plat seul - 9 €</p>
           </div>
-          <div class="card-plats">
-            <div class="menu-du-jour-main">
-              <div class="jour">Mercredi</div>
+          <div class="card-pdj">
+            <div class="menu-du-jour">
+              <h3 class="jour">Mercredi</h3>
               <div class="frame">
                 <div class="entree">Salade nordique</div>
                 <div class="trait"></div>
                 <p class="plat">Fleschnaka maison, sauce madère, salade verte</p>
               </div>
             </div>
-            <div class="menu-du-jour-main">
-              <div class="jour">Jeudi</div>
+            <div class="menu-du-jour">
+              <h3 class="jour">Jeudi</h3>
               <div class="frame">
                 <p class="entree">Salade de tomates au thon<br />et vinaigre balsamique</p>
                 <div class="trait"></div>
                 <p class="plat">Assiette mix grill lard, merguez, échine de porc<br />Sauce barbecue, maïs et potato</p>
               </div>
             </div>
-            <div class="menu-du-jour-main">
-              <div class="jour">Vendredi</div>
+            <div class="menu-du-jour">
+              <h3 class="jour">Vendredi</h3>
               <div class="frame">
                 <div class="entree">Quiche lorraine</div>
                 <div class="trait"></div>
@@ -87,7 +87,7 @@
         </div>
         <div class="card-pdj">
           <div class="menu-du-jour">
-            <div class="jour">Mercredi</div>
+            <h3 class="jour">Mercredi</h3>
             <div class="elements-menu">
               <p class="entree">Salade nordique</p>
               <div class="trait"></div>
@@ -95,7 +95,7 @@
             </div>
           </div>
           <div class="menu-du-jour">
-            <div class="jour">Jeudi</div>
+            <h3 class="jour">Jeudi</h3>
             <div class="elements-menu">
               <p class="entree">Salade de tomates au thon et vinaigre balsamique</p>
               <div class="trait"></div>
@@ -103,7 +103,7 @@
             </div>
           </div>
           <div class="menu-du-jour">
-            <div class="jour">Vendredi</div>
+            <h3 class="jour">Vendredi</h3>
             <div class="elements-menu">
               <p class="entree">Quiche lorraine</p>
               <div class="trait"></div>
@@ -113,28 +113,164 @@
         </div>
       </section>
       
+      <!-- suggestions -->
+      <section class="carte-suggestions">
+        <h2>Les suggestions</h2>
+        <div class="plats">
+          <div class="card-plats">
+            <p>Véritable rosbeef à <strong>l'alsacienne</strong></p>
+           
+            <div class="trait-prix">
+              <div class="trait-plats"></div>
+              <p>18,50 €</p>
+            </div>
+          </div>
+          <div class="card-plats">
+            <p>Camembert frit, pommes de terre sautées, salade</p>
+            <div class="trait-prix">
+              <div class="trait-plats"></div>
+              <p>16,50 €</p>
+            </div>
+          </div>
+          <div class="card-plats">
+            <p>Hampe de bœuf à l'échalotte, frites <strong>maison</strong></p>
+            <div class="trait-prix">
+              <div class="trait-plats"></div>
+              <p class="prix">18,50 €</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- carte -->
+      <section class="carte-suggestions">
+        <h2>La carte</h2>
+        <div class="filtre">
+          <h3 class="filtre-plats">Plats</h3>
+          <h3 class="filtre-tartes-flambees">Tartes flambées</h3>
+          <h3 class="filtre-desserts">Desserts</h3>
+        </div>
+          <div class="plats-hidden">
+            <div class="plats">
+              <div class="card-plats">
+                <p class="element">Saumon fumé par nos soins</p>
+                <p class="description">Toast de pain de campagne, crème de raifort </p>
+                <div class="trait-prix">
+                  <div class="trait-plats"></div>
+                  <p>13,50 €</p>
+                </div>
+              </div>
+              <div class="card-plats">
+                <p class="element">Joues de porc braisées au pinot noir</p>
+                <p class="description"></p>
+                <div class="trait-prix">
+                  <div class="trait-plats"></div>
+                  <p>16,50 €</p>
+                </div>
+              </div>
+              <div class="card-plats">
+                <p class="element">Bouchées à la reine</p>
+                <p class="description"></p>
+                <div class="trait-prix">
+                  <div class="trait-plats"></div>
+                  <p>18,50 €</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tartes-flambees">
+          <div class="plats">
+            <div class="card-plats">
+              <p class="element">Tradition</p>
+              <p class="description">Crème, oignons, lardons</p>
+              <div class="trait-prix">
+                <div class="trait-plats"></div>
+                <p>9,50 €</p>
+              </div>
+            </div>
+            <div class="card-plats">
+              <p class="element">Gratinée</p>
+              <p class="description">Crème, oignons, lardons, emmental</p>
+              <div class="trait-prix">
+                <div class="trait-plats"></div>
+                <p>10,50 €</p>
+              </div>
+            </div>
+            <div class="card-plats">
+              <p class="element">Champignons</p>
+              <p class="description">Crème, oignons, lardons, champignons</p>
+              <div class="trait-prix">
+                <div class="trait-plats"></div>
+                <p>10,50 €</p>
+              </div>
+            </div>
+            <div class="card-plats">
+              <p class="element">Champignons gratinée</p>
+              <p class="description">Crème, oignons, lardons, champignons, emmental</p>
+              <div class="trait-prix">
+                <div class="trait-plats"></div>
+                <p>10,50 €</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="desserts">
+          <div class="plats">
+            <div class="card-plats">
+              <p class="element">Tarte du moment</p>
+              <p class="description"></p>
+              <div class="trait-prix">
+                <div class="trait-plats"></div>
+                <p>5,20 €</p>
+              </div>
+            </div>
+            <div class="card-plats">
+              <p class="element">Crème brulée à la fève de tonka</p>
+              <p class="description"></p>
+              <div class="trait-prix">
+                <div class="trait-plats"></div>
+                <p>6,10 €</p>
+              </div>
+            </div>
+            <div class="card-plats">
+              <p class="element">Vacherin glacé</p>
+              <p class="description"></p>
+              <div class="trait-prix">
+                <div class="trait-plats"></div>
+                <p>6,80 €</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
     </main>
 
     <footer>
-      <img class="logo-desktop vertical" src="./assets/img/logo-vertical.svg" alt="le logo du restaurant, cicogne au dessus et 'L'ami Fritsch en dessous'">
-      <div class="contact-card">
-        <p>
-          L'ami Fritsch <br> 9, rue princpale, 67350 <br> Ettendorf <br>
-          Tél : 03.68.03.81.67 <br>
-          Mail : lamifritsch@orange.fr
-        </p>
-      </div>
-      <div class="navigation-card">
-        <ul class="gauche">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="carte-et-menus.html">Carte et menus</a></li>
-          <li><a href="reservations.html">Réservations</a></li>
-        </ul>
-        <ul class="droite">
-          <li><a href="contact.html">Groupe</a></li>
-          <li><a href="mentions-legales.html">Mentions légales</a></li>
-          <li><a href="protections-donees.html">Protections des données</a></li>
-        </ul>
+      <img class="logo-desktop-vertical" src="./assets/img/logo-vertical.svg" alt="le logo du restaurant, cicogne au dessus et 'L'ami Fritsch en dessous'">
+      <img class="logo-desktop-horizontal" src="./assets/img/logo-horizontal-grand.svg" alt="le logo du restaurant, cicogne à gauche et 'L'ami Fritshc à droite'">
+      <div class="cards">
+        <div class="contact-card">
+          <p>
+            L'ami Fritsch <br> 9, rue princpale, 67350 <br> Ettendorf <br>
+            Tél : 03.68.03.81.67 <br>
+            Mail : lamifritsch@orange.fr
+          </p>
+        </div>
+        <div class="navigation-card">
+          <ul class="gauche">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="carte-et-menus.html">Carte et menus</a></li>
+            <li><a href="reservations.html">Réservations</a></li>
+          </ul>
+          <ul class="droite">
+            <li><a href="contact.html">Groupe</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="protections-donees.html">Protections des données</a></li>
+          </ul>
+        </div>
       </div>
       <div class="socials">
         <div class="pastille">
