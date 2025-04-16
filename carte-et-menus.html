@@ -10,30 +10,59 @@
     <link rel="stylesheet" href="./assets/css/styleguide.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="icon" type="image/x-icon" href="./assets/icons/Favicon.svg">
+    <script src="./js/global.js" defer></script>
   </head>
 
   <body>
     <header>
-      <img class="logo-desktop-vertical-top" src="./assets/img/logo-vertical.svg" alt="le logo du restaurant, cicogne à gauche et 'L'ami Fritshc à droite'">
-      <img class="logo-mobile" width="400" src="./assets/img/logo-horizontal-petit.svg" alt="le logo du restaurant, cicogne à gauche et 'L'ami Fritshc à droite'">
-      <button class="burger"><span class="bar"></span></button>
-      <div class="menu-navigation">
+      <img class="logo-desktop-vertical-top" src="./assets/img/logo-vertical.svg" alt="le logo du restaurant, cicogne au dessus et 'L'ami Fritsch en dessous'">
+      <img class="logo-mobile" src="./assets/img/logo-horizontal-petit.svg" alt="le logo du restaurant, cicogne à gauche et 'L'ami Fritsch à droite'">
+      <button id="burger" class="burger"><span class="bar"></span></button>
+      <nav class="menu-navigation">
         <ul>
           <li><a href="index.html">Accueil</a></li>
           <li><a href="carte-et-menus.html">Carte et menus</a></li>
           <li><a href="reservations.html">Réservations</a></li>
           <li><a href="contact.html">Groupe</a></li>
         </ul>
-      </div>
-      <div class="menu-navigation-mobile">
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="carte-et-menus.html">Carte et menus</a></li>
-          <li><a href="reservations.html">Réservations</a></li>
-          <li><a href="contact.html">Groupe</a></li>
-          <li><a href="mentions-légales.html">Mentions légales</a></li>
-          <li><a href="protections-donees.html">Protections des données</a></li>
-        </ul>
+      </nav>
+      <div id="burger-overlap" class="burger-overlap">	
+        <nav class="liens">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="carte-et-menus.html">Carte et menus</a></li>
+            <li><a href="reservations.html">Réservations</a></li>
+            <li><a href="contact.html">Groupe</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="protections-donees.html">Protections des données</a></li>
+          </ul>
+        </nav>
+        <div class="contacts">
+          <div class="contact-card">
+            <p>
+              L'ami Fritsch <br> 9, rue princpale, 67350 <br> Ettendorf <br>
+              Tél : 03.68.03.81.67 <br>
+              Mail : lamifritsch@orange.fr
+            </p>
+          </div>
+          <div class="cta"><a href="contact.html">Contactez-nous</a></div>
+        </div>
+        <div class="socials">
+          <div class="pastille">
+            <a href="https://www.instagram.com/lamifritsch/">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 51" fill="none">
+                <path d="M36.4584 13.967H36.4793M14.5834 4.59204H35.4168C41.1697 4.59204 45.8334 9.25574 45.8334 15.0087V35.842C45.8334 41.595 41.1697 46.2587 35.4168 46.2587H14.5834C8.83045 46.2587 4.16675 41.595 4.16675 35.842V15.0087C4.16675 9.25574 8.83045 4.59204 14.5834 4.59204ZM33.3334 24.1129C33.5905 25.8467 33.2944 27.6175 32.4871 29.1733C31.6798 30.7292 30.4025 31.9908 28.8368 32.7789C27.2711 33.5669 25.4968 33.8412 23.7663 33.5627C22.0358 33.2843 20.4371 32.4672 19.1977 31.2278C17.9582 29.9884 17.1412 28.3897 16.8627 26.6592C16.5843 24.9286 16.8586 23.1543 17.6466 21.5887C18.4346 20.023 19.6963 18.7457 21.2521 17.9384C22.808 17.1311 24.5787 16.8349 26.3126 17.092C28.0812 17.3543 29.7185 18.1784 30.9828 19.4427C32.247 20.7069 33.0712 22.3443 33.3334 24.1129Z"  stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+          <div class="pastille">
+            <a href="https://www.facebook.com/Lamifritsch/">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 51" fill="none">
+                <path d="M37.5002 4.59204H31.2502C28.4875 4.59204 25.838 5.68951 23.8845 7.64301C21.931 9.59652 20.8335 12.246 20.8335 15.0087V21.2587H14.5835V29.592H20.8335V46.2587H29.1668V29.592H35.4168L37.5002 21.2587H29.1668V15.0087C29.1668 14.4562 29.3863 13.9263 29.777 13.5356C30.1677 13.1449 30.6976 12.9254 31.2502 12.9254H37.5002V4.59204Z" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -251,6 +280,7 @@
     <footer>
       <img class="logo-desktop-vertical" src="./assets/img/logo-vertical.svg" alt="le logo du restaurant, cicogne au dessus et 'L'ami Fritsch en dessous'">
       <img class="logo-desktop-horizontal" src="./assets/img/logo-horizontal-grand.svg" alt="le logo du restaurant, cicogne à gauche et 'L'ami Fritshc à droite'">
+      <img class="logo-mobile" src="./assets/img/logo-horizontal-petit.svg" alt="le logo du restaurant, cicogne à gauche et 'L'ami Fritsch à droite'">
       <div class="cards">
         <div class="contact-card">
           <p>
