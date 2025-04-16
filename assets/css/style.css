@@ -1,12 +1,3 @@
-/* 
-
-@font-face {
-  font-family: "Dancing Script";
-  src: url('../fonts/DancingScript-VariableFont_wght.ttf') format(truetype);
-  font-weight: normal;
-  font-style: normal;
-} */
-
 
 /* mobile */
 
@@ -26,26 +17,13 @@
 } */
 
 
-  header .logo-desktop-vertical{
-    flex-shrink: 0;
-    /* display: none; */
-  }
+  /*mobile avant media querries*/
 
 
- 
-  /* css premier jet mobile */
-
-  header .logo-mobile{
-    width: 168px;
-    height: 68px;
-    flex-shrink: 0;
-    display: none;
+  .logo-mobile{
+    max-width: 40%;
   }
    
-  .menu-navigation-mobile{
-    display: none;
-  }
-
 	.burger {
 		background: none;
 		border: none;
@@ -53,8 +31,6 @@
 		height: 27px;
 		cursor: pointer;
 		position: relative;
-		display: none;
-		
 	}
 
 	.burger .bar {
@@ -65,7 +41,8 @@
 		
 	}
 
-	.burger .bar::before, .burger .bar::after {
+	.burger .bar::before, 
+  .burger .bar::after {
 		display: block;
 		content: "";
 		width: 32px;
@@ -74,7 +51,7 @@
 		position: absolute;
 	}
 
-	.burger .bar::before{
+	.burger .bar::before {
 	  transform: translate3d(-4px, -12px, 0)
 		
 	}
@@ -83,24 +60,9 @@
 		transform: translate3d(-4px, +12px, 0);
 	}
 
-@media screen and (max-width:768px) {
- 
-	main{
-	display: flex;
-	flex-direction: column;
-	max-width: 100%;
-	padding-top: 24px;
-	gap: 40px;
-	background-color: var(--bleu-pale);
-	}
-}
 
-	h1{
-	align-self: center;
-		font-family: var(--h1-mobile-font-family);
-		font-size: var(--h1-mobile-font-size);
-		font-weight: var(--h1-mobile-font-weight);
-	}
+
+	
 
 	.plats-du-jour-mobile {
     
@@ -117,20 +79,14 @@
 		box-shadow: var(--box-shadow);
 	}
 
-  @media screen and (min-width:769px) {
-    .plats-du-jour-mobile{
-      display: none;
-    }
-  }
-	
-	.plats-du-jour-mobile .bord{
+	.plats-du-jour-mobile .bord {
 		position: relative;
 		align-self: stretch;
 		width: 20px;
 		background-color: #334264f2;
 	}
 	
-	.plats-du-jour-mobile .centre{
+	.plats-du-jour-mobile .centre {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -243,8 +199,7 @@
 		font-style: var(--elements-menu-mobile-font-style);
 	}
 	
-	.trait
-  {
+	.trait {
 		position: relative;
 		width: 13px;
 		height: 1px;
@@ -272,18 +227,10 @@
     background-color: var(--bleu-pale);
   }
 
-  h1{
-    text-align: center;
-    font-family: var(--h1-font-family);
-    font-weight: var(--h1-font-weight);
-    font-size: var(--h1-font-size)
-  }
-
   h2 {
     text-align: left;
     font-family: var(--h2-font-family);
     font-weight: var(--h2-font-weight);
-    font-size: var(--h2-font-size);
   }
 
   h3 { 
@@ -295,6 +242,7 @@
   /* page d'accueil desktop*/
 
   /* header */
+
   header {
     display: flex;
     max-width: 100%;
@@ -333,35 +281,11 @@
   }
   
   /* main */
-  @media screen and (min-width: 769px) {
-  
-  main {
-    display: flex;
-    padding: 60px 0px;
-    margin: 100px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    align-self: stretch;
-  }
-
-  .index {
-    display: flex;
-    padding: 60px 0px;
-    margin: 0px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    align-self: stretch;
-  }
-
-  }
-    p {
-      font-family: var(--paragraphes-font-family);
-      font-weight: var(--paragraphes-font-weight);
-      font-size: var(--paragraphes-font-size);
+ 
+  p {
+    font-family: var(--paragraphes-font-family);
+    font-weight: var(--paragraphes-font-weight);
+    font-size: var(--paragraphes-font-size);
   }
 
   .about {
@@ -380,7 +304,7 @@
     align-self: stretch;
   }
 
-  .groupe{
+  .groupe {
     display: flex;
     padding-right: 100px;
     align-items: center;
@@ -388,32 +312,7 @@
     align-self: stretch;
   }
 
-  @media screen and (min-width: 769px) and (max-width: 1400px) {
-    
-    .index {
-      max-width: 90%;
-      margin: auto;
-    }
-
-    
-    
-    .about,
-    .reservations,
-    .groupe {
-      flex-direction: column;
-      padding: 0px;
-    }
-
-    .photo {
-      order: 1;
-    }
-
-    .texte {
-      order: 2;
-    }
-
-  }
-  .photo{
+  .photo {
     max-width: 50%;
   }
 
@@ -427,60 +326,8 @@
     box-shadow: var(--box-shadow);
   }
 
-  /* .reservations .photo-montage {
-    position: relative;
-    flex: 1;
-    flex-grow: 1;
-    height: 632px;
-  }
-
-  .reservations .overlap-group {
-    position: relative;
-    width: 858px;
-    height: 642px;
-    top: -4px;
-    left: -4px;
-  }
-
-  .reservations .cadre-bleu {
-    position: absolute;
-    width: 212px;
-    height: 323px;
-    top: 110px;
-    left: 394px;
-    background-color: var(--bleu-moyen);
-    box-shadow: var(--box-shadow);
-  }
-
-  .reservations .epaule-agneau {
-    position: absolute;
-    width: 552px;
-    height: 411px;
-    top: 231px;
-    left: 0;
-    object-fit: cover;
-    box-shadow: var(--box-shadow);
-  }
-
-  .reservations .pate {
-    position: absolute;
-    width: 413px;
-    height: 311px;
-    top: 0;
-    left: 445px; 
-    object-fit: cover;
-    box-shadow: var(--box-shadow);
-  } */
-
   .texte {
     display: flex;
-   padding: 64px 64px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 64px;
-    flex: 1 0 0;
-    align-self: stretch;
   }
 
   .cta {
@@ -514,74 +361,23 @@
 
   /* footer */
 
-@media screen and (min-width:1730px){
-
   footer {
     background-color: var(--bleu-fritsch);
+  }
+ 
+  .cards {
     display: flex;
-    padding: 60px 100px;
-    justify-content: space-between;
-    align-items: center;
-    align-self: stretch;
+
   }
-
-  footer .cards{
-    display: flex;
-    align-items: center;
-    gap: 60px;
-  }
-
-  footer .logo-desktop-horizontal {
-    display: none;
-  }
-
-  .logo-desktop-vertical {
-    max-width: 245px;
-  }
-}
-
-@media screen and (min-width:769px) and (max-width:1729px) {
-
-  footer {
-    background-color: var(--bleu-fritsch);
-    display: flex;
-    padding: 60px 100px;
-    flex-direction: column;
-    align-items: center;
-    gap: 60px;
-    align-self: stretch;
-  }
-
-
-  footer .cards {
-    display: flex;
-    justify-content: space-around;
-    gap: 60px;
-    align-items: center;
-    align-self: stretch;
-    flex-wrap: wrap;
-  }
-
-  .logo-desktop-vertical {
-    
-    display: none;
-    
-  }
-
-  footer .logo-desktop-horizontal{
-    max-width: 40%;
-  }
-}
 
   .contact-card {
-    display: flex;
     padding: 40px 40px;
     justify-content: center;
     align-items: center;
-    align-self: stretch;
     background-color: var(--bleu-moyen);
     border-radius: 10px;
     box-shadow: var(--box-shadow);
+    max-width: 200%;
   }
 
   .contact-card p {
@@ -679,12 +475,7 @@
     color: white;
   }
 
-  @media screen and (max-width:768px) {
-    .plats-du-jour,
-  .carte-suggestions {
-    display: none;
-    }
-  }
+  
   
   .plats-du-jour .head {
     display: flex;
@@ -720,7 +511,7 @@
     align-self: stretch;
   }
 
-  .plats-du-jour .card-pdj .menu-du-jour .elements-menu{
+  .plats-du-jour .card-pdj .menu-du-jour .elements-menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -745,8 +536,8 @@
     padding: 0 20px;
   }
 
-    /* plats */
 
+    /* plats */
 
   .carte-suggestions .plats {
     display: flex;
@@ -756,11 +547,10 @@
     align-self: stretch;
   }
 
-  .carte-suggestions .plats p{
+  .carte-suggestions .plats p {
     align-self: stretch;
     font-family: var(--elements-menu-desktop-font-family);
     font-size: var(--elements-menu-desktop-font-size);
-    
   }
 
   .carte-suggestions .plats .card-plats {
@@ -774,7 +564,7 @@
     position: relative;
   }
 
-  .carte-suggestions .plats .card-plats .trait-prix{
+  .carte-suggestions .plats .card-plats .trait-prix {
     display: flex;
     padding-left: 15px;
     align-items: flex-end;
@@ -785,6 +575,7 @@
     width: 100%;
     flex: 0 0 auto
   }
+
   .carte-suggestions .plats .card-plats .trait-plats {
     position: relative;
     flex: 1;
@@ -839,3 +630,356 @@
   }
 
  
+
+  /* media querries */
+
+    /* mobile */
+
+@media screen and (max-width:768px) {
+  
+  h1 {
+    font-size: var(--h1-mobile-font-size);
+  }
+
+  h2 {
+    font-size: var(--h2-mobile-font-size);
+  }
+
+  p {
+    font-size: var(--paragraphes-mobile-font-size);
+  }
+
+  header {
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+  }
+
+  .burger-overlap {
+    background-color: var(--bleu-pale);
+    display: flex;
+    padding: 48px 20px 24px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    flex: 1 0 0;
+    align-self: stretch;
+    position: absolute;
+    top: 100%;
+		left: 110%;
+		width: 0%;
+		overflow-y: auto;
+		opacity: 0;
+		height: calc(100vh - 146px);
+		transition: all 0.4s ease-out;
+  }
+
+  .show-overlap .burger-overlap {
+		opacity: 1;
+		width: 100%;
+		left: 0;
+		z-index: 2;
+	}
+
+	.show-overlap .burger .bar {
+		width:0;
+	}
+
+	.burger .bar::before,
+	.burger .bar::after {
+		transition: all 0.2s ease-out;
+	}
+
+	.show-overlap .burger .bar::before {
+		transform: rotate(-45deg);
+	}
+
+	.show-overlap .burger .bar::after {
+		transform: rotate(45deg);
+	}
+
+
+  .liens ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex: 1 0 0;
+  }
+
+  .liens a {
+    display: flex;
+    color: #000;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--menu-nav-mobile-font-family);
+    font-size: var(--menu-nav-mobile-font-size);
+    text-transform: uppercase;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    align-self: stretch;
+  }
+
+
+  .menu-navigation{
+    display: none;
+  }
+
+  main{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding-top: calc(var(--header-height, 100px) + 24px);
+    gap: 40px;
+    background-color: var(--bleu-pale);
+  }
+
+  .plats-du-jour,
+  .carte-suggestions {
+    display: none;
+  }
+
+  
+
+  .logo-desktop-horizontal,
+  .logo-desktop-vertical,
+  .logo-desktop-vertical-top {
+    display: none
+  }
+
+  .about, 
+  .reservations,
+  .groupe {
+    display: flex;
+    padding: 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    align-self: stretch;
+  }
+
+  .texte {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    order: 2;
+  }
+
+  .photo {
+    max-width: 100%;
+  }
+
+  .cta {
+    padding: 10px 30px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    font-size: 24px;
+  }
+
+  footer {
+    display: flex;
+    padding: 60px 20px 20px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    align-self: stretch;
+  }
+
+  .cards {
+    gap: 30px;
+    flex-direction: column;
+  }
+
+  .contact-card {
+    display: flex;
+    padding: 16px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+  }
+
+  .navigation-card {
+    display: flex;
+    padding: 12px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navigation-card a{
+    font-size: var(--nav-card-mobile-font-size);
+  }
+
+}
+  /* desktop */
+
+@media screen and (min-width: 769px) {
+
+  h1{
+	  align-self: center;
+		font-family: var(--h1-mobile-font-family);
+		font-size: var(--h1-font-size);
+	}
+
+  h2 {
+    font-size: var(--h2-font-size);
+  }
+
+  .burger-overlap {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: none;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  main {
+    display: flex;
+    padding: 60px 0px;
+    margin: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+  }
+
+  .index {
+    display: flex;
+    padding: 60px 0px;
+    margin: 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+  }
+
+  .texte {
+    padding: 64px 64px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+
+  .plats-du-jour-mobile{
+    display: none;
+  }
+}
+
+  /* tablettes */
+
+@media screen and (min-width: 769px) and (max-width: 1400px) {
+
+  .index {
+    max-width: 90%;
+    margin: auto;
+  }
+
+
+  .about,
+  .reservations,
+  .groupe {
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .photo {
+    order: 1;
+  }
+
+  .texte {
+    order: 2;
+  }
+
+}
+ /* spécial footer */
+
+@media screen and (min-width:1730px){
+
+  footer {
+    display: flex;
+    padding: 60px 100px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+  }
+
+  footer .cards{
+    align-items: center;
+    gap: 60px;
+  }
+
+  footer .logo-desktop-horizontal {
+    display: none;
+  }
+
+  .logo-desktop-vertical {
+    max-width: 245px;
+  }
+}
+
+  /* spécial footer 2 */
+
+@media screen and (min-width:769px) and (max-width:1729px) {
+
+  footer {
+    display: flex;
+    padding: 60px 100px;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+  }
+
+
+  footer .cards {
+    justify-content: space-around;
+    gap: 60px;
+    align-items: center;
+    align-self: stretch;
+    flex-wrap: wrap;
+  }
+
+  .logo-desktop-vertical {
+    display: none;
+    
+  }
+
+  footer .logo-desktop-horizontal{
+    max-width: 40%;
+  }
+}
