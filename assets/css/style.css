@@ -16,9 +16,25 @@
   
 } */
 
+ /* règles globales */
+
+ body {
+  background-color: var(--bleu-pale);
+}
+
+h2 {
+  text-align: left;
+  font-family: var(--h2-font-family);
+  font-weight: var(--h2-font-weight);
+}
+
+h3 { 
+  font-family: var(--h3-font-family);
+  font-weight: var(--h3-font-weight);
+  font-size: var(--h3-font-size);
+}
 
   /*mobile avant media querries*/
-
 
   .logo-mobile{
     max-width: 40%;
@@ -64,7 +80,8 @@
 
 	
 
-	.plats-du-jour-mobile {
+	.plats-du-jour-mobile,
+  .carte-suggestions-mobile {
     
 		display: flex;
 	  max-width: 100%;
@@ -79,7 +96,8 @@
 		box-shadow: var(--box-shadow);
 	}
 
-	.plats-du-jour-mobile .bord {
+	.plats-du-jour-mobile .bord,
+   .carte-suggestions-mobile .bord {
 		position: relative;
 		align-self: stretch;
 		width: 20px;
@@ -97,6 +115,17 @@
 		flex-grow: 1;
 		background-color: #334264f2;
 	}
+
+  .carte-suggestions-mobile .centre {
+    display: flex;
+		flex-direction: column;
+		gap: 40px;
+		padding: 20px 0px;
+		position: relative;
+		flex: 1;
+		flex-grow: 1;
+		background-color: #334264f2;
+  }
 	
 	.plats-du-jour-mobile .head {
 		display: flex;
@@ -109,7 +138,8 @@
 		flex: 0 0 auto;
 	}
 	
-	.plats-du-jour-mobile .text-wrapper {
+	.plats-du-jour-mobile .text-wrapper,
+  .carte-suggestions-mobile .text-wrapper{
 		position: relative;
 		align-self: stretch;
 		margin-top: -1.00px;
@@ -136,7 +166,8 @@
 		font-style: var(--h3-mobile-font-style);
 	}
 	
-	.plats-du-jour-mobile .card-pdj {
+	.plats-du-jour-mobile .card-pdj,
+  .carte-suggestions-mobile .plats {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -220,24 +251,25 @@
 	}
   
 
-
-  /* règles globales */
-
-  body {
-    background-color: var(--bleu-pale);
+  .carte-suggestions-mobile p {
+    color: white;
+    font-family: var(--elements-menu-mobile-font-family);
+    font-size: var(--elements-menu-mobile-font-size);
   }
 
-  h2 {
+  .carte-suggestions-mobile h3 {
     text-align: left;
-    font-family: var(--h2-font-family);
-    font-weight: var(--h2-font-weight);
+    color: white;
+    font-size: var(--h3-mobile-font-size);
+    padding-left: 20px;
   }
 
-  h3 { 
-    font-family: var(--h3-font-family);
-    font-weight: var(--h3-font-weight);
-    font-size: var(--h3-font-size);
+  .carte-suggestions-mobile .description {
+    font-family: var( --description-menu-mobile-font-family);
+    font-size: var(--description-menu-mobile-font-size);
   }
+  
+ 
 
   /* page d'accueil desktop*/
 
@@ -564,7 +596,18 @@
     position: relative;
   }
 
-  .carte-suggestions .plats .card-plats .trait-prix {
+  .carte-suggestions-mobile .card-plats {
+    display: flex;
+    padding: 0px 20px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-self: stretch;
+    position: relative;
+  }
+
+  .carte-suggestions .plats .card-plats .trait-prix,
+  .carte-suggestions-mobile .trait-prix {
     display: flex;
     padding-left: 15px;
     align-items: flex-end;
@@ -576,7 +619,8 @@
     flex: 0 0 auto
   }
 
-  .carte-suggestions .plats .card-plats .trait-plats {
+  .carte-suggestions .plats .card-plats .trait-plats,
+  .carte-suggestions-mobile .trait-plats {
     position: relative;
     flex: 1;
     flex-grow: 1;
@@ -653,7 +697,10 @@
 @media screen and (max-width:768px) {
   
   h1 {
+    font-family: var(--h1-mobile-font-family);
     font-size: var(--h1-mobile-font-size);
+    font-weight: var(--h1-mobile-font-weight);
+    text-align: center;
   }
 
   h2 {
@@ -816,6 +863,8 @@
     font-size: 24px;
   }
 
+
+  
   footer {
     display: flex;
     padding: 60px 20px 20px 20px;
@@ -860,10 +909,12 @@
 	  align-self: center;
 		font-family: var(--h1-mobile-font-family);
 		font-size: var(--h1-font-size);
+    font-weight: var(--h1-font-weight);
 	}
 
   h2 {
     font-size: var(--h2-font-size);
+    font-weight: var(--h2-font-weight);
   }
 
   .burger-overlap {
@@ -911,6 +962,10 @@
   }
 
   .plats-du-jour-mobile{
+    display: none;
+  }
+
+  .carte-suggestions-mobile{
     display: none;
   }
 }
