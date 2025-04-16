@@ -592,6 +592,21 @@
     align-self: stretch;
   }
 
+  .filtre h3 {
+    cursor: pointer;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+  }
+  
+  .filtre h3:hover {
+    text-decoration: underline;
+  }
+  
+  .filtre h3.active {
+    text-decoration: underline;
+    font-weight: bold; /* Optional: Make it visually distinct */
+  }
+
   .carte-suggestions .plats .card-plats .description {
     font-family: var(--description-menu-desktop-font-family);
     font-size: var(--description-menu-desktop-font-size);
