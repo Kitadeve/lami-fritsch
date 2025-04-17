@@ -120,7 +120,7 @@ body{
   }
 
   .cta:hover {
-    opacity: 50%;
+    opacity: 80%;
     transition: all 0.3s;
   }
 
