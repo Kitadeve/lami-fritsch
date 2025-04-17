@@ -90,7 +90,7 @@ h3 {
 		position: relative;
 		border-radius: 25px;
 		overflow: hidden;
-		background-image: url("../img/suggestions-conteneur.png");
+		background-image: url("../img/suggestions-conteneur.jpg");
 		background-size: cover;
 		background-position: 50% 50%;
 		box-shadow: var(--box-shadow);
@@ -648,7 +648,7 @@ h3 {
   
   .filtre h3.active {
     text-decoration: underline;
-    font-weight: bold; /* Optional: Make it visually distinct */
+    font-weight: bold; 
   }
 
   .carte-suggestions .plats .card-plats .description {
