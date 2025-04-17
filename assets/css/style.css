@@ -821,6 +821,10 @@ h3 {
     background-color: var(--bleu-pale);
   }
 
+  .index {
+    margin: 20px;
+  }
+
   .plats-du-jour,
   .carte-suggestions {
     display: none;
