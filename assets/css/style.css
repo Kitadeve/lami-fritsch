@@ -34,8 +34,6 @@ body{
     font-family:var(--menu-nav-font-family);
     font-weight: var(--menu-nav-font-weight);
     font-size: var(--menu-nav-font-size);
-    letter-spacing: var(--menu-nav-letter-spacing);
-    line-height: var(--menu-nav-line-height);
   }
 
   .menu-navigation ul a:hover {
@@ -677,8 +675,6 @@ body{
 		color: #ffffff;
 		font-size: var(--carte-jour-mobile-font-size);
 		text-align: center;
-		letter-spacing: var(--carte-jour-mobile-letter-spacing);
-		line-height: var(--carte-jour-mobile-line-height);
 		font-style: var(--carte-jour-mobile-font-style);
 	}
 	
@@ -693,8 +689,6 @@ body{
 		color: #ffffff;
 		font-size: var(--elements-menu-mobile-font-size);
 		text-align: center;
-		letter-spacing: var(--elements-menu-mobile-letter-spacing);
-		line-height: var(--elements-menu-mobile-line-height);
 		font-style: var(--elements-menu-mobile-font-style);
 	}
 	
