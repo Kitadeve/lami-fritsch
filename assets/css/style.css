@@ -2,7 +2,6 @@ body{
   background-color: var(--bleu-pale);
 }
 
-
 /* page d'accueil desktop*/
 
   /* header */
@@ -52,33 +51,17 @@ body{
     font-size: var(--paragraphes-font-size);
   }
 
-  .about {
-    display: flex;
-    padding-right: 100px;
-    align-items: center;
-    gap: 24px;
-    align-self: stretch;
-  }
-
-  .reservations {
-    display: flex;
-    padding: 0px 100px;
-    align-items: center;
-    gap: 24px;
-    align-self: stretch;
-  }
-
+  .about,
+  .reservations,
   .groupe {
     display: flex;
-    padding-right: 100px;
     align-items: center;
     gap: 24px;
-    align-self: stretch;
   }
 
-  .photo {
+  /* .photo {
     max-width: 50%;
-  }
+  } */
 
   .reservations img {
     max-width: 100%;
@@ -402,7 +385,7 @@ body{
 
 @media screen and (max-width:768px) {
   
-  /* Règles globales */
+  /* Règles globales mobile */
 
   h1 {
     font-family: var(--h1-mobile-font-family);
@@ -457,7 +440,6 @@ body{
   .index {
     margin: 20px;
   }
-
 
   /* burger */
 
@@ -543,22 +525,11 @@ body{
     display: none;
   }
 
-  
-
-  .plats-du-jour,
-  .carte-suggestions {
-    /* display: none; */
-  }
-
-  
-
   .logo-desktop-horizontal,
   .logo-desktop-vertical,
   .logo-desktop-vertical-top {
     display: none
   }
-
-
 
   .about, 
   .reservations,
@@ -636,20 +607,6 @@ body{
 
 
   /* carte et menus mobile */
-
-  /* .plats-du-jour,
-  .carte-suggestions {
-    display: flex;
-    padding: 64px;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    align-self: stretch;
-    border-radius: 25px;
-    background: var(--bleu-fritsch);
-    box-shadow: var(--box-shadow);
-    color: white;
-  } */
 
 	.plats-du-jour,
   .carte-suggestions {
@@ -774,12 +731,6 @@ body{
     display: none;
   }
 
-  /* .tartes-flambees,
-  .plats-hidden,
-  .desserts {
-    display: block;
-  } */
-
   footer {
     display: flex;
     padding: 60px 20px 20px 20px;
@@ -820,7 +771,8 @@ body{
 
 @media screen and (min-width: 769px) {
 
-  
+  /* règles globales desktop */
+
 body {
   background-color: var(--bleu-pale);
 }
@@ -846,6 +798,8 @@ body {
     font-weight: var(--h3-font-weight);
     font-size: var(--h3-font-size);
   }
+
+   /* burger caché, pour desktop */
 
   .burger-overlap {
     display: none;
@@ -881,6 +835,10 @@ body {
     align-self: stretch;
   }
 
+   .photo {
+    max-width: 50%;
+  }
+
   .texte {
     padding: 64px 64px;
     flex-direction: column;
@@ -891,7 +849,7 @@ body {
     align-self: stretch;
   }
 
-  /* carte et menus */
+  /*plats du jour, carte et menus desktop*/
 
   .plats-du-jour,
   .carte-suggestions {
@@ -981,15 +939,6 @@ body {
     align-self: stretch;
     display: none;
   }
-
-/* 
-  .plats-du-jour-mobile{
-    display: none;
-  }
-
-  .carte-suggestions-mobile{
-    display: none;
-  } */
 }
 
   /* tablettes */
