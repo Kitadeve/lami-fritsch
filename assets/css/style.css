@@ -742,6 +742,12 @@ body{
     font-size: var(--nav-card-mobile-font-size);
   }
 
+  .legale ul {
+    font-family: var(--paragraphes-mobile-font-family);
+    font-size: var(--paragraphes-mobile-font-size);
+    list-style-type: disc;
+    margin-left: 40px;
+  }
 }
   /* desktop */
 
@@ -916,7 +922,23 @@ body {
     align-self: stretch;
     display: none;
   }
+
+  .legale {
+    margin: 100px;
+  }
+
+  .legale ul{
+    font-family: var(--paragraphes-font-family);
+    font-size: var(--paragraphes-font-size);
+    list-style-type: disc;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
 }
+
+
+
 
   /* tablettes */
 
@@ -1000,4 +1022,32 @@ body {
   footer .logo-desktop-horizontal{
     max-width: 40%;
   }
+}
+
+
+.legale {
+  display: flex;
+  flex-direction: column;
+  margin: 20px
+}
+
+.legale h1 {
+  margin-bottom: 40px;
+}
+
+.legale h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.legale p {
+  margin: 10px 0px;
+}
+
+.legale li {
+  padding: 2px;
+}
+
+.legale span {
+  font-weight: bold;
 }
