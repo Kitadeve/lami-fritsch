@@ -11,14 +11,14 @@
 
 @font-face {
   font-family: "Lato";
-  src: url(../fonts/LATO-REGULAR.TTF) format('truetype');
+  src: url(../assets/fonts/LATO-REGULAR.TTF) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato";
-  src: url(../fonts/LATO-BOLD.TTF);
+  src: url(../assets/fonts/LATO-BOLD.TTF) format('truetype');
   font-weight: bold;
   font-style: normal;
 }
