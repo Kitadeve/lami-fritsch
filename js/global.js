@@ -32,4 +32,8 @@ function menuMobile () {
 
   menuMobile();
 
- 
+  const burger = document.getElementById("burger");
+  burger.addEventListener("click", () => {
+    const expanded = burger.getAttribute("aria-expanded") === "true";
+    burger.setAttribute("aria-expanded", !expanded);
+  });
