@@ -132,9 +132,7 @@ a {
   cursor: pointer;
 }
 
-.cta a {
-  color: white;
-}
+
 
 .cta:hover {
   opacity: 80%;
