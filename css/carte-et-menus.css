@@ -22,6 +22,10 @@
 }
 
 .plats-du-jour .menu-plat-seul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: var(--h3-font-family);
   align-self: stretch;
   color: white;
   text-align: center;
@@ -34,7 +38,7 @@
   color: white;
   text-align: center;
 }
-
+/* 
 .plats-du-jour span {
   font-family: "Lato";
   font-size: 32px;
@@ -42,7 +46,7 @@
   font-weight: 700;
   line-height: normal;
   align-self: center;
-}
+} */
 
 .plats-du-jour .card-pdj {
   display: flex;
@@ -177,11 +181,14 @@
     background-color: #334264f2;
   }
 		
-  .plats-du-jour .text-wrapper,
-  .carte-suggestions .text-wrapper{
+  .text-wrapper {
     font-size: var(--h2-mobile-font-size);
   }
-	
+
+  .plats-du-jour .menu-plat-seul {
+    font-size: var(--h3-mobile-font-size)
+  }
+
 	.plats-du-jour .card-pdj,
   .carte-suggestions  .plats {
 		flex-direction: column;
