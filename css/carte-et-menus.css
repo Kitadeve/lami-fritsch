@@ -38,15 +38,6 @@
   color: white;
   text-align: center;
 }
-/* 
-.plats-du-jour span {
-  font-family: "Lato";
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  align-self: center;
-} */
 
 .plats-du-jour .card-pdj {
   display: flex;
