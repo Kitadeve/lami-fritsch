@@ -50,3 +50,17 @@ document.addEventListener("DOMContentLoaded", () => {
       dessertsSection.style.display = "flex";
     }
   });
+
+  document.querySelectorAll(".filtre h3").forEach((element) => {
+    element.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault(); // Empêche le défilement de la page si "Espace" est pressé
+        element.click(); // Simule un clic sur l'élément
+      }
+    });
+  
+    element.addEventListener("click", () => {
+      // Exemple d'action à effectuer lors du clic ou de l'appui sur Entrée/Espace
+      console.log(`${element.textContent} a été sélectionné`);
+    });
+  });

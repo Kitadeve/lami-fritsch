@@ -59,9 +59,8 @@
 
 .plats-du-jour .jour {
   text-align: center;
-  font-family: "Dancing Script";
+  font-family: var(--elements-menu-desktop-font-family);
   font-size: 56px;
-  font-weight: 700;
   color: white;
   font-weight: var(--h3-font-weight);
 }
@@ -121,7 +120,7 @@
   padding: 0px 20px;
   flex-direction: column;
   justify-content: center;
-  gap: 24px;
+  gap: 18px;
   align-self: stretch;
 }
 
@@ -281,7 +280,15 @@
     text-decoration: underline;
     font-weight: bold; 
   }
+
+  .filtre h3:focus-visible {
+    outline: 2px solid #4a90e2;
+  }
    
+  .filtre h3:focus {
+    outline: 2px solid #4a90e2;
+  }
+
   .plats-hidden,
   .tartes-flambees,
   .desserts{
