@@ -170,9 +170,11 @@ header {
   } 
 
   
+  .logo-desktop-vertical-top {
+    max-width: 300px;
+  }
 
-.logo-desktop-vertical,
-.logo-desktop-vertical-top {
+.logo-desktop-vertical {
   max-width: 245px;
 }
 
