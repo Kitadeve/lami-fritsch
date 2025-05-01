@@ -25,29 +25,30 @@
     font-weight: bold;
   }
   
-  /* desktop */
 
-@media screen and (min-width:769px) {
+  .legale ul {
+    font-size: var(--paragraphes-mobile-font-size);
+    list-style-type: disc;
+    margin-left: 40px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .legale{
+      margin: 60px;
+    }
+  }
+    /* desktop */
+
+@media screen and (min-width: 1024px) {
   .legale {
     margin: 100px;
   }
 
   .legale ul{
-    font-family: var(--paragraphes-font-family);
     font-size: var(--paragraphes-font-size);
     list-style-type: disc;
     margin-left: 60px;
     margin-bottom: 10px;
     margin-top: 10px;
-  }
-}
-
-@media screen and (max-width:768px) {
-
-  .legale ul {
-    font-family: var(--paragraphes-mobile-font-family);
-    font-size: var(--paragraphes-mobile-font-size);
-    list-style-type: disc;
-    margin-left: 40px;
   }
 }

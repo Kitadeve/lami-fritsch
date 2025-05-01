@@ -1,37 +1,11 @@
-/* main */
-
-
-  
-.about,
-.reservations,
-.groupe {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.reservations img {
-  max-width: 100%;
-}
-
-.about img,
-.groupe img {
-  max-width: 100%;
-  box-shadow: var(--box-shadow);
-}
-
-.texte {
-  display: flex;
-}
 
 /* mobile */
-
-@media screen and (max-width:768px) {
-  .about, 
+  
+  
+  .about,
   .reservations,
   .groupe {
     display: flex;
-    padding: 0px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -39,7 +13,18 @@
     align-self: stretch;
   }
 
+  .reservations img {
+    max-width: 100%;
+  }
+
+  .about img,
+  .groupe img {
+    max-width: 75%;
+    box-shadow: var(--box-shadow);
+  }
+
   .texte {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -47,65 +32,68 @@
     order: 2;
   }
 
-  .photo {
-    max-width: 100%;
-  }
-}
-
-/* deskop */
-
-@media screen and (min-width: 769px) {
-
-  .index {
-    display: flex;
-    padding: 60px 0px;
-    margin: 0px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    align-self: stretch;
+  .texte p {
+    padding: 0 40px;
   }
 
-   .photo {
-    max-width: 50%;
+ /* tablette */
+
+  @media screen and (min-width: 768px) {
+
+    .texte p {
+      padding: 0px 80px;
+    }
+
   }
+
+  /* laptop */
+
+  @media screen and (min-width: 1024px) {
+
+    main {
+      margin: 0;
+    }
+
+    .about,
+    .groupe {
+      flex-direction: row;
+      padding: 0px;
+      margin-right: 40px;
+    }
+
+    .reservations {
+      flex-direction: row;
+      margin: 0px 40px;
+    
+    }
+
+    .texte {
+      align-items: flex-start;
+      gap: 48px;
+      padding: 0px;
+      order:0 ;
+    }
+    .texte p {
+      padding: 0 0px;
+    }
+    .reservations img {
+      max-width: 50%;
+    }
+  
+    .about img,
+    .groupe img {
+      max-width: 50%;
+    }
+  }
+  
+
+/* desktop */
+
+@media screen and (min-width: 1400px) {
 
   .texte {
-    padding: 64px 64px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 64px;
     gap: 64px;
-    flex: 1 0 0;
-    align-self: stretch;
   }
 }
 
-  /* tablettes */
-
-  @media screen and (min-width: 769px) and (max-width: 1400px) {
-
-    .index {
-      max-width: 90%;
-      margin: auto;
-    }
-  
-  
-    .about,
-    .reservations,
-    .groupe {
-      flex-direction: column;
-      padding: 0px;
-    }
-  
-    .photo {
-      order: 1;
-    }
-  
-    .texte {
-      order: 2;
-    }
-  
-  }
-  
