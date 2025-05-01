@@ -30,17 +30,21 @@
     align-items: center;
     gap: 24px;
     order: 2;
+   
   }
-
-  .texte p {
+  .texte p,
+  .texte h2 {
     padding: 0 40px;
+    align-self: flex-start;
   }
+  
 
  /* tablette */
 
   @media screen and (min-width: 768px) {
-
-    .texte p {
+  
+    .texte p,
+    .texte h2 {
       padding: 0px 80px;
     }
 
@@ -73,7 +77,9 @@
       padding: 0px;
       order:0 ;
     }
-    .texte p {
+    
+    .texte p,
+    .texte h2 {
       padding: 0 0px;
     }
     .reservations img {
@@ -91,8 +97,12 @@
 
 @media screen and (min-width: 1400px) {
 
+  .texte h2,
+  .texte p {
+    padding: 0 64px;
+    
+  }
   .texte {
-    padding: 64px;
     gap: 64px;
   }
 }
