@@ -1,3 +1,20 @@
+// function loadHeader() {
+//   const headerPlaceholder = document.createElement("div");
+//   headerPlaceholder.id = "header-placeholder";
+//   document.body.insertBefore(headerPlaceholder, document.body.firstChild);
+
+//   fetch("./assets/partials/header.html")
+//     .then((response) => response.text())
+//     .then((data) => {
+//       document.getElementById("header-placeholder").innerHTML = data;
+//     })
+//     .catch((error) => console.error("Erreur lors du chargement du header :", error));
+// }
+
+// window.addEventListener("DOMContentLoaded", loadHeader);
+
+
+
 function updateHeaderHeight() {
     const header = document.querySelector("header");
     const root = document.documentElement;
@@ -37,3 +54,18 @@ function menuMobile () {
     const expanded = burger.getAttribute("aria-expanded") === "true";
     burger.setAttribute("aria-expanded", !expanded);
   });
+
+  // fonction pour gérer dynamiquement la hauteur de l'overlap
+  
+  function updateBurgerHeight() {
+    const headerHeight = document.querySelector("header").offsetHeight;
+    const burgerOverlap = document.querySelector(".burger-overlap");
+  
+    // Calculer la hauteur restante pour le menu burger
+    const burgerHeight = window.innerHeight - headerHeight;
+    burgerOverlap.style.height = `${burgerHeight}px`;
+  }
+  
+  // Mettre à jour la hauteur au chargement et au redimensionnement
+  window.addEventListener("load", updateBurgerHeight);
+  window.addEventListener("resize", updateBurgerHeight);
