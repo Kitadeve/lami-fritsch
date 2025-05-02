@@ -17,7 +17,7 @@ body {
   line-height: 1;
   margin: 0px;
   height: 100%;
-  background-color: var(--bleu-pale);
+  background: linear-gradient(180deg, #FFF -40.63%, #BFCDE5 58.47%, #FFF 157.57%);  
   font-family: var(--main-font-family);
 }
 
@@ -94,9 +94,11 @@ a {
   }
 }
 
+  /* règles globales desktop */
+
 @media screen and (min-width: 1024px) {
 
-  /* règles globales desktop */
+
 
   h1{
 	  align-self: center;
@@ -396,17 +398,28 @@ header {
 }
 
 /* footer */
-
-footer { 
+footer {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 48px 20px 20px 20px;
+  max-width: 100%;
+  background-color: var(--bleu-fritsch);
+  color: white;
+}
+
+footer p {
+  font-size: 1em;
+}
+
+.logo-info { 
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 30px;
   align-self: stretch;
-  max-width: 100%;
-  background-color: var(--bleu-fritsch);
+
 }
 
 
@@ -442,6 +455,7 @@ footer {
 
 .contact-card {
   display: flex;
+  flex-direction: column;
   padding: 12px;
   justify-content: center;
   align-items: center;
@@ -475,7 +489,6 @@ footer {
 .cards a,
 .cards p {
   color: white;
-  font-size: var(--nav-card-font-size);
 }
 
 .contact-card p {
@@ -534,7 +547,7 @@ footer {
 
 @media screen and (min-width:1025px){
   
-  footer {
+  .logo-info {
       display: grid;
       grid-template-columns: 1fr 3fr 1fr;
       grid-template-rows: 1fr;
