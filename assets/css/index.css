@@ -34,7 +34,7 @@
   }
   .texte p,
   .texte h2 {
-    padding: 0 40px;
+    /* padding: 0 40px; */
     align-self: flex-start;
   }
   
