@@ -396,17 +396,25 @@ header {
 }
 
 /* footer */
-
-footer { 
+footer {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 48px 20px 20px 20px;
+  max-width: 100%;
+  background-color: var(--bleu-fritsch);
+  color: white;
+  font-size: 0.75em;
+}
+
+.logo-info { 
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 30px;
   align-self: stretch;
-  max-width: 100%;
-  background-color: var(--bleu-fritsch);
+
 }
 
 
@@ -442,6 +450,7 @@ footer {
 
 .contact-card {
   display: flex;
+  flex-direction: column;
   padding: 12px;
   justify-content: center;
   align-items: center;
@@ -534,7 +543,7 @@ footer {
 
 @media screen and (min-width:1025px){
   
-  footer {
+  .logo-info {
       display: grid;
       grid-template-columns: 1fr 3fr 1fr;
       grid-template-rows: 1fr;
