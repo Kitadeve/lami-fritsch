@@ -17,7 +17,7 @@ body {
   line-height: 1;
   margin: 0px;
   height: 100%;
-  background-color: var(--bleu-pale);
+  background: linear-gradient(180deg, #FFF -40.63%, #BFCDE5 58.47%, #FFF 157.57%);  
   font-family: var(--main-font-family);
 }
 
@@ -94,9 +94,11 @@ a {
   }
 }
 
+  /* règles globales desktop */
+
 @media screen and (min-width: 1024px) {
 
-  /* règles globales desktop */
+
 
   h1{
 	  align-self: center;
@@ -404,7 +406,10 @@ footer {
   max-width: 100%;
   background-color: var(--bleu-fritsch);
   color: white;
-  font-size: 0.75em;
+}
+
+footer p {
+  font-size: 1em;
 }
 
 .logo-info { 
@@ -484,7 +489,6 @@ footer {
 .cards a,
 .cards p {
   color: white;
-  font-size: var(--nav-card-font-size);
 }
 
 .contact-card p {
