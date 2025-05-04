@@ -7,6 +7,12 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Gothique";
+  src: url(../fonts/UNIFRAKTURMAGUNTIA-REGULAR.TTF) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 @font-face {
@@ -31,22 +37,26 @@
     --bleu-clair: rgba(153, 175, 212, 1);
     --bleu-pale: rgba(191, 205, 229, 1);
     --bleu-fonce: rgba(51, 67, 92, 1);
+    --cta: #be7216;
+    /* --cta: #926719; */
+    /* --brun: #b7933e; */
+    /* --brun: #E3A508; */
     --main-font-family: "Lato", Helvetica;
     --elements-menu-font-family: "Dancing Script", Helvetica;
     --h1-font-weight: bold;
-    --h1-font-size: 4em;
+    --h1-font-size: 2.5em;
     --h1--font-style: normal;
     --h2-font-weight: bold;
-    --h2-font-size: 3em;
+    --h2-font-size: 2em;
     --h2-font-style: normal;
     --h3-font-weight: bold;
-    --h3-font-size: 2em;
+    --h3-font-size: 1.5em;
     --h3-font-style: normal;
     --paragraphes-font-weight: normal;
-    --paragraphes-font-size: 1.5em;
+    --paragraphes-font-size: 1em;
     --paragraphes-font-style: normal;
     --h1-mobile-font-weight: bold;
-    --h1-mobile-font-size: 2.25em;
+    --h1-mobile-font-size: 2em;
     --h1-mobile-font-style: normal;
     --h2-mobile-font-weight: bold;
     --h2-mobile-font-size: 1.5em;
@@ -55,7 +65,7 @@
     --h3-mobile-font-size: 1.25em;
     --h3-mobile-font-style: normal;
     --paragraphes-mobile-font-weight: normal;
-    --paragraphes-mobile-font-size: 1em;
+    --paragraphes-mobile-font-size: 0.95em;
     --paragraphes-mobile-font-style: normal;
     --carte-jour-mobile-font-weight: normal;
     --carte-jour-mobile-font-size: 1.5em;
@@ -76,7 +86,7 @@
     --description-menu-desktop-font-size: 1em;
     --description-menu-desktop-font-style: normal;
     --menu-nav-font-weight: normal;
-    --menu-nav-font-size: 1.5em;
+    --menu-nav-font-size: 1.25em;
     --menu-nav-font-style: normal;
     --nav-card-font-weight: normal;
     --nav-card-font-size: 1em;

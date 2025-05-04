@@ -1,7 +1,57 @@
 
 /* mobile */
   
+  /* h1 {
+    font-family: "Gothique";
+  } */
+   
+  main{
+  margin: 20px;
+  padding-top: 0;
+  }
+
+  .hero .texte {
+    /* width: 34%; */
+    /* padding: 100px 100px; */
+    display: flex;
+    color: white;
+    align-items: center;
+  }
+
+  .hero .texte h2 {
+    text-align: center;
+    /* padding: 24px 0px; */
+  }
+
+  .hero .texte p {
+    text-align: center;
+    /* padding: 16px 0px; */
+  }
+ 
+  h1 {
+    font-family: "Gothique";
+    /* font-size: 4em; */
+    color: white;
+    /* padding: 24px 0; */
+  }
+
+  /* .hero{
+    height: calc(100vh - var(--header-height));
+    width: 100vw;
+    background-image: url(../img/hero1.png);
+    background-repeat: no-repeat;
+    overflow: hidden;
+  } */
+
+  /* .cigogne {
+    width: 45%;
+    position: relative;
+    left: 28%;
+    top: -35%;
+  } */
   
+  /* main aprés hero */
+
   .about,
   .reservations,
   .groupe {
@@ -28,14 +78,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 24px;
     order: 2;
    
   }
   .texte p,
   .texte h2 {
-    /* padding: 0 40px; */
     align-self: flex-start;
+  }
+
+  
+  .texte h2 {
+    padding: 16px 0;
+  }
+
+  .texte p {
+    padding: 8px 0;
+  }
+
+  .texte .cta {
+    margin-top: 32px;
   }
   
 
@@ -45,7 +106,8 @@
   
     .texte p,
     .texte h2 {
-      padding: 0px 80px;
+      padding-left: 80px;
+      padding-right: 80px;
     }
 
   }
@@ -73,7 +135,6 @@
 
     .texte {
       align-items: flex-start;
-      gap: 48px;
       padding: 0px;
       order:0 ;
     }
@@ -81,6 +142,18 @@
     .texte p,
     .texte h2 {
       padding: 0 0px;
+    }
+
+    .texte h2 {
+      padding: 24px 0px;
+    }
+  
+    .texte p {
+      padding: 16px 0px;
+    }
+  
+    .texte .cta {
+      margin-top: 32px;
     }
     .reservations img {
       max-width: 50%;
@@ -97,13 +170,57 @@
 
 @media screen and (min-width: 1400px) {
 
-  .texte h2,
-  .texte p {
-    padding: 0 64px;
-    
+  main{
+    padding-bottom: 0;
   }
-  .texte {
-    gap: 64px;
+
+  .texte h2 {
+    padding: 24px 64px;
+  }
+
+  .texte p {
+    padding: 16px 64px;
+  }
+
+  .texte .cta {
+    margin-top: 32px;
+  }
+
+  /* hero */
+
+  .hero .texte {
+    width: 34%;
+    padding: 100px 100px;
+  }
+
+  .hero .texte h2 {
+    padding: 24px 0px;
+  }
+
+  .hero .texte p {
+    padding: 16px 0px;
+    margin-bottom: 48px;
+  }
+ 
+  h1 {
+    font-size: 4em;
+    padding: 24px 0;
+  }
+
+  .hero{
+    height: calc(100vh - var(--header-height));
+    width: 100vw;
+    background-image: url(../img/hero3.jpg);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-position: 0px -200px;
+  }
+
+  .cigogne {
+    width: 45%;
+    position: relative;
+    left: 28%;
+    top: -60%;
   }
 }
 
