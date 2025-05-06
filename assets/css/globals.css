@@ -141,8 +141,7 @@ p {
   background-color: var(--cta);
   border-radius: 10px;
   box-shadow: var(--box-shadow);
-  padding: 10px 60px;
-  flex-direction: column;
+  padding: 16px 60px;
   width: 95%;
   cursor: pointer;
 }
@@ -171,11 +170,9 @@ header {
   display: flex;
   max-width: 100%;
   background-color: var(--bleu-fritsch);
-  padding: 24px 40px;
-  justify-content: space-between;
+  padding: 12px 40px;
   align-items: center;
   justify-content: space-between;
-  flex: 1 0 0;
   align-self: stretch;
   position: fixed;
   top: 0;
@@ -185,7 +182,7 @@ header {
 } 
 
 .logo-mobile {
-  max-width: 40%;
+  max-width: 100px;
 }
 
 .logo-desktop-vertical-top {
@@ -235,7 +232,7 @@ body.no-scroll {
 .burger .bar {
   display: block;
   width: 24px;
-  height: 6px;
+  height: 4px;
   background: white;
   
 }
@@ -245,7 +242,7 @@ body.no-scroll {
   display: block;
   content: "";
   width: 32px;
-  height: 6px;
+  height: 4px;
   background: white;
   position: absolute;
 }
