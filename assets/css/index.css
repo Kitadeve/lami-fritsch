@@ -10,59 +10,78 @@
   }
 
   .hero{
-    display: flex;
     position: relative;
     height: calc(100vh - var(--header-height));
     width: 100%;
     background-image: url(../img/hero1.jpg);
     background-repeat: no-repeat;
     overflow: hidden;
+    padding: 0 20px;
   }
 
   .hero .texte {
     color: white;
-    align-items: center;
-    margin: 0 20px;
     margin-bottom: 32px;
     width: 100%;
+    height: calc(100vh - var(--header-height));
+    /* background-image: url(../img/cigogne-blanche-seule-mirror.svg);
+    background-repeat: no-repeat;
+    background-position: 50vw 55vh; */
   }
 
   .call-to-action {
     display: flex;
     flex-direction: column;
-    margin-top: 32px
+    gap: 5vh;
+    margin-top: 10vh;
   }
 
-  .hero .cta {
+  .hero .texte .cta {
     width: auto;
     z-index: 2;
     margin: 0px;
+    
+  }
+
+  #un {
+    animation: appear 2.5s ease-out;
+  }
+
+  #deux {
+    animation: appear 3s ease-out
   }
 
   h1 {
     font-family: "Gothique";
-    font-size: 3em;
+    font-size: 7vh;
     color: white;
-    padding: 24px 0;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    animation: slideInFromLeft 1s ease-out;
   }
 
   .hero .texte h2 {
-    padding: 24px 24px;
+    font-size: 4vh;
+    padding: 2vh 2vh;
     text-align: center;
     align-self: center;
+    animation: slideInFromRight 1s ease-out;
   }
 
   .hero .texte p {
+    font-size: 2.5vh;
     text-align: center;
     align-self: center;
+    animation: appear 2s ease-in;
   }
  
   .cigogne {
-    width: 300px;
-    position: absolute;
+    width: 100%;
+    /* position: absolute; */
     left: 45%;
-    bottom: -150px;
+    bottom: -40vh;
     z-index: 1;
+    transform: translate(50vw, -45vh );
   }
   
   /* main aprés hero */
@@ -129,16 +148,16 @@
     .hero{
       background-image: url(../img/hero2.jpg);
     }
-
+/* 
     .cigogne {
       bottom: -175px;
     }
-  
-    h1 {
+   */
+    /* h1 {
       font-size: 3.5em;
-    }
+    } */
   
-    .hero .texte h2 {
+    /* .hero .texte h2 {
       font-size: 2em;
     }
   
@@ -150,7 +169,7 @@
     .texte h2 {
       padding-left: 80px;
       padding-right: 80px;
-    }
+    } */
 
     .cta {
       width: 60%;
@@ -175,7 +194,8 @@
   
     .hero .texte {
       width: 50%;
-      /* margin-left: 64px;; */
+      display: flex;
+      align-items: center;
     }
   
     .hero .texte h2 {
@@ -193,11 +213,9 @@
     }
   
     .cigogne {
-      width: 600px;
-      position: absolute;
-      left: 60%;
-      /* bottom: 400px; */
-    }
+      width: 70%;
+      transform: translate(50vw, -60vh);
+    } 
 
     /* main après hero */
     .about,
@@ -268,7 +286,7 @@
 
   /* hero */
 
-  .hero .texte {
+  /* .hero .texte {
     width: 34%;
     margin-top: 150px;
     margin-left: 300px;;
@@ -291,6 +309,6 @@
   .cigogne {
     left: 55%;
     bottom: -300px;
-  }
+  } */
 }
 
