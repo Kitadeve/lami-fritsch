@@ -65,7 +65,7 @@ function updateHeaderHeight() {
 
 // Écouteurs d'événements
 window.addEventListener("DOMContentLoaded", () => {
-  loadHeader();
+  // loadHeader();
   // loadFooter();
   menuMobile();
 });
