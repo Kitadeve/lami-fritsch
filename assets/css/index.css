@@ -23,10 +23,8 @@
     color: white;
     margin-bottom: 32px;
     width: 100%;
-    height: calc(100vh - var(--header-height));
-    /* background-image: url(../img/cigogne-blanche-seule-mirror.svg);
-    background-repeat: no-repeat;
-    background-position: 50vw 55vh; */
+    /* height: calc(100vh - var(--header-height)); */
+    /* height: 100vh; */
   }
 
   .call-to-action {
@@ -81,7 +79,7 @@
     left: 45%;
     bottom: -40vh;
     z-index: 1;
-    transform: translate(50vw, -45vh );
+    transform: translate(50vw, -35vh );
   }
   
   /* main aprés hero */
