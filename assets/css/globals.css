@@ -182,7 +182,7 @@ header {
 } 
 
 .logo-mobile {
-  max-width: 100px;
+  max-width: 40%;
 }
 
 .logo-desktop-vertical-top {
@@ -232,7 +232,7 @@ body.no-scroll {
 .burger .bar {
   display: block;
   width: 24px;
-  height: 4px;
+  height: 6px;
   background: white;
   
 }
@@ -242,7 +242,7 @@ body.no-scroll {
   display: block;
   content: "";
   width: 32px;
-  height: 4px;
+  height: 6px;
   background: white;
   position: absolute;
 }
