@@ -1,16 +1,4 @@
-// Chargement du header
-function loadHeader() {
-  const headerPlaceholder = document.createElement("div");
-  headerPlaceholder.id = "header-placeholder";
-  document.body.insertBefore(headerPlaceholder, document.body.firstChild);
 
-  fetch("./assets/partials/header.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById("header-placeholder").innerHTML = data;
-    })
-    .catch((error) => console.error("Erreur lors du chargement du header :", error));
-}
 
 // // Chargement du footer
 // function loadFooter() {
@@ -61,6 +49,20 @@ function updateHeaderHeight() {
   const header = document.querySelector("header");
   const root = document.documentElement;
   root.style.setProperty("--header-height", `${header.offsetHeight}px`);
+}
+
+// Chargement du header
+function loadHeader() {
+  const headerPlaceholder = document.createElement("div");
+  headerPlaceholder.id = "header-placeholder";
+  document.body.insertBefore(headerPlaceholder, document.body.firstChild);
+
+  fetch("./assets/partials/header.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    })
+    .catch((error) => console.error("Erreur lors du chargement du header :", error));
 }
 
 // Écouteurs d'événements

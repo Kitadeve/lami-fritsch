@@ -6,7 +6,7 @@
   } */
    
   main{
-  padding-top: var(--header-height, 100px);
+  padding-top: var(--header-height, 55);
   }
 
   .hero{
