@@ -27,6 +27,7 @@ main {
   padding-bottom: 40px;
   padding-top: calc(var(--header-height, 100px) + 24px);
   gap: 40px;
+  align-items: center;
 }
 
 ol,
@@ -185,8 +186,8 @@ header {
   max-width: 40%;
 }
 
-.logo-desktop-vertical-top {
-  max-width: 300px;
+.logo-desktop-vertical-top svg{
+  width: 50%;
 }
 
 .logo-desktop-vertical {

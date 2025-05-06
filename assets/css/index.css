@@ -75,11 +75,8 @@
  
   .cigogne {
     width: 100%;
-    /* position: absolute; */
-    left: 45%;
-    bottom: -40vh;
     z-index: 1;
-    transform: translate(50vw, -35vh );
+    transform: translate(50vw, -30vh );
   }
   
   /* main aprés hero */
@@ -194,8 +191,8 @@
       width: 50%;
       display: flex;
       align-items: center;
-      margin-top: 10%
-      /* justify-content: center; */
+      margin-top: 5%;
+      justify-content: center;
     }
   
     /*.hero .texte h2 {
@@ -213,7 +210,7 @@
     } */
   
     .cigogne {
-      width: 70%;
+      width: 60%;
       transform: translate(50vw, -60vh);
     } 
 
