@@ -61,7 +61,7 @@
     width: 300px;
     position: absolute;
     left: 45%;
-    bottom: -25vh;
+    bottom: -150px;
     z-index: 1;
   }
   
@@ -128,6 +128,10 @@
 
     .hero{
       background-image: url(../img/hero2.jpg);
+    }
+
+    .cigogne {
+      bottom: -175px;
     }
   
     h1 {
