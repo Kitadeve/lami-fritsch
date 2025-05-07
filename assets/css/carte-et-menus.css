@@ -90,7 +90,8 @@
 
 /* plats */
 
-.carte-suggestions p {
+.carte-suggestions p,
+strong {
   color: white;
   font-family: var(--elements-menu-font-family);
   font-size: var(--elements-menu-desktop-font-size);
@@ -148,6 +149,9 @@
   font-size: var(--description-menu-desktop-font-size);
 }
 
+.cta {
+  align-self: center;
+}
 /* spécifique mobile  */
 
 @media screen and (max-width:768px) {
@@ -208,7 +212,8 @@
 		text-align: center;
 	}
   
-  .carte-suggestions p {
+  .carte-suggestions p,
+  strong {
     font-size: var(--elements-menu-mobile-font-size);
   }
 

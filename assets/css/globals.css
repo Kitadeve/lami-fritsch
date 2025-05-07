@@ -17,6 +17,7 @@
 body {
   height: 100%;
   font-family: var(--main-font-family);
+  background: linear-gradient(180deg, #FFF -20%, #BFCDE5 58.47%, #FFF 120%);  
 }
 
 main {
@@ -24,9 +25,7 @@ main {
   flex-direction: column;
   padding-bottom: 40px;
   padding-top: calc(var(--header-height) + 24px);
-  background: linear-gradient(180deg, #FFF -40.63%, #BFCDE5 58.47%, #FFF 157.57%);  
   gap: 40px;
-  align-items: center;
 }
 
 ol,
@@ -144,11 +143,13 @@ p {
   padding: 16px 60px;
   width: 95%;
   cursor: pointer;
+  transition: all 0.3s ease-out;
 }
 
 .cta:hover {
   opacity: 80%;
-  transition: all 0.3s;
+  transform: scale(1.2);
+  transition: all 0.3s ease-out;
 }
 
 .cta:focus {
@@ -186,7 +187,7 @@ header {
 }
 
 .logo-desktop-top svg{
-  width: 50%;
+  width: 10vw;
 }
 
 .logo-desktop-vertical {
@@ -211,7 +212,7 @@ header {
 
 .menu-navigation ul a:hover {
   text-decoration: underline;
-  transition: all 0.5s;
+  transition: all 0.5s ease-out;
 }
 
 

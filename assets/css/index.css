@@ -99,7 +99,7 @@
 
   .about img,
   .groupe img {
-    max-width: 75%;
+    max-width: 100%;
     box-shadow: var(--box-shadow);
   }
 
@@ -215,22 +215,23 @@
     } 
 
     /* main après hero */
-    .about,
-    .groupe {
-      flex-direction: row;
-      padding: 0px;
-      margin-right: 40px;
+
+    main{
+      gap: 0;
+      padding: 0;
     }
 
+    .about,
+    .groupe,
     .reservations {
+      gap: 0;
       flex-direction: row;
-      margin: 0px 40px;
-    
+      padding: 0;
     }
 
     .texte {
       align-items: flex-start;
-      padding: 0px;
+      padding: 24px 24px;
       order:0 ;
     }
     
