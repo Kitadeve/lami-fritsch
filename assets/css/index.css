@@ -23,8 +23,10 @@
     color: white;
     margin-bottom: 32px;
     width: 100%;
-    height: calc(100vh - var(--header-height));
-    /* height: 100vh; */
+    /* height: calc(100vh - var(--header-height)); */
+    height: 100vh;
+    justify-content: flex-start;
+
   }
 
   .call-to-action {
@@ -76,7 +78,7 @@
   .cigogne {
     width: 100%;
     z-index: 1;
-    transform: translate(50vw, -30vh );
+    transform: translate(50vw, -60vh );
   }
   
   /* main aprés hero */
@@ -194,7 +196,7 @@
       width: 50%;
       display: flex;
       align-items: center;
-      justify-content: center;
+      margin: 2.5vh
     }
   
     /*.hero .texte h2 {
@@ -213,7 +215,7 @@
   
     .cigogne {
       width: 60%;
-      transform: translate(50vw, -60vh);
+      transform: translate(50vw, -80vh);
     } 
 
     /* main après hero */
