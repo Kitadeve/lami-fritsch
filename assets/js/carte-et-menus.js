@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
     // Check if the screen width is greater than or equal to 768px
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 1024) {
       // Add click event listeners to filter titles
       document.querySelector(".filtre-plats").addEventListener("click", () => {
         showSection(platsSection, "filtre-plats");
@@ -45,9 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
       showSection(platsSection, "filtre-plats");
     } else {
       // On mobile, ensure all sections are visible
-      platsSection.style.display = "flex";
-      tartesSection.style.display = "flex";
-      dessertsSection.style.display = "flex";
+      platsSection.style.display = "block";
+      tartesSection.style.display = "block";
+      dessertsSection.style.display = "block";
     }
   });
 

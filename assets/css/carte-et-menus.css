@@ -1,84 +1,116 @@
-  /* carte et menus globales */
+  /************** animation au chargement *****************/
 
-    /* Plats du jour */
 
-.plats-du-jour .head {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 16px;
+h1 {
+  animation: slideInFromLeft 1s ease-out;
+} 
+
+.plats-du-jour h2 {
+  opacity: 0;
+  animation: appear 2s ease-out 1s forwards;
+}
+
+.plats-du-jour span {
+  opacity: 0;
+  animation: appear 2s ease-out 1s forwards;
+}
+
+.plats-du-jour .jour-un {
+  opacity: 0;
+  animation: appear 2s ease-out 1.5s forwards;
+}
+
+
+.plats-du-jour .jour-deux {
+  opacity: 0;
+  animation: appear 2s ease-out 2s forwards;
+}
+
+
+.plats-du-jour .jour-trois {
+  opacity: 0;
+  animation: appear 2s ease-out 2.5s forwards;
+}
+
+/************ Plats du jour *************/
+
+
+.plats-du-jour h2 {
+  margin-bottom: 16px;
 }
 
 .centre {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  align-items: stretch;
+  padding: 20px;
+  gap: 24px;
   flex: 1;
-  flex-grow: 1;
+  color: white;
+  text-align: center;
   background-color: #334264f2;
 }
 
-.plats-du-jour .menu-plat-seul {
+.plats-du-jour,
+.carte-suggestions {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-  align-self: stretch;
-  color: white;
-  text-align: center;
-  font-size: var(--h3-font-size);
+  width: 100%;
+  gap: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-image: url("../img/bg-carte-et-menus.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  box-shadow: var(--box-shadow);
 }
 
-.plats-du-jour .text-wrapper,
-.carte-suggestions .text-wrapper{
-  align-self: stretch;
-  color: white;
-  text-align: center;
+.plats-du-jour .bord,
+.carte-suggestions .bord {
+  width: 20px;
+  background-color: #334264f2;
 }
 
-.plats-du-jour .card-pdj {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 64px;
-  align-self: stretch;
+.plats-du-jour span {
+  display: block;
+  padding: 4px;
 }
 
-.plats-du-jour .card-pdj .menu-du-jour {
+.cards-pdj,
+.cards-plats-suggestions {
+  font-family: var(--elements-menu-font-family);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.card-jour {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   align-self: stretch;
 } 
 
-
-.plats-du-jour .jour {
-  text-align: center;
-  font-family: var(--elements-menu-font-family);
-  font-size: var(--carte-jour-desktop-font-size);
-  color: white;
-  font-weight: var(--h3-font-weight);
-}
-
-.plats-du-jour .entree,
-.plat {
-  font-family: var(--elements-menu-font-family);
-  font-size: var(--elements-menu-desktop-font-size);
-  text-align: center;
-  padding: 0 20px;
-  color: white;
-}
-
-.plats-du-jour .frame {
+.frame {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
   width: 100%;
-  flex: 0 0 auto;
+}
+
+.jour {
+  font-size: var(--carte-jour-mobile-font-size);
+  font-weight: var(--h3-font-weight);
+}
+
+.entree,
+.plat {
+  padding: 8px 0;
+  font-family: var(--elements-menu-font-family);
+  font-size: var(--elements-menu-mobile-font-size);
+  line-height: 1em;
+  align-self: stretch;
 }
 
 .trait {
@@ -88,49 +120,40 @@
 }
 
 
-/* plats */
+/********************** plats et suggestions *****************************/
 
-.carte-suggestions p,
-strong {
-  color: white;
-  font-family: var(--elements-menu-font-family);
-  font-size: var(--elements-menu-desktop-font-size);
-}
 
 .carte-suggestions h3 {
   text-align: left;
-  color: white;
-
 }
 
-.carte-suggestions .plats {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 32px;
-  align-self: stretch;
-}
-
-
-
-.carte-suggestions .plats .card-plats {
+.card-plats {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 18px;
+  align-items: flex-start;
   align-self: stretch;
+  text-align: left;
+}
+.card-plats .plat {
+  padding: 0;
 }
 
-.carte-suggestions .plats .card-plats .trait-prix {
+.trait-prix {
   display: flex;
   padding-left: 15px;
   align-items: flex-end;
   gap: 10px;
   width: 100%;
-  flex: 0 0 auto
+  flex: 0 0 auto;
+  padding-top: 8px;
 }
 
-.carte-suggestions .plats .card-plats .trait-plats {
+.trait-prix p {
+  line-height: 1em;
+}
+
+.trait-plats {
   flex: 1;
   flex-grow: 1;
   height: 1px;
@@ -138,143 +161,61 @@ strong {
   border-color: white;
 }
 
-.carte-suggestions .description {
+.description {
   font-family: var(--main-font-family);
-  font-size: var(--description-menu-desktop-font-size);
+  font-size: var(--description-menu-mobile-font-size);
 }
 
-.carte-suggestions .sides {
+.sides p{
+  text-align: left;
   font-family: var(--main-font-family);
-  font-size: var(--description-menu-desktop-font-size);
+  font-size: 12px;
 }
 
 .cta {
   align-self: center;
 }
 
-/********************** mobile  *************************/
-
-@media screen and (max-width:768px) {
-
-  .plats-du-jour,
-  .carte-suggestions {
-    display: flex;
-    max-width: 100%;
-    align-items: center;
-    gap: 20px;
-    border-radius: 25px;
-    overflow: hidden;
-    background-image: url("../img/bg-carte-et-menus.jpg");
-    background-size: cover;
-    background-position: 50% 50%;
-    box-shadow: var(--box-shadow);
-  }
-
-  .plats-du-jour .bord,
-  .carte-suggestions .bord {
-    align-self: stretch;
-    width: 20px;
-    background-color: #334264f2;
-  }
-		
-  .text-wrapper {
-    font-size: var(--h2-mobile-font-size);
-  }
-
-  .plats-du-jour .menu-plat-seul {
-    font-size: var(--h3-mobile-font-size)
-  }
-
-	.plats-du-jour .card-pdj,
-  .carte-suggestions  .plats {
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 34px;
-		align-self: stretch;
-		width: 100%;
-		flex: 0 0 auto;
-	}
-
-	
-	.plats-du-jour .jour {
-		font-size: var(--carte-jour-mobile-font-size);
-	}
-	
-	.plats-du-jour .entree {
-		align-self: stretch;
-		font-size: var(--elements-menu-mobile-font-size);
-		text-align: center;
-	}
-	
-	.plats-du-jour .plat {
-		align-self: stretch;
-		font-size: var(--elements-menu-mobile-font-size);
-		text-align: center;
-	}
-  
-  .carte-suggestions p,
-  strong {
-    font-size: var(--elements-menu-mobile-font-size);
-  }
-
- .centre {
-    padding: 20px 20px;
-    gap: 24px;
-  }
-
-  .carte-suggestions .plats {
-    gap: 24px;
-  }
-
-  .carte-suggestions .plats .card-plats {
-    gap: 8px;
-  }
-
-  .carte-suggestions .description {
-    font-size: var(--description-menu-mobile-font-size);
-  }
-  
-  .carte-suggestions .sides{
-    font-size: var(--paragraphes-mobile-font-size);
-  }
+.filtre{
+  display: none;    /* pour empécher l'affichage des titres de sections de carte en mode filtre */
 }
-  .filtre{
-    display: none;    /* pour empécher l'affichage des titres de sections de carte en mode filtre */
-  }
-/* } */
 
-/*********************************** desktop *****************************/
+/*********************************** tablettes *****************************/
+
 
 @media screen and (min-width:768px) {
 
-  .plats-du-jour,
-  .carte-suggestions {
-    display: flex;
-    padding: 64px;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    align-self: stretch;
-    border-radius: 25px;
-    background: var(--bleu-fritsch);
-    box-shadow: var(--box-shadow);
+  .description {
+    padding-top: 4px;
   }
 
-  .plats-du-jour .frame {
-    gap: 16px;
+}
+
+/*********************************** desktop *****************************/
+@media screen and (min-width: 1024px) {
+ 
+ .mobile {
+  display: none;  /*pour empécher l'affichage des titres de section de carte sans filtre*/
   }
 
- /*pour empécher l'affichage des titres de section de carte sans filtre*/
-
-  .mobile {
+  /* .bord{
     display: none;
+  } */
+
+  main {
+    margin: auto 200px;
   }
 
-  .carte-suggestions .centre{
+  .centre{
     width: 100%;
+    padding: 32px 64px;
+    
   }
 
-  .carte-suggestions .filtre {
+  .centre h2 {
+  text-align: center;
+  }
+  .filtre {
     display: flex;
     align-items: center;
     gap: 28px;

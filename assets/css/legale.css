@@ -5,6 +5,7 @@
   }
   
   .legale h1 {
+    font-family: var(--main-font-family);
     margin-bottom: 40px;
   }
   
@@ -41,7 +42,7 @@
 
 @media screen and (min-width: 1024px) {
   .legale {
-    margin: 100px;
+    margin: 0 100px;
   }
 
   .legale ul{

@@ -80,7 +80,7 @@
     width: 100%;
     z-index: 1;
     transform: translate(50vw, -50vh );
-    animation: appear 2s linear 2s forwards;
+    animation: appear 3s linear 2.5s forwards;
   }
   
   /* main aprés hero */
