@@ -424,6 +424,7 @@ footer img {
 
 footer .horaires {
   margin-bottom: 32px;
+  align-self: stretch;
 }
 
 .logo-info { 
@@ -556,11 +557,10 @@ footer .horaires {
       margin: auto;
       align-self: stretch;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
   }
 
   .cards {
-    justify-content: space-around;
     gap: 3vw;
   }
 
