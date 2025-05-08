@@ -137,7 +137,7 @@ p {
   font-weight: 700;
   background-color: var(--cta);
   border-radius: 10px;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--cta-shadow);
   padding: 16px 32px;
   width: 90%;
   cursor: pointer;
