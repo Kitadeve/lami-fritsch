@@ -348,6 +348,11 @@ body.no-scroll {
   padding: 0;
 }
 
+.burger-overlap .socials a,
+.burger-overlap .contact-card {
+  box-shadow: var(--cta-shadow);
+}
+
 .contacts .cta {
   width: 100%;
 }
@@ -464,7 +469,7 @@ footer .horaires {
   align-self: stretch;
   border-radius: 10px;
   background: var(--bleu-moyen);
-  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: var(--deep-shadow);
 }
 .navigation-card {
   display: flex;
@@ -474,7 +479,7 @@ footer .horaires {
   align-self: stretch;
   border-radius: 10px;
   background: var(--bleu-moyen);
-  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: var(--deep-shadow);
 }
 
 .gauche,
@@ -524,7 +529,7 @@ footer .horaires {
   flex-shrink: 0;
   align-self: stretch;
   border-radius: 50px;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--deep-shadow);
   background: var(--bleu-moyen);
 }
 
