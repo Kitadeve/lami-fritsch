@@ -253,4 +253,14 @@ h1 {
     gap: 20px;
     align-self: stretch;
   }
+}  
+
+@media screen and (min-width: 1400px) {
+
+  .plats-du-jour,
+  .carte-suggestions {
+
+    margin: auto 200px;
+    width: 60%;
+  }
 }
