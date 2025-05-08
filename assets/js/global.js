@@ -8,6 +8,7 @@ function menuMobile() {
   const links = document.querySelectorAll(".burger-overlap a");
   const body = document.body;
 
+  
   btn.addEventListener("click", () => {
     header.classList.toggle("show-overlap");
     body.classList.toggle("no-scroll");
@@ -40,10 +41,13 @@ function updateHeaderHeight() {
 window.addEventListener("DOMContentLoaded", () => {
   menuMobile();
 });
+
 window.addEventListener("load", () => {
   updateHeaderHeight();
   updateBurgerHeight();
+  // updateHeroHeight();
 });
+
 window.addEventListener("resize", () => {
   updateHeaderHeight();
   updateBurgerHeight();
