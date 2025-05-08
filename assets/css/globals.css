@@ -51,6 +51,7 @@ img {
 /*********************** Règles globales mobile ***************************/
 
 h1 {
+  font-family: "Gothique";
   font-size: var(--h1-mobile-font-size);
   font-weight: var(--h1-mobile-font-weight);
   text-align: center;
@@ -380,6 +381,7 @@ body.no-scroll {
   header{
     position: relative;
   }
+  
   main{
     padding-top: 60px;
   }

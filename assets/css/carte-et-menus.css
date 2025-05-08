@@ -100,7 +100,7 @@ strong {
 .carte-suggestions h3 {
   text-align: left;
   color: white;
-  /* padding-left: 20px; */
+
 }
 
 .carte-suggestions .plats {
@@ -115,7 +115,6 @@ strong {
 
 .carte-suggestions .plats .card-plats {
   display: flex;
-  /* padding: 0px 20px; */
   flex-direction: column;
   justify-content: center;
   gap: 18px;
@@ -152,7 +151,8 @@ strong {
 .cta {
   align-self: center;
 }
-/* spécifique mobile  */
+
+/********************** mobile  *************************/
 
 @media screen and (max-width:768px) {
 
@@ -237,14 +237,13 @@ strong {
   .carte-suggestions .sides{
     font-size: var(--paragraphes-mobile-font-size);
   }
-  /* pour empécher l'affichage des titres de sections de carte en mode filtre */
-
-  .filtre{
-    display: none;
-  }
 }
+  .filtre{
+    display: none;    /* pour empécher l'affichage des titres de sections de carte en mode filtre */
+  }
+/* } */
 
-/*spécifique desktop */
+/*********************************** desktop *****************************/
 
 @media screen and (min-width:768px) {
 
