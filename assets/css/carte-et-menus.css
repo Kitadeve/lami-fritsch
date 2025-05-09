@@ -1,36 +1,47 @@
   /************** animation au chargement *****************/
 
-
 h1 {
   animation: slideInFromLeft 1s ease-in;
 } 
 
-.plats-du-jour h2 {
-  opacity: 0;
-  animation: appear 2s ease-out 1s forwards;
+/****************** animation gérée en JS  ****************/
+
+
+ .plats-du-jour h2,
+  .plats-du-jour span,
+  .card-jour,
+  .card-plats {
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .plats-du-jour h2.visible,
+  .plats-du-jour span.visible,
+  .card-jour.visible,
+  .card-plats.visible {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+  
+@media screen and (max-width: 1023px) {
+  
+  /* .plats-du-jour h2,
+  .plats-du-jour span,
+  .card-jour,
+  .card-plats {
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .plats-du-jour h2.visible,
+  .plats-du-jour span.visible,
+  .card-jour.visible,
+  .card-plats.visible {
+    opacity: 1;
+    transform: translateY(0); 
+  } */
 }
 
-.plats-du-jour span {
-  opacity: 0;
-  animation: appear 2s ease-out 1s forwards;
-}
-
-.plats-du-jour .jour-un {
-  opacity: 0;
-  animation: appear 2s ease-out 1.5s forwards;
-}
-
-
-.plats-du-jour .jour-deux {
-  opacity: 0;
-  animation: appear 2s ease-out 2s forwards;
-}
-
-
-.plats-du-jour .jour-trois {
-  opacity: 0;
-  animation: appear 2s ease-out 2.5s forwards;
-}
 
 /************ Plats du jour *************/
 
@@ -192,10 +203,41 @@ p.sides {
 }
 
 /*********************************** desktop *****************************/
+
 @media screen and (min-width: 1024px) {
+
+/* animation en css pour palier au manque de js (pas pertinent et génant, a cause des filtres) */
  
+.plats-du-jour h2 {
+  opacity: 0;
+  animation: appear 2s ease-out 1s forwards;
+}
+
+.plats-du-jour span {
+  opacity: 0;
+  animation: appear 2s ease-out 1s forwards;
+}
+
+.plats-du-jour .jour-un {
+  opacity: 0;
+  animation: appear 2s ease-out 1.5s forwards;
+}
+
+.plats-du-jour .jour-deux {
+  opacity: 0;
+  animation: appear 2s ease-out 2s forwards;
+}
+
+
+.plats-du-jour .jour-trois {
+  opacity: 0;
+  animation: appear 2s ease-out 2.5s forwards;
+}
+
+
+
  .mobile {
-  display: none;  /*pour empécher l'affichage des titres de section de carte sans filtre*/
+  display: none;   /*pour empécher l'affichage des titres de section de carte sans filtre*/
   }
 
   /* .bord{
