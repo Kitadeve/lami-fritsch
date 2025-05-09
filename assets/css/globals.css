@@ -72,6 +72,10 @@ p {
   line-height: 1.5em;
 }
 
+.img-desktop {
+  display: none;
+}
+
  /************************ tablettes ****************************/
 
 @media screen and (min-width:768px) {
@@ -124,6 +128,14 @@ p {
 
   p {
     font-size: var(--paragraphes-font-size);
+  }
+
+  .img-mobile {
+    display: none;
+  }
+
+  .img-desktop{
+    display: block;
   }
 
 }
@@ -342,7 +354,7 @@ body.no-scroll {
   align-self: stretch;
   gap: 32px;
   max-width: 70%;
-  margin: auto;
+  margin: 0 auto;
   color: white;
 }
 
@@ -476,7 +488,7 @@ footer .horaires {
   font-size: 12px;
   display: flex;
   flex-direction: column;
-  padding: 1vw 2vw;
+  padding: 16px 32px;;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -487,7 +499,7 @@ footer .horaires {
 }
 .navigation-card {
   display: flex;
-  padding: 0.5vw 1vw;
+  padding: 16px 32px;
   align-items: center;
   gap: 10px;
   align-self: stretch;
@@ -656,12 +668,15 @@ footer .horaires {
   }
 }
 
-@keyframes appear {
-  from {
-    opacity: 0;
+
+@keyframes slideInFromBottom {
+  from{
+    transform: translateY(110%);
+    opacity: 0; 
   }
-  
+
   to {
-    opacity: 1;
+    transform: translateY(0);
+    opacity: 1; 
   }
 }

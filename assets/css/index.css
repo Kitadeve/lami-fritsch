@@ -10,7 +10,7 @@
     position: relative;
     height: calc(100vh - var(--header-height, 50px));
     width: 100%;
-    background-image: url(../img/hero1.jpg);
+    background-image: url(../img/index-hero1.jpg);
     background-repeat: no-repeat;
     overflow: hidden;
     padding: 0 20px;
@@ -85,9 +85,7 @@
   
   /* main aprés hero */
 
-  .img-desktop {
-    display: none;
-  }
+ 
 
   .about,
   .reservations,
@@ -148,7 +146,7 @@
     }
 
     .hero{
-      background-image: url(../img/hero2.jpg);
+      background-image: url(../img/index-hero2.jpg);
     }
   }
 
@@ -164,7 +162,7 @@
     /* hero */
    
     .hero {
-      background-image: url(../img/hero3.jpg);
+      background-image: url(../img/index-hero3.jpg);
       background-position: 0px -200px;
     }
   
@@ -185,14 +183,6 @@
     main{
       gap: 0;
       padding: 0;
-    }
-
-    .img-desktop{
-      display: block;
-    }
-
-    .img-mobile {
-      display: none;
     }
 
     .about,
