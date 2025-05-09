@@ -40,14 +40,13 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
-  margin: 0 20px;
 }
 
 form {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin: 0 20px;
 }
 
 input[type="text"],
@@ -103,19 +102,22 @@ textarea {
   display: flex;
   align-items: center;
   flex-direction: row;
-  gap: 16px;
+  gap: 8px;
 }
 
 input[type="checkbox"] {
   appearance: none; 
   width: 25px;
   height: 25px;
+  min-width: 25px;
+  min-height: 25px;
   border: 2px solid var(--bleu-fritsch);
   border-radius: 5px; 
   background-color: white; 
   cursor: pointer;
   display: inline-block;
   position: relative;
+  flex-shrink: 0;
 }
 
 
@@ -137,6 +139,7 @@ input[type="checkbox"]:checked::after {
 
 .cta {
   margin-top: 8px;
+  align-self: center;
 }
 
 .rgpd {
@@ -149,3 +152,28 @@ input[type="checkbox"]:checked::after {
     max-width: 100%;
 }
 
+@media screen and (min-width: 768px) {
+
+  form{
+    width: 100%;
+    max-width: 80%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  form {
+    width: 100%;
+    max-width: 50%;
+    margin: auto;
+  }
+
+}
+
+@media screen and (min-width: 1400px) {
+  form {
+    width: 100%;
+    max-width: 33%;
+    margin: auto;
+  }
+
+}
