@@ -430,7 +430,6 @@ body.no-scroll {
 /****************** footer **********************/
 
 footer {
-  font-size: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -439,6 +438,10 @@ footer {
   background-color: var(--bleu-fritsch);
   color: white;
   text-align: center;
+}
+
+footer p {
+    font-size: 14px;
 }
 
 footer img {
@@ -485,7 +488,7 @@ footer .horaires {
 
 .contact-card {
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   display: flex;
   flex-direction: column;
   padding: 16px 32px;;
@@ -519,7 +522,7 @@ footer .horaires {
 }
 
 .navigation-card a {
-  font-size: 12px;
+  font-size: 14px;
   text-decoration: none;
   text-transform: uppercase;
   color: white;
