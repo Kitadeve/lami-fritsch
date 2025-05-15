@@ -9,13 +9,13 @@ function menuMobile() {
   const body = document.body;
 
   
-  btn.addEventListener("click", () => {
+  btn.addEventListener("click", function() {
     header.classList.toggle("show-overlap");
     body.classList.toggle("no-scroll");
   });
 
   links.forEach(link => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", function() {
       header.classList.remove("show-overlap");
       body.classList.remove("no-scroll");
     });
@@ -38,17 +38,17 @@ function updateHeaderHeight() {
 }
 
 // Écouteurs d'événements
-window.addEventListener("DOMContentLoaded", () => {
-  menuMobile();
-});
+// window.addEventListener("DOMContentLoaded", () => {
+//   menuMobile();
+// });
 
-window.addEventListener("load", () => {
+window.addEventListener("load", function() {
   updateHeaderHeight();
   updateBurgerHeight();
   // updateHeroHeight();
 });
 
-window.addEventListener("resize", () => {
+window.addEventListener("resize", function() {
   updateHeaderHeight();
   updateBurgerHeight();
 });

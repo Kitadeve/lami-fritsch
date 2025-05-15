@@ -9,8 +9,8 @@ function loadHeader() {
   document.body.insertBefore(headerPlaceholder, document.body.firstChild);
 
   fetch("./assets/partials/header.html")
-    .then((response) => response.text())
-    .then((data) => {
+    .then(response => response.text())
+    .then(data => {
       document.getElementById("header-placeholder").innerHTML = data;
 
       // Re-initialize header-related scripts after the header is loaded
