@@ -1,0 +1,81 @@
+.intro {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px; 
+}
+
+h1 {
+    margin-bottom: 16px;
+    align-self: center;
+}
+
+h2 {
+  margin: 16px;
+}
+
+.plugin-placeholder {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 0 20px;
+  padding: 0 20px;
+  background-color: black;
+  max-width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  display: none;
+}
+
+input {
+  border-top: none;
+  width: 100%;
+  padding: 5px 10px;
+}
+
+h2 {
+  color:white;
+  text-align: center;
+}
+
+p.condition,
+p.plugin-info {
+  color: #A8A8A8;
+}
+
+.info-plugin {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  width: 100%;
+  gap: 8px;
+  align-items: center;
+}
+
+.dash {
+  align-self: stretch;
+  width: 100%;
+  border-color: #A8A8A8;
+}
+.plugin-cta {
+  color:  black;
+  background-color: white;
+  width: 100%;
+  margin-top: 16px;
+}

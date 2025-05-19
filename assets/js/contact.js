@@ -23,7 +23,7 @@ form.addEventListener('submit', function(e){
 
     // Nettoyage des entrées
     const lastName = sanitizeInput(form.lastName.value.trim());
-    const firstName = sanitizeInput(form.fisrtName.value.trim());
+    const firstName = sanitizeInput(form.firstName.value.trim());
     const email = sanitizeInput(form.email.value.trim());
     // const select = sanitizeInput(form.subject.value);
 
@@ -45,14 +45,23 @@ form.addEventListener('submit', function(e){
         inputEmailIsValid = true;
     }
 
-    if (inputLastNameIsValid && inputFirstNameIsValid && inputEmailIsValid && inputSelectIsValid) {
+    if (inputLastNameIsValid && inputFirstNameIsValid && inputEmailIsValid) {
+        // alert("Formulaire envoyé")
         message.innerText = "Formulaire envoyé";
         message.classList.add("message-succes");
         message.classList.remove("message-error");
         // Ici, tu peux envoyer le formulaire via AJAX si besoin
     } else {
+        // alert("Formulaire invalide")
         message.innerText = "Formulaire invalide";
         message.classList.add("message-error");
         message.classList.remove("message-succes");
     }
+
+    setTimeout(function () {
+        message.innerText = ""
+        message.classList.remove("message-error")
+        message.classList.remove("message-succes")
+    }, 3000)
+
 });

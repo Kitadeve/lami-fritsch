@@ -1,0 +1,36 @@
+{
+  "entrees": [
+    {
+      "id": 1,
+      "nom": "Salade de tomates au thon et vinaigre balsamique"
+    },
+    {
+      "id": 2,
+      "nom": "Carottes râpées et œuf dur"
+    }
+  ],
+  "plats": [
+    {
+      "id": 1,
+      "nom": "Assiette mix grill lard, merguez, échine de porc",
+      "accompagnement": "Sauce barbecue, maïs et potato"
+    },
+    {
+      "id": 2,
+      "nom": "Poulet rôti",
+      "accompagnement": "Gratin dauphinois"
+    }
+  ],
+  "menu_jours": [
+    {
+      "jour": "Jeudi",
+      "entree_id": 1,
+      "plat_id": 1
+    },
+    {
+      "jour": "Lundi",
+      "entree_id": 2,
+      "plat_id": 2
+    }
+  ]
+}
