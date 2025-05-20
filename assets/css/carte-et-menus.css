@@ -11,36 +11,18 @@ h1 {
   .plats-du-jour span,
   .card-jour,
   .card-plats {
-    opacity: 0;
-    transition: opacity 1s ease, transform 1s ease;
+    opacity: 1;
+    transition: opacity 0.6s ease, transform 0.6s ease;
   }
 
-  .plats-du-jour h2.visible,
-  .plats-du-jour span.visible,
-  .card-jour.visible,
-  .card-plats.visible {
-    opacity: 1;
-    transform: translateY(0); 
-  }
-  
-@media screen and (max-width: 1023px) {
-  
-  /* .plats-du-jour h2,
-  .plats-du-jour span,
-  .card-jour,
-  .card-plats {
+  .plats-du-jour h2.non-visible,
+  .plats-du-jour span.non-visible,
+  .card-jour.non-visible,
+  .card-plats.non-visible {
     opacity: 0;
-    transition: opacity 1s ease, transform 1s ease;
+    /* transform: translateY(0);  */
   }
-
-  .plats-du-jour h2.visible,
-  .plats-du-jour span.visible,
-  .card-jour.visible,
-  .card-plats.visible {
-    opacity: 1;
-    transform: translateY(0); 
-  } */
-}
+  
 
 
 /************ Plats du jour *************/
@@ -208,7 +190,7 @@ p.sides {
 
 /* animation en css pour palier au manque de js (pas pertinent et génant, a cause des filtres) */
  
-.plats-du-jour h2 {
+/* .plats-du-jour h2 {
   opacity: 0;
   animation: appear 2s ease-out 1s forwards;
 }
@@ -232,7 +214,7 @@ p.sides {
 .plats-du-jour .jour-trois {
   opacity: 0;
   animation: appear 2s ease-out 2.5s forwards;
-}
+} */
 
 
 
@@ -287,7 +269,7 @@ p.sides {
     outline: 2px solid #4a90e2;
   }
 
-  .plats-hidden,
+  .plats-filtre,
   .tartes-flambees,
   .desserts{
     flex-direction: column;

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const platsSection = document.querySelector(".plats-hidden");
+    const platsSection = document.querySelector(".plats-filtre");
     const tartesSection = document.querySelector(".tartes-flambees");
     const dessertsSection = document.querySelector(".desserts");
     const filterTitles = document.querySelectorAll(".filtre h3");

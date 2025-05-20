@@ -88,19 +88,19 @@ const plats = document.querySelectorAll('.card-plats, .card-jour, .plats-du-jour
 
 // //Création de la fonction Intersction Observer
 function initializeObserver() {
-  // Enlever la classe visible au chargement
-  plats.forEach(plat => plat.classList.remove('visible'));
+  // Enlever la classe non-visible au chargement
+  plats.forEach(plat => plat.classList.remove('non-visible'));
 
   const observer = new IntersectionObserver(function (entries) {
     entries.forEach(function(entry) {
       if (window.innerWidth < 1024) {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+          entry.target.classList.remove('non-visible');
         } else {
-          entry.target.classList.remove('visible');
+          entry.target.classList.add('non-visible');
         }
       } else {
-        entry.target.classList.add('visible');
+        entry.target.classList.remove('non-visible');
       }
     });
   }, {
