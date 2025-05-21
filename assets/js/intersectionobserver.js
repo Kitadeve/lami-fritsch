@@ -83,7 +83,7 @@
 
 
 
-// déclarer un variable pour sélectionner la bonne classe css
+// déclarer une variable pour sélectionner les bonnes classes css
 const plats = document.querySelectorAll('.card-plats, .card-jour, .plats-du-jour h2, .plats-du-jour span');
 
 // //Création de la fonction Intersction Observer
@@ -91,7 +91,7 @@ function initializeObserver() {
   // Enlever la classe non-visible au chargement
   plats.forEach(plat => plat.classList.remove('non-visible'));
 
-  const observer = new IntersectionObserver(function (entries) {
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(function(entry) {
       if (window.innerWidth < 1024) {
         if (entry.isIntersecting) {
@@ -113,6 +113,9 @@ function initializeObserver() {
   plats.forEach(function(plat) {
     observer.observe(plat);
   });
+
+ 
+  
 }
 
 initializeObserver();
