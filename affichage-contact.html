@@ -12,17 +12,32 @@
     <main>
     <h2>Messages enregistrés</h2>
     <ul id="messageList"></ul>
+    <button id="reset" type="button">Vider les messages</button>
 </main>
 <style>
+    main {
+        margin: 20px;
+        display: flex;
+        height: 80vh;
+    }
+
     #messageList {
         align-self: flex-start;
         
     }
 
     #messageList li{
-        padding: 20px;
         justify-self: flex-start;
         line-height: 1.2em;
+    }
+
+    button {
+        padding: 16px 8px;
+        border-radius: 5px;
+        box-shadow: var(--box-shadow);
+        background-color: var(--cta);
+        color: white;
+        align-self: flex-start;
     }
 </style>
     <script>
@@ -46,14 +61,20 @@ document.addEventListener('DOMContentLoaded', () => {
                         Message : ${msg.message}<br>
                         Accepte la newsletter : ${accepteNewsletter}`;
     messageList.appendChild(li);
-    if (messages.length >=5) {
-        localStorage.clear()
-    }
-    console.log(messages.length);
   });
+    document.getElementById("reset").addEventListener("click", () => {
+        localStorage.removeItem("contactMessages")
+        location.reload()
+    })
+    // if (messages.length >=5) {
+    //     localStorage.clear()
+    // }
+    console.log(messages.length);
 });
-</script>
 
+
+
+</script>
     <script src="./assets/js/global.js"></script>
     <script src="./assets/js/partials.js"></script>
 </body>

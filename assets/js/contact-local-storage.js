@@ -2,6 +2,7 @@ const form = document.querySelector("form");
 const validation = document.querySelector(".validation");
 const popUp = document.querySelector(".validation-card");
 const btn = document.querySelector(".validation-confirm");
+
 let validationTimeout = null
 
 // Fonction de nettoyage des entrées utilisateur
@@ -106,7 +107,6 @@ form.addEventListener('submit', function(e){
 
         // Enregistrer dans le localStorage
         localStorage.setItem('contactMessages', JSON.stringify(messages));
-        // console.log(contact);
         
         // Réinitialiser le formulaire
         this.reset();
@@ -120,16 +120,16 @@ form.addEventListener('submit', function(e){
 
   // reset de la valeur 
 
-    // if (validationTimeout) {
-    //     clearTimeout(validationTimeout);
-    // }
+    if (validationTimeout) {
+        clearTimeout(validationTimeout);
+    }
 
-    // validationTimeout = setTimeout(function () {
-    //     validation.innerText = "";
-    //     popUp.classList.remove("validation-error");
-    //     popUp.classList.remove("validation-succes");
-    //     form.classList.remove("active");
-    // }, 4000);
+    validationTimeout = setTimeout(function () {
+        validation.innerText = "";
+        popUp.classList.remove("validation-error");
+        popUp.classList.remove("validation-succes");
+        form.classList.remove("active");
+    }, 4000);
 });
 
 

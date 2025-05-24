@@ -4,28 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Admin - Plats du jour</title>
+  <link rel="stylesheet" href="./assets/css/styleguide.css">
+  <link rel="stylesheet" href="./assets/css/globals.css">
+  <link rel="stylesheet" href="./assets/css/contact.css">
   <link rel="stylesheet" href="./assets/css/admin.css">
+  <script src="./assets/js/admin.js"></script>
 </head>
 <body>
-  <h1>Ajouter un plat du jour</h1>
-  <form id="form-pdj">
-    <label for="jour">Jour :</label>
-    <select id="jour" required>
-      <option value="">Choisir un jour</option>
-      <option>Mercredi</option>
-      <option>Jeudi</option>
-      <option>Vendredi</option>
-    </select><br/>
+  <main>
+    <h1>Ajouter un plat du jour</h1>
+    <form id="form-pdj">
+      <label for="jour">Jour :</label>
+      <select id="jour" required>
+        <option value="">Choisir un jour</option>
+        <option>Mercredi</option>
+        <option>Jeudi</option>
+        <option>Vendredi</option>
+      </select><br/>
 
-    <label for="entree">Entrée :</label>
-    <input type="text" id="entree" required><br/>
+      <label for="entree">Entrée :</label>
+      <input type="text" id="entree" required><br/>
 
-    <label for="plat">Plat principal :</label>
-    <input type="text" id="plat" required><br/>
+      <label for="plat">Plat principal :</label>
+      <input  type="text" id="plat" required><br/>
 
-    <button type="submit">Ajouter</button>
-  </form>
-
-  <script src="./assets/js/admin.js"></script>
+      <button class="cta" type="submit">Ajouter</button>
+    </form>
+    
+    <button class="cta" id="reset" type="button">Clear local storage</button>
+  </main>
+  
+  <script src="./assets/js/partials.js"></script>
+  <script src="./assets/js/global.js"></script>
 </body>
 </html>
