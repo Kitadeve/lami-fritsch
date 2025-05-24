@@ -10,6 +10,11 @@
   gap: 12px; 
 } 
 
+h1 {
+  align-self: center;
+  margin-bottom: 16px;
+}
+
 h2 {
   align-self: flex-start;
 }
@@ -69,7 +74,7 @@ textarea {
   width: 100%;
   box-shadow: var(--box-shadow);
   border: 0px;
-  padding: 5px 10px;
+  padding: 8px 12px;
   box-sizing: border-box;
   border-radius: 5px;
 }
@@ -156,10 +161,83 @@ input[type="checkbox"]:checked::after {
   align-self: flex-start;
 }
 
+.validation-card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px;
+  gap: 16px;
+  position: fixed;
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px;
+  background-color: rgba(51, 66, 100, 0.8);
+  box-shadow: var(--box-shadow);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 100;
+  color: white;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.5s ease-out;
+}
+
+/* Erreur : rouge vif + glow + shake */
+.validation-error.validation-card {
+  border-color: #ff3b3b;
+  box-shadow: 0 0 24px 8px #ff3b3b, 0 0 0 8px #fff0;
+  animation: shake 0.4s;
+}
+
+/* Succès : vert lumineux + glow + pulse */
+.validation-succes.validation-card {
+  border-color: #00c853;
+  box-shadow: 0 0 24px 8px #00c853, 0 0 0 8px #fff0;
+  animation: pulse 0.7s;
+}
+
+/* Animation shake pour l'erreur */
+@keyframes shake {
+  0% { transform: translate(-50%, -50%) translateX(0); }
+  20% { transform: translate(-50%, -50%) translateX(-10px); }
+  40% { transform: translate(-50%, -50%) translateX(10px); }
+  60% { transform: translate(-50%, -50%) translateX(-8px); }
+  80% { transform: translate(-50%, -50%) translateX(8px); }
+  100% { transform: translate(-50%, -50%) translateX(0); }
+}
+
+/* Animation pulse pour le succès */
+@keyframes pulse {
+  0% { box-shadow: 0 0 24px 4px #00c85388, 0 0 0 8px #fff0; }
+  50% { box-shadow: 0 0 48px 16px #00e676cc, 0 0 0 8px #fff0; }
+  100% { box-shadow: 0 0 24px 4px #00c85388, 0 0 0 8px #fff0; }
+}
+.validation-card button {
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+  background-color: var(--cta);
+  font-style: bold;
+}
+
+.active .validation-card{
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.6s ease-out;
+}
+
+
+.validation {
+  text-align: center;
+}
+
+
+
 #map {
     max-width: 100%;
 }
 
+/*********************** animations  *********************/
 .un {
   animation: slideInFromBottom 0.7s ease-in forwards;
 }

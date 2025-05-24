@@ -1,14 +1,14 @@
-<header>
-  <a class="logo-desktop-top-wrapper"href="index.html">
-    <p>Retour à l'accueil</p>
-    <img src="./assets/img/svg/logo-horizontal-grand.svg" alt="le logo du restaurant, cigogne à gauche et 'L'ami Fritsch' à droite"">
+<header role="banner">
+  <a class="logo-desktop-top-wrapper" href="index.html">
+    <span class="sr-only">Retour à l'accueil</span>
+    <img src="./assets/img/svg/logo-horizontal-grand.svg" alt="Logo du restaurant L'ami Fritsch">
   </a>
   <a class="logo-mobile-top-wrapper" href="index.html">
-    <p>Retour à l'accueil</p>
-    <img src="./assets/img/svg/logo-horizontal-petit.svg" alt="le logo du restaurant, cicogne à gauche et 'L'ami Fritsch' à droite">
+    <span class="sr-only">Retour à l'accueil</span>
+    <img src="./assets/img/svg/logo-horizontal-petit.svg" alt="Logo du restaurant L'ami Fritsch">
   </a>
-  <button id="burger" class="burger"><span class="bar"></span></button>
-  <nav class="menu-navigation">
+  <button id="burger" class="burger" aria-label="Ouvrir le menu principal"><span class="bar"></span></button>
+  <nav class="menu-navigation" role="navigation" aria-label="Menu principal">
     <ul>
       <li><a href="./index.html">Accueil</a></li>
       <li><a href="./carte-et-menus.html">Carte et menus</a></li>
@@ -16,8 +16,8 @@
       <li><a href="./contact.html">Groupe</a></li>
     </ul>
   </nav>
-  <div id="burger-overlap" class="burger-overlap">	
-    <nav class="liens">
+  <div id="burger-overlap" class="burger-overlap" aria-label="Menu mobile">
+    <nav class="liens" role="navigation" aria-label="Menu mobile">
       <ul>
         <li><a href="./index.html">Accueil</a></li>
         <li><a href="./carte-et-menus.html">Carte et menus</a></li>
@@ -30,29 +30,26 @@
     <div class="dash"></div>
     <div class="contacts">
       <div class="contact-card">
-        <p>
-          <p>
-            L'ami Fritsch <br> 9, rue princpale, 67350 <br> Ettendorf <br>
-          </p> 
-          <p>
-            Tél : 03.68.03.81.67
-          <p>
-            Mail : lamifritsch@orange.fr
-          </p>
-        </p>
+        <address>
+          L'ami Fritsch<br>
+          9, rue principale, 67350<br>
+          Ettendorf<br>
+          Tél : <a href="tel:0368038167">03.68.03.81.67</a><br>
+          Mail : <a href="mailto:lamifritsch@orange.fr">lamifritsch@orange.fr</a>
+        </address>
       </div>
-      <a class="cta" href="./contact.html">Contactez-nous</a>
+      <a class="cta" href="./reservations.html">Réserver</a>
     </div>
     <div class="dash"></div>
     <div class="socials">
       <a class="pastille" target="_blank" href="https://www.instagram.com/lamifritsch/">
-        <p>Suivez-nous sur instagram</p>
-        <img src="./assets/icons/instagram-brands.svg" alt="Logo instagram">
+        <span class="sr-only">Suivez-nous sur Instagram</span>
+        <img src="./assets/icons/instagram-brands.svg" alt="Logo Instagram">
       </a>
       <a class="pastille" target="_blank" href="https://www.facebook.com/Lamifritsch/">
-        <p>Suivez-nous sur facebook</p>
-        <img src="./assets/icons/facebook-f-brands-solid.svg"  alt="Logo facebook">
+        <span class="sr-only">Suivez-nous sur Facebook</span>
+        <img src="./assets/icons/facebook-f-brands-solid.svg" alt="Logo Facebook">
       </a>
-  </div>
+    </div>
   </div>
 </header>

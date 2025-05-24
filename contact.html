@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>L'ami Fritsch</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./assets/css/globals.css">
-    <link rel="stylesheet" href="./assets/css/styleguide.css">
-    <link rel="stylesheet" href="./assets/css/contact.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Réservation de groupe - L'ami Fritsch</title>
+    <meta name="description" content="Contactez L'ami Fritsch pour organiser
+                                      vos événements, réserver pour votre groupe.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
     <link rel="icon" type="image/x-icon" href="./assets/icons/Favicon.svg">
+    <link rel="stylesheet" href="./assets/css/styleguide.css">
+    <link rel="stylesheet" href="./assets/css/globals.css">
+    <link rel="stylesheet" href="./assets/css/contact.css">
 </head>
   <body>
 
@@ -22,7 +24,7 @@
       <!--------------------- Introduction ---------------------->
 
       <section class="intro">
-        <h2>Groupe</h2>
+        <h1>Groupe</h1>
         <p>L’équipe de l’ami Fritsch se tient à 
           votre disposition pour organiser votre 
           déjeuner ou dîner d’affaires, repas de 
@@ -58,8 +60,8 @@
           <img class="img-desktop trois" src="./assets/img/contacts-sanglier-broche-1380.jpg" alt="Photo de sangliers à la broche">
         </div>
         <div class="photo-container">
-          <img class="img-mobile quatre" src="./assets/img/contacts-birthday-490.jpg" alt="Photo du coin stammtishc préparé pour un anniversaire">
-          <img class="img-desktop quatre" src="./assets/img/contacts-birthday-1380.jpg" alt="Photo du coin stammtishc préparé pour un anniversaire">
+          <img class="img-mobile quatre" src="./assets/img/contacts-birthday-490.jpg" alt="Photo du coin stammtisch préparé pour un anniversaire">
+          <img class="img-desktop quatre" src="./assets/img/contacts-birthday-1380.jpg" alt="Photo du coin stammtisch préparé pour un anniversaire">
 
         </div>
       </section>
@@ -73,38 +75,39 @@
           <p class="rgpd">Les champs marquées d’un astérisque sont obligatoires</p>
           <div class="nom-prenom">
             <div class="nom">
-              <label for="lname"></label>
-              <input type="text" id="lname" name="lname" placeholder="Nom*" required aria-required="true">
+              <label for="lastName" class="sr-only">Nom de famille</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Nom*"  aria-required="true">
             </div>
             <div class="prenom">
-              <label for="fname"></label>
-              <input type="text" id="fname" name="fname" placeholder="Prénom*" required aria-required="true">
+              <label for="firstName" class="sr-only">Prénom</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Prénom*"  aria-required="true">
             </div>
           </div>
           <div class="elements">
             <div>
-              <label for="email"></label>
-              <input type="email" id="email" name="e-mail" placeholder="E-mail*" required aria-required="true">
+              <label for="email" class="sr-only">Adress e-mail</label>
+              <input type="email" id="email" name="email" placeholder="E-mail*"  aria-required="true">
             </div>
             <div>
-              <label for="phone"></label>
-              <input type="tel" id="phone" name="phone" placeholder="Téléphone" pattern="[0-9]{10}">
+              <label for="phoneNumber" class="sr-only">Numéro de téléphone</label>
+              <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Téléphone" pattern="^(\+33|0)[1-9](?:[\s.-]?\d{2}){4}$">
             </div>
           </div>
           <div class="date-heure">
-            <label for="date-heure"></label>
-            <input type="datetime-local" id="date-heure" name="reservation" value="2025-05-02T18:45">
+            <label for="dateTime" class="sr-only">Date et heure</label>
+            <input type="datetime-local" id="dateTime" name="dateTime" value="2025-07-08T18:45">
           </div>
           <div class="elements">
             <div>
-              <label for="group-size"></label>
-              <input type="number" id="group-size" name="group-size" placeholder="Taille du groupe (de 16 à 100) *" min="16" max="100" required aria-required="true">
+              <label for="groupSize" class="sr-only">Taille du groupe</label>
+              <input type="number" id="groupSize" name="groupSize" placeholder="Taille du groupe (de 16 à 100) *" min="16" max="100" aria-required="true">
             </div>
             <div>
-              <label for="event"></label>
-              <input type="text" id="event" name="event" placeholder="Type d'événement" >
+              <label for="eventType" class="sr-only">Type d'événnement</label>
+              <input type="text" id="eventType" name="eventType" placeholder="Type d'événement" >
             </div>
-          </div> 
+          </div>
+          <label for="message" class="sr-only">Message</label>
           <textarea name="message" id="message" placeholder="Message" rows="10" ></textarea>
           <div class="news">
             <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" />
@@ -113,7 +116,10 @@
             </label>
           </div>
           <button class="cta" type="submit">Envoyer</button>
-          <div class="message"></div>
+          <div class="validation-card">
+            <p class="validation"></p>
+            <button class="validation-confirm" type="button">Compris</button>
+          </div>
           <p class="rgpd">
             Les informations recueillies via ce formulaire sont destinées
              à L'ami Fritsch pour la gestion de votre demande et pour vous 
@@ -122,7 +128,7 @@
             Pour plus de détails, consultez notre politique de protection des données.
           </p>
         </form>
-        
+        <a href="./affichage-contact.html" style="margin-top:32px" target="_blank" rel="noopener noreferrer">Page d'affichage du contenu pour présentation</a>
       </section>
 
       <!--------------------- API google maps ---------------------->
@@ -155,7 +161,7 @@
 
         <!---------------- footer ------------------------------->
 
-    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/contact-local-storage.js"></script>
     <script src="./assets/js/global.js"></script>
     <script src="./assets/js/partials.js"></script>
     <!-- <script src="./assets/js/maps.js"></script> -->
