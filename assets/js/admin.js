@@ -11,19 +11,38 @@ function sanitizeInput(input) {
               .replace(/&/g, "&amp;");
 }
 
-document.getElementById("form-pdj").addEventListener("submit", function (e) {
-  e.preventDefault();
 
-  const jour = sanitizeInput(document.getElementById("jour").value) ;
-  const entree = sanitizeInput(document.getElementById("entree").value) ;
-  const plat = sanitizeInput(document.getElementById("plat").value) ;
 
-  const platsDuJour = JSON.parse(localStorage.getItem("platsDuJour") || "{}");
-
-  platsDuJour[jour] = { entree, plat };
-
-  localStorage.setItem("platsDuJour", JSON.stringify(platsDuJour));
-  alert(`Plat du jour pour ${jour} enregistré !`);
+window.addEventListener("DOMContentLoaded", function () {
+  const formulairePdj = document.querySelector("form")
+  const resetLocalStorage = document.getElementById("reset")
+  console.log(formulairePdj);
   
-  this.reset();
-});
+
+  formulairePdj.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const jour = sanitizeInput(document.getElementById("jour").value) ;
+    const entree = sanitizeInput(document.getElementById("entree").value) ;
+    const plat = sanitizeInput(document.getElementById("plat").value) ;
+    console.log(this);
+    
+
+    const platsDuJour = JSON.parse(localStorage.getItem("platsDuJour") || "{}");
+
+    platsDuJour[jour] = { entree, plat };
+
+    localStorage.setItem("platsDuJour", JSON.stringify(platsDuJour));
+    alert(`Plat du jour pour ${jour} enregistré !`);
+    console.log(formulairePdj);
+    this.reset();
+  });
+  
+  resetLocalStorage.addEventListener("click", function() {
+    localStorage.removeItem("platsDuJour");
+  });
+})
+  
+
+
+
