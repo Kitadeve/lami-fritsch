@@ -18,7 +18,11 @@ function isValidName(name) {
 }
 
 function isValidPhoneNumber(phone) {
-  return /^(\+33|0)[1-9](?:[\s.-]?\d{2}){4}$/.test(phone);
+  // Français
+  const fr = /^(\+33|0)[1-9](?:[\s.-]?\d{2}){4}$/;
+  // Allemand
+  const de = /^(\+49|0049|0)[1-9][0-9\s.-]{3,14}$/;
+  return fr.test(phone) || de.test(phone);
 }
 
 function isValidEmail (email) {
@@ -50,13 +54,13 @@ form.addEventListener('submit', function(e){
     let errorMessage = "";
 
     // Validation des champs sur la donnée brute
-    if (lastNameRaw === "" || !isValidName(lastNameRaw)) {
+    if (lastNameRaw === "" || !isValidName(lastNameRaw) || lastNameRaw.lenght > 50) {
         errorMessage = "Veuillez entrer un nom valide (lettres, espaces, tirets, apostrophes).";
     } 
-    else if (firstNameRaw === "" || !isValidName(firstNameRaw)) {
+    else if (firstNameRaw === "" || !isValidName(firstNameRaw) || firstNameRaw > 50) {
         errorMessage = "Veuillez entrer un prénom valide (lettres, espaces, tirets, apostrophes).";
     }
-    else if (!isValidEmail(emailRaw)) {
+    else if (!isValidEmail(emailRaw) ||emailRaw.lenght > 100) {
         errorMessage = "Veuillez entrer une adresse e-mail valide.";
     }
     else if (phoneNumberRaw === "" || !isValidPhoneNumber(phoneNumberRaw)) {
@@ -66,7 +70,10 @@ form.addEventListener('submit', function(e){
         errorMessage = "Le nombre de convives doit être compris entre 16 et 100.";
         // console.log(groupSize); 
     }
-
+    else if (messageRaw.length > 1000) {
+      errorMessage = "Votre message est trop long."
+    }
+    
 
     // si il n'y pas de message d'erreur, il n'y a pas d'erreur et on peut enregistrer le contenu du formulaire
 
@@ -102,7 +109,7 @@ form.addEventListener('submit', function(e){
         // console.log(contact);
         
         // Réinitialiser le formulaire
-        form.reset();
+        this.reset();
     } 
     else {
         form.classList.add("active")
