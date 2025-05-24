@@ -164,11 +164,11 @@ input[type="checkbox"]:checked::after {
 .validation-card {
   display: flex;
   flex-direction: column;
-  padding: 24px 0px;
+  padding: 32px 24px;
   gap: 16px;
   position: fixed;
-  width: 50%;
-  height: 20%;
+  max-width: 50%;
+  height: auto;
   border-radius: 10px;
   background-color: rgba(51, 66, 100, 0.8);
   box-shadow: var(--box-shadow);
@@ -180,10 +180,39 @@ input[type="checkbox"]:checked::after {
   text-align: center;
   justify-content: space-around;
   align-items: center;
-  padding: 16px;
   transition: all 0.5s ease-out;
 }
 
+/* Erreur : rouge vif + glow + shake */
+.validation-error.validation-card {
+  border-color: #ff3b3b;
+  box-shadow: 0 0 24px 8px #ff3b3b, 0 0 0 8px #fff0;
+  animation: shake 0.4s;
+}
+
+/* Succès : vert lumineux + glow + pulse */
+.validation-succes.validation-card {
+  border-color: #00c853;
+  box-shadow: 0 0 24px 8px #00c853, 0 0 0 8px #fff0;
+  animation: pulse 0.7s;
+}
+
+/* Animation shake pour l'erreur */
+@keyframes shake {
+  0% { transform: translate(-50%, -50%) translateX(0); }
+  20% { transform: translate(-50%, -50%) translateX(-10px); }
+  40% { transform: translate(-50%, -50%) translateX(10px); }
+  60% { transform: translate(-50%, -50%) translateX(-8px); }
+  80% { transform: translate(-50%, -50%) translateX(8px); }
+  100% { transform: translate(-50%, -50%) translateX(0); }
+}
+
+/* Animation pulse pour le succès */
+@keyframes pulse {
+  0% { box-shadow: 0 0 24px 4px #00c85388, 0 0 0 8px #fff0; }
+  50% { box-shadow: 0 0 48px 16px #00e676cc, 0 0 0 8px #fff0; }
+  100% { box-shadow: 0 0 24px 4px #00c85388, 0 0 0 8px #fff0; }
+}
 .validation-card button {
   padding: 12px;
   border-radius: 10px;
@@ -202,12 +231,7 @@ input[type="checkbox"]:checked::after {
   text-align: center;
 }
 
-.validation-succes {
-  font-weight: bold;
-  color: white;
-  border-radius: 10px;
-  padding: 20px;
-}
+
 
 #map {
     max-width: 100%;

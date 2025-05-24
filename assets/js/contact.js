@@ -1,5 +1,6 @@
 const form = document.querySelector("form");
 const validation = document.querySelector(".validation");
+const popUp = document.querySelector(".validation-card");
 const btn = document.querySelector(".validation-confirm");
 let validationTimeout = null
 
@@ -36,7 +37,7 @@ form.addEventListener('submit', function(e){
     const groupSizeRaw = form.groupSize.value.trim();
     const eventTypeRaw = form.eventType.value.trim();
     const messageRaw = form.message.value.trim();
-    const subsribeNews = form.subscribeNews.checked;
+    const subscribeNews = form.subscribeNews.checked;
 
     const groupSize = parseInt(groupSizeRaw, 10);
 
@@ -58,24 +59,25 @@ form.addEventListener('submit', function(e){
     else if (!isValidEmail(emailRaw)) {
         errorMessage = "Veuillez entrer une adresse e-mail valide.";
     }
-    else if (!isValidPhoneNumber(phoneNumberRaw)) {
+    else if (phoneNumberRaw === "" || !isValidPhoneNumber(phoneNumberRaw)) {
         errorMessage = "Veuillez entrer un numéro de téléphone valide."
     }
     else if (isNaN(groupSize) || groupSize < 16 || groupSize > 100) {
         errorMessage = "Le nombre de convives doit être compris entre 16 et 100.";
-        console.log(groupSize); 
+        // console.log(groupSize); 
     }
+
+
+    // si il n'y pas de message d'erreur, il n'y a pas d'erreur et on peut enregistrer le contenu du formulaire
 
     if (errorMessage === "") {
         form.classList.add("active")
         validation.innerText = "Formulaire envoyé, merci !";
-        // validation.classList.add("validation-succes");
-        // validation.classList.remove("validation-error");
+        popUp.classList.add("validation-succes");
+        popUp.classList.remove("validation-error");
         // Ici, tu peux envoyer le formulaire via AJAX si besoin
 
           // On sanitize uniquement pour l'affichage ou l'envoi
-        
-
         const contact = {
              lastName: sanitizeInput(lastNameRaw),
              firstName: sanitizeInput(firstNameRaw),
@@ -83,9 +85,12 @@ form.addEventListener('submit', function(e){
              phoneNumber: sanitizeInput(phoneNumberRaw),
              dateTime: new Date(dateTimeRaw).toLocaleString(),
              eventType: sanitizeInput(eventTypeRaw),
-             message: sanitizeInput(messageRaw)
+             message: sanitizeInput(messageRaw),
+             check: subscribeNews
         };
-
+        // console.log(contact);
+        // console.log(subscribeNews);
+        
         // Récupérer les messages existants ou initialiser un tableau vide
         const messages = JSON.parse(localStorage.getItem('contactMessages')) || [];
 
@@ -94,7 +99,7 @@ form.addEventListener('submit', function(e){
 
         // Enregistrer dans le localStorage
         localStorage.setItem('contactMessages', JSON.stringify(messages));
-        console.log(contact);
+        // console.log(contact);
         
         // Réinitialiser le formulaire
         form.reset();
@@ -102,27 +107,22 @@ form.addEventListener('submit', function(e){
     else {
         form.classList.add("active")
         validation.innerText = errorMessage;
-        // validation.classList.add("validation-error");
-        // validation.classList.remove("validation-succes");
+        popUp.classList.add("validation-error");
+        popUp.classList.remove("validation-succes");
     }
 
-  
+  // reset de la valeur 
 
-   
-    // Logs pour debug
-    console.log(lastName, firstName, email, phoneNumber, dateTime, groupSize, eventType, message, subsribeNews);
+    // if (validationTimeout) {
+    //     clearTimeout(validationTimeout);
+    // }
 
-
-    if (validationTimeout) {
-        clearTimeout(validationTimeout);
-    }
-
-    validationTimeout = setTimeout(function () {
-        validation.innerText = "";
-        validation.classList.remove("validation-error");
-        validation.classList.remove("validation-succes");
-        form.classList.remove("active");
-    }, 4000);
+    // validationTimeout = setTimeout(function () {
+    //     validation.innerText = "";
+    //     popUp.classList.remove("validation-error");
+    //     popUp.classList.remove("validation-succes");
+    //     form.classList.remove("active");
+    // }, 4000);
 });
 
 
@@ -131,8 +131,8 @@ form.addEventListener('submit', function(e){
 btn.addEventListener("click", function(){
     form.classList.remove("active");
     validation.innerText = "";
-    validation.classList.remove("validation-error");
-    validation.classList.remove("validation-succes");
+    popUp.classList.remove("validation-error");
+    popUp.classList.remove("validation-succes");
     console.log(btn, validationTimeout)
     if (validationTimeout) {
         clearTimeout(validationTimeout);
@@ -153,13 +153,3 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const messageList = document.getElementById('messageList');
-  const messages = JSON.parse(localStorage.getItem('contactMessages')) || [];
-
-  messages.forEach(msg => {
-    const li = document.createElement('li');
-    li.textContent = `${msg.dateTime} - ${msg.lastName} ${msg.firstName} (${msg.email}) : ${msg.subject}`;
-    messageList.appendChild(li);
-  });
-});

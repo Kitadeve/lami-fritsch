@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>L'ami Fritsch</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./assets/css/globals.css">
-    <link rel="stylesheet" href="./assets/css/styleguide.css">
-    <link rel="stylesheet" href="./assets/css/contact.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Réservation de groupe - L'ami Fritsch</title>
+    <meta name="description" content="Contactez L'ami Fritsch pour organiser
+                                      vos événements, réserver pour votre groupe.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
     <link rel="icon" type="image/x-icon" href="./assets/icons/Favicon.svg">
+    <link rel="stylesheet" href="./assets/css/styleguide.css">
+    <link rel="stylesheet" href="./assets/css/globals.css">
+    <link rel="stylesheet" href="./assets/css/contact.css">
 </head>
   <body>
 
@@ -58,8 +60,8 @@
           <img class="img-desktop trois" src="./assets/img/contacts-sanglier-broche-1380.jpg" alt="Photo de sangliers à la broche">
         </div>
         <div class="photo-container">
-          <img class="img-mobile quatre" src="./assets/img/contacts-birthday-490.jpg" alt="Photo du coin stammtishc préparé pour un anniversaire">
-          <img class="img-desktop quatre" src="./assets/img/contacts-birthday-1380.jpg" alt="Photo du coin stammtishc préparé pour un anniversaire">
+          <img class="img-mobile quatre" src="./assets/img/contacts-birthday-490.jpg" alt="Photo du coin stammtisch préparé pour un anniversaire">
+          <img class="img-desktop quatre" src="./assets/img/contacts-birthday-1380.jpg" alt="Photo du coin stammtisch préparé pour un anniversaire">
 
         </div>
       </section>
@@ -74,17 +76,17 @@
           <div class="nom-prenom">
             <div class="nom">
               <label for="lastName" class="sr-only">Nom de famille</label>
-              <input type="text" id="lastName" name="lastName" placeholder="Nom*" required aria-required="true">
+              <input type="text" id="lastName" name="lastName" placeholder="Nom*"  aria-required="true">
             </div>
             <div class="prenom">
               <label for="firstName" class="sr-only">Prénom</label>
-              <input type="text" id="firstName" name="firstName" placeholder="Prénom*" required aria-required="true">
+              <input type="text" id="firstName" name="firstName" placeholder="Prénom*"  aria-required="true">
             </div>
           </div>
           <div class="elements">
             <div>
               <label for="email" class="sr-only">Adress e-mail</label>
-              <input type="email" id="email" name="email" placeholder="E-mail*" required aria-required="true">
+              <input type="email" id="email" name="email" placeholder="E-mail*"  aria-required="true">
             </div>
             <div>
               <label for="phoneNumber" class="sr-only">Numéro de téléphone</label>
@@ -98,7 +100,7 @@
           <div class="elements">
             <div>
               <label for="groupSize" class="sr-only">Taille du groupe</label>
-              <input type="number" id="groupSize" name="groupSize" placeholder="Taille du groupe (de 16 à 100) *" min="16" max="100">
+              <input type="number" id="groupSize" name="groupSize" placeholder="Taille du groupe (de 16 à 100) *" min="16" max="100" aria-required="true">
             </div>
             <div>
               <label for="eventType" class="sr-only">Type d'événnement</label>
@@ -126,10 +128,8 @@
             Pour plus de détails, consultez notre politique de protection des données.
           </p>
         </form>
+        <a href="./affichage-contact.html" style="margin-top:32px" target="_blank" rel="noopener noreferrer">Page d'affichage du contenu pour présentation</a>
       </section>
-
-      <h2>Messages enregistrés</h2>
-    <ul id="messageList"></ul>
 
       <!--------------------- API google maps ---------------------->
 
