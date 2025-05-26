@@ -13,11 +13,34 @@ function loadHeader() {
     .then(data => {
       document.getElementById("header-placeholder").innerHTML = data;
 
-      // Re-initialize header-related scripts after the header is loaded
-      // setTimeout(() => { updateHeaderHeight(); }, 1000);
-      menuMobile();
-      updateHeaderHeight();
-      updateBurgerHeight(); // Update the burger height
+      const header = document.querySelector("header");
+      const firstImg = header ? header.querySelector("img") : null;
+      if (firstImg) {
+        if (firstImg.complete) {
+          // Image déjà chargée
+          menuMobile();
+          updateHeaderHeight();
+          updateBurgerHeight();
+        } else {
+          firstImg.addEventListener("load", () => {
+            menuMobile();
+            updateHeaderHeight();
+            updateBurgerHeight();
+            console.log(2);
+            
+          });
+          firstImg.addEventListener("error", () => {
+            menuMobile();
+            updateHeaderHeight();
+            updateBurgerHeight();
+          });
+        }
+      } else {
+        // Pas d'image, on lance tout de suite
+        menuMobile();
+        updateHeaderHeight();
+        updateBurgerHeight();
+      }
     })
     .catch((error) => console.error("Erreur lors du chargement du header :", error));
 }
