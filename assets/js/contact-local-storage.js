@@ -55,13 +55,13 @@ form.addEventListener('submit', function(e){
     let errorMessage = "";
 
     // Validation des champs sur la donnée brute
-    if (lastNameRaw === "" || !isValidName(lastNameRaw) || lastNameRaw.lenght > 50) {
+    if (lastNameRaw === "" || !isValidName(lastNameRaw) || lastNameRaw.length > 50) {
         errorMessage = "Veuillez entrer un nom valide (lettres, espaces, tirets, apostrophes).";
     } 
-    else if (firstNameRaw === "" || !isValidName(firstNameRaw) || firstNameRaw > 50) {
+    else if (firstNameRaw === "" || !isValidName(firstNameRaw) || firstNameRaw.length > 50) {
         errorMessage = "Veuillez entrer un prénom valide (lettres, espaces, tirets, apostrophes).";
     }
-    else if (!isValidEmail(emailRaw) ||emailRaw.lenght > 100) {
+    else if (!isValidEmail(emailRaw) ||emailRaw.length > 100) {
         errorMessage = "Veuillez entrer une adresse e-mail valide.";
     }
     else if (phoneNumberRaw === "" || !isValidPhoneNumber(phoneNumberRaw)) {

@@ -4,8 +4,6 @@
     document.querySelectorAll(".card-jour").forEach(card => {
       const jourEl = card.querySelector("h3.jour");
       const jour = jourEl.textContent.trim();
-      console.log(localStorage.getItem("platsDuJour"));
-      
       
       if (platsDuJour[jour]) {
         const { entree, plat } = platsDuJour[jour];
@@ -18,11 +16,6 @@
       }
     });
   });
-
-
-///////////////// clear du local storage à décommenter si besoin ///////////////////
-
-//   localStorage.clear();
 
 // version en fetch, pour chercher le menu écrit en dur dans le json et similer la recherche dans une bdd//
 

@@ -12,9 +12,10 @@ function loadHeader() {
     .then(response => response.text())
     .then(data => {
       document.getElementById("header-placeholder").innerHTML = data;
-
+      
       const header = document.querySelector("header");
       const firstImg = header ? header.querySelector("img") : null;
+      
       if (firstImg) {
         if (firstImg.complete) {
           // Image déjà chargée

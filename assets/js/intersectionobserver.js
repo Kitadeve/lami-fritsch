@@ -107,9 +107,6 @@ function initializeObserver() {
     threshold: 0.1 
   });
 
-  // Observe each element
-  // plats.forEach(plat => observer.observe(plat));
-
   plats.forEach(function(plat) {
     observer.observe(plat);
   });
