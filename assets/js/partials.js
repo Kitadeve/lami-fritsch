@@ -27,7 +27,6 @@ function loadHeader() {
             setTimeout(() => { updateHeaderHeight(); }, 100);
             // updateHeaderHeight();
             updateBurgerHeight();
-            // console.log(2);
             
           });
           firstImg.addEventListener("error", () => {
