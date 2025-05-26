@@ -210,17 +210,21 @@ p.sides {
   animation: appear 2s ease-out 2s forwards;
 }
 
-
 .plats-du-jour .jour-trois {
   opacity: 0;
   animation: appear 2s ease-out 2.5s forwards;
 } */
 
-
-
  .mobile {
   display: none;   /*pour empécher l'affichage des titres de section de carte sans filtre*/
   }
+
+  .filtre {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  align-self: stretch;
+}
 
   /* .bord{
     display: none;
@@ -239,13 +243,7 @@ p.sides {
   .centre h2 {
   text-align: center;
   }
-  .filtre {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-    align-self: stretch;
-  }
-
+ 
   .filtre h3 {
     cursor: pointer;
     text-decoration: none;

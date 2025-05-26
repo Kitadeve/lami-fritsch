@@ -304,15 +304,15 @@ body.no-scroll {
   transition: all 0.4s ease-out;
 }
 
-.burger-overlap .socials {
-  padding-bottom: 40px;
-}
-
 .show-overlap .burger-overlap {
   opacity: 1;
   width: 100%;
   left: 0;
   z-index: 2;
+}
+
+.burger-overlap .socials {
+  padding-bottom: 40px;
 }
 
 .show-overlap .burger .bar {

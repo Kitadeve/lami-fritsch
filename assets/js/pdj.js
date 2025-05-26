@@ -22,14 +22,14 @@
 
 //   localStorage.clear();
 
+// version en fetch, pour chercher le menu écrit en dur dans le json et similer la recherche dans une bdd//
+
 // fetch('./assets/json/menus-jour.json')
 //   .then(response => response.json())
 //   .then(data => {
 //     afficherPlatsDuJour(data.platsDuJour);
 //   });
 
-
-// version en fetch, pour chercher le menu écrit en dur dans le json et similer la recherche dans une bdd//
 
 // function afficherPlatsDuJour(plats) {
 //   const container = document.querySelector('.cards-pdj');
