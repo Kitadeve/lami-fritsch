@@ -189,8 +189,8 @@ input[type="checkbox"]:checked::after {
 /* Succès : vert lumineux + glow + pulse */
 .validation-succes.validation-card {
   border-color: #00c853;
+  animation: pulse 1s 0.5s;
   box-shadow: 0 0 24px 8px #00c853, 0 0 0 8px #fff0;
-  animation: pulse 0.7s;
 }
 
 /* Animation shake pour l'erreur */
@@ -205,9 +205,9 @@ input[type="checkbox"]:checked::after {
 
 /* Animation pulse pour le succès */
 @keyframes pulse {
-  0% { box-shadow: 0 0 24px 4px #00c85388, 0 0 0 8px #fff0; }
-  50% { box-shadow: 0 0 48px 16px #00e676cc, 0 0 0 8px #fff0; }
-  100% { box-shadow: 0 0 24px 4px #00c85388, 0 0 0 8px #fff0; }
+  0% { box-shadow: 0 0 24px 8px #00c853, 0 0 0 8px #fff0; }
+  50% { box-shadow: 0 0 24px 4px #00c85388, 0 0 0 8px #fff0; }
+  100% { box-shadow: 0 0 24px 8px #00c853, 0 0 0 8px #fff0; }
 }
 .validation-card button {
   padding: 12px;
@@ -219,7 +219,7 @@ input[type="checkbox"]:checked::after {
 
 .active .validation-card{
   transform: translate(-50%, -50%) scale(1);
-  transition: all 0.6s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 

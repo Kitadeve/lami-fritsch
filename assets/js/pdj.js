@@ -4,7 +4,9 @@
     document.querySelectorAll(".card-jour").forEach(card => {
       const jourEl = card.querySelector("h3.jour");
       const jour = jourEl.textContent.trim();
-
+      console.log(localStorage.getItem("platsDuJour"));
+      
+      
       if (platsDuJour[jour]) {
         const { entree, plat } = platsDuJour[jour];
         const frame = card.querySelector(".frame");
