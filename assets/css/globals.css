@@ -33,15 +33,24 @@ ul {
   list-style: none;
 }
 
-/* a blue color as a generic focus style */
-.cta:focus-visible { 
-  outline: 2px solid #4a90e2 !important;
-  outline: -webkit-focus-ring-color auto 5px !important;
-}
+
   
 a {
   text-decoration: none;
 }
+
+  a:focus-visible {
+    outline: 2px solid white;
+    border: 2px solid var(--cta);
+    offset: 2px;
+  }
+   
+  a:focus {
+    outline: 2px solid white;
+    border: 3px solid var(--cta);
+  }
+
+
 
 img {
   border-radius: 10px;
@@ -168,9 +177,18 @@ p {
   
 }
 
+
+
+.cta:focus-visible {
+  outline: 2px solid black;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+  
 .cta:focus {
-  outline: 2px solid #FFF;
-  outline-offset: 2px;
+  outline: 2px solid black;
+  border: 3px solid white;
+  border-radius: 10px;
 }
 
 /******************************* cta desktop ******************************/

@@ -45,10 +45,6 @@ img.img-mobile {
   object-fit: cover;
 }
 
-.map {
-  padding: 20px;
-}
-
 .formulaire {
   display: flex;
   flex-direction: column;
@@ -76,7 +72,7 @@ textarea {
   border: 0px;
   padding: 8px 12px;
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .nom-prenom {
@@ -125,7 +121,7 @@ input[type="checkbox"] {
   min-width: 25px;
   min-height: 25px;
   border: 2px solid var(--bleu-fritsch);
-  border-radius: 5px; 
+  border-radius: 10px; 
   background-color: white; 
   cursor: pointer;
   display: inline-block;
@@ -233,8 +229,9 @@ input[type="checkbox"]:checked::after {
 
 
 
-#map {
-    max-width: 100%;
+.map {
+    width: 100%;
+    padding: 20px;
 }
 
 /*********************** animations  *********************/
@@ -295,6 +292,11 @@ input[type="checkbox"]:checked::after {
     max-width: 50%;
     margin: auto;
   }
+
+  .map {
+    width: 50%;
+    padding: 20px;
+}
 
 }
 
