@@ -24,9 +24,10 @@ function loadHeader() {
         } else {
           firstImg.addEventListener("load", () => {
             menuMobile();
-            updateHeaderHeight();
+            setTimeout(() => { updateHeaderHeight(); }, 100);
+            // updateHeaderHeight();
             updateBurgerHeight();
-            console.log(2);
+            // console.log(2);
             
           });
           firstImg.addEventListener("error", () => {
