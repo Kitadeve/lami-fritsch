@@ -14,8 +14,9 @@ function loadHeader() {
       document.getElementById("header-placeholder").innerHTML = data;
 
       // Re-initialize header-related scripts after the header is loaded
-      menuMobile(); // Initialize the burger menu
-      updateHeaderHeight(); // Update the header height
+      // setTimeout(() => { updateHeaderHeight(); }, 1000);
+      menuMobile();
+      updateHeaderHeight();
       updateBurgerHeight(); // Update the burger height
     })
     .catch((error) => console.error("Erreur lors du chargement du header :", error));

@@ -37,16 +37,11 @@ function updateHeaderHeight() {
   root.style.setProperty("--header-height", `${header.offsetHeight}px`);
 }
 
-// Écouteurs d'événements
-// window.addEventListener("DOMContentLoaded", () => {
+// window.addEventListener("DOMcontentloaded", function() {
+//   updateHeaderHeight();
+//   updateBurgerHeight();
 //   menuMobile();
 // });
-
-window.addEventListener("load", function() {
-  updateHeaderHeight();
-  updateBurgerHeight();
-  // updateHeroHeight();
-});
 
 window.addEventListener("resize", function() {
   updateHeaderHeight();
