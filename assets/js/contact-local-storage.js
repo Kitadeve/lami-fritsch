@@ -148,15 +148,38 @@ btn.addEventListener("click", function(){
 
 
 // Affichage de la date d'aujourd'hui dans le formulaire
-
+// Quand la page est chargée...
 document.addEventListener("DOMContentLoaded", function() {
+  // On cherche le champ de type "datetime-local" dans le formulaire
   const dateTimeInput = form.querySelector('input[type="datetime-local"]');
   if (dateTimeInput) {
+    // On crée un objet Date pour avoir la date et l'heure actuelles
     const now = new Date();
-    // Format : YYYY-MM-DDTHH:MM (sans les secondes)
-    const pad = n => n.toString().padStart(2, '0');
-    const formatted = `${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())}T${pad(now.getHours())}:${pad(now.getMinutes())}`;
+
+    // On prépare chaque partie de la date (année, mois, jour, heure, minute)
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0'); // Mois commence à janvier = 0, hors, on veut afficher 01
+    const day = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+
+    // On assemble la date au format attendu par le champ (ex: 2025-05-28T14:30)
+    const formatted = `${year}-${month}-${day}T${hours}:${minutes}`;
+
+    // On met cette valeur dans le champ du formulaire
     dateTimeInput.value = formatted;
   }
 });
 
+// Affichage de la date d'aujourd'hui dans le formulaire vesrion compacte
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   const dateTimeInput = form.querySelector('input[type="datetime-local"]');
+//   if (dateTimeInput) {
+//     const now = new Date();
+//     // Format : YYYY-MM-DDTHH:MM (sans les secondes)
+//     const pad = n => n.toString().padStart(2, '0');
+//     const formatted = `${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())}T${pad(now.getHours())}:${pad(now.getMinutes())}`;
+//     dateTimeInput.value = formatted;
+//   }
+// });

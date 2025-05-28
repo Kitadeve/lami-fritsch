@@ -7,12 +7,12 @@ function filtres() {
     // Fonction pour afficher la section sélectionnée et masquer les autres
     function showSection(sectionToShow, activeFilterClass) {
       // Masquer toutes les sections
-      platsSection.style.display = "none";
-      tartesSection.style.display = "none";
-      dessertsSection.style.display = "none";
+      platsSection.classList.add("hide");
+      tartesSection.classList.add("hide");
+      dessertsSection.classList.add("hide");
 
       // Afficher la section sélectionnée
-      sectionToShow.style.display = "flex";
+      sectionToShow.classList.remove("hide");
 
       // Retirer la classe active de tous les titres de filtre
       filterTitles.forEach(title => title.classList.remove("active"));
@@ -47,9 +47,9 @@ function filtres() {
       showSection(platsSection, "filtre-plats");
     } else {
       // Sur mobile, toutes les sections sont visibles
-      platsSection.style.display = "block";
-      tartesSection.style.display = "block";
-      dessertsSection.style.display = "block";
+      platsSection.classList.remove("hide");
+      tartesSection.classList.remove("hide");
+      dessertsSection.classList.remove("hide");
     }
   };
 

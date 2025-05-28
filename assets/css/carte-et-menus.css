@@ -102,7 +102,6 @@ h1 {
   padding: 8px 0;
   font-family: var(--elements-menu-font-family);
   font-size: var(--elements-menu-mobile-font-size);
-  line-height: 1em;
   align-self: stretch;
 }
 
@@ -171,6 +170,12 @@ p.sides {
 
 .filtre{
   display: none;    /* pour empécher l'affichage des titres de sections de carte en mode filtre */
+}
+
+.plats-filtre.hide,
+.tartes-flambees.hide, /*pour cacher les sections non active en js */
+.desserts.hide {
+  display: none;
 }
 
 /*********************************** tablettes *****************************/
@@ -261,17 +266,9 @@ p.sides {
 
   .filtre h3:focus-visible {
     outline: 2px solid white;
-    border: 2px solid var(--cta);
-    border-radius: 10px;
+    border: 3px solid var(--cta);
   }
    
-  .filtre h3:focus {
-    outline: 2px solid white;
-    border: 3px solid var(--cta);
-    border-radius: 10px;
-    padding: 4px;
-  }
-
   .plats-filtre,
   .tartes-flambees,
   .desserts{

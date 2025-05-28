@@ -42,7 +42,7 @@
     /* --brun: #b7933e; */
     /* --brun: #E3A508; */
     --main-font-family: "Lato", Helvetica;
-    --elements-menu-font-family: "Dancing Script", Helvetica;
+    --elements-menu-font-family: "Lato", Helvetica;
     --h1-font-weight: bold;
     --h1-font-size: 2.5em;
     --h1--font-style: normal;
@@ -71,13 +71,13 @@
     --carte-jour-mobile-font-size: 1.5em;
     --carte-jour-mobile-font-style: normal;
     --elements-menu-mobile-font-weight: normal;
-    --elements-menu-mobile-font-size: 1.25rem;
+    --elements-menu-mobile-font-size: 1rem;
     --elements-menu-mobile-font-style: normal;
     --description-menu-mobile-font-weight: normal;
     --description-menu-mobile-font-size: 0.75em;
     --description-menu-mobile-font-style: normal;
     --elements-menu-desktop-font-weight: normal;
-    --elements-menu-desktop-font-size: 2rem;
+    --elements-menu-desktop-font-size: 1rem;
     --elements-menu-desktop-font-style: normal;
     --carte-jour-desktop-font-weight: normal;
     --carte-jour-desktop-font-size: 2.5em;
