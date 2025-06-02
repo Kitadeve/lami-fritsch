@@ -12,35 +12,39 @@ function loadHeader() {
     .then(response => response.text())
     .then(data => {
       document.getElementById("header-placeholder").innerHTML = data;
-      
       const header = document.querySelector("header");
-      const firstImg = header ? header.querySelector("img") : null;
+      //Expression ternaire, si le header existe (si il est chargé), img prend la valeur du querySelector, sinon, elle est null
+      // const img = header ? header.querySelector("img") : null;
+      const img = header.querySelector("img")
       
-      if (firstImg) {
-        if (firstImg.complete) {
+      // if (img) {
+      
+        if (img.complete) {
           // Image déjà chargée
           menuMobile();
           updateHeaderHeight();
           updateBurgerHeight();
         } else {
-          firstImg.addEventListener("load", () => {
+          img.addEventListener("load", () => {
             menuMobile();
             setTimeout(() => { updateHeaderHeight(); }, 100);
             // updateHeaderHeight();
             updateBurgerHeight();
           });
-          firstImg.addEventListener("error", () => {
+          img.addEventListener("error", () => {
             menuMobile();
             updateHeaderHeight();
             updateBurgerHeight();
           });
         }
-      } else {
-        // Pas d'image, on lance tout de suite
-        menuMobile();
-        updateHeaderHeight();
-        updateBurgerHeight();
-      }
+
+      // } 
+      // else {
+      //   // Pas d'image, on lance tout de suite
+      //   menuMobile();
+      //   updateHeaderHeight();
+      //   updateBurgerHeight();
+      // }
     })
     .catch((error) => console.error("Erreur lors du chargement du header :", error));
 }

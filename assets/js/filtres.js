@@ -2,7 +2,7 @@ function filtres() {
     const platsSection = document.querySelector(".plats-filtre");
     const tartesSection = document.querySelector(".tartes-flambees");
     const dessertsSection = document.querySelector(".desserts");
-    const filterTitles = document.querySelectorAll(".filtre h3");
+    const filterTitles = document.querySelectorAll(".filtre button");
 
     // Fonction pour afficher la section sélectionnée et masquer les autres
     function showSection(sectionToShow, activeFilterClass) {
@@ -54,19 +54,14 @@ function filtres() {
   };
 
   // Accessibilité clavier : active le filtre avec Entrée ou Espace
-  document.querySelectorAll(".filtre h3").forEach((element) => {
-    element.addEventListener("keydown", (event) => {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault(); // Empêche le défilement de la page si "Espace" est pressé
-        element.click(); // Simule un clic sur l'élément
-      }
-    });
-
-    element.addEventListener("click", () => {
-      // Exemple d'action à effectuer lors du clic ou de l'appui sur Entrée/Espace
-      console.log(`${element.textContent} a été sélectionné`);
-    });
-  });
+  // document.querySelectorAll(".filtre h3").forEach((element) => {
+  //   element.addEventListener("keydown", (event) => {
+  //     if (event.key === "Enter" || event.key === " ") {
+  //       event.preventDefault(); // Empêche le défilement de la page si "Espace" est pressé
+  //       element.click(); // Simule un clic sur l'élément
+  //     }
+  //   });
+  // });
 
   document.addEventListener("DOMContentLoaded", filtres)
   window.addEventListener("resize", filtres)

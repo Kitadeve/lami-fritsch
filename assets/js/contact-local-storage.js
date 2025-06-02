@@ -5,7 +5,7 @@ const btn = document.querySelector(".validation-confirm");
 
 let validationTimeout = null
 
-// Fonction de nettoyage des entrées utilisateur
+// Fonction de nettoyage des entrées utilisateur pour éviter les attaques xss
 function sanitizeInput(input) {
   return input.replace(/</g, "&lt;")
               .replace(/>/g, "&gt;")

@@ -249,22 +249,36 @@ p.sides {
   text-align: center;
   }
  
-  .filtre h3 {
-    cursor: pointer;
-    text-decoration: none;
-    transition: text-decoration 0.3s ease;
+ .filtre button {
+  /* Reset du style natif du bouton */
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-align: inherit;
+  /* Hérite du style du parent (ici, le h3 ou la classe filtre) */
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  /* Supprime l’apparence bouton sur certains navigateurs */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   }
   
-  .filtre h3:hover {
+  .filtre button:hover {
     text-decoration: underline;
   }
   
-  .filtre h3.active {
+  .filtre button.active {
     text-decoration: underline;
     font-weight: bold; 
   }
 
-  .filtre h3:focus-visible {
+  .filtre button:focus-visible {
     outline: 2px solid white;
     border: 3px solid var(--cta);
   }
