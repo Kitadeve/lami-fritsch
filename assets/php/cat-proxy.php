@@ -1,8 +1,8 @@
 <?php
 header('Content-Type: application/json');
 
-// Ta clé API (ne jamais la mettre côté JS !)
-$apiKey = 'live_PeZJ564McjPA1Z5n6JJ62FmBu8ByoVb5LnYqOlblTbLZZXxnKQYvxNmJs7MC6JBG';
+// Inclure la clé API depuis un fichier non versionné
+include 'config.php';
 
 // Prépare la requête cURL
 $ch = curl_init();
