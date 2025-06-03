@@ -46,7 +46,7 @@ const reload = document.querySelector("#reload")
 function getCat() {
   const chats = document.querySelector(".chats");
 
-  fetch("../thomas-karcher/assets/php/cat-proxy.php")
+  fetch("./assets/php/cat-proxy.php")
     .then(response => response.json())
     .then(result => {
       chats.innerHTML = "";
