@@ -443,7 +443,7 @@ body.no-scroll {
   }
 
  /* affichage du menu de navigation du burger mais en version desktop   */
- 
+
 .burger-overlap {         
   opacity: 1;
   flex: none;
@@ -455,6 +455,7 @@ body.no-scroll {
   background: none;
   height: auto;
   padding: 0;
+  transition: none;
 }
 
 .liens ul {
