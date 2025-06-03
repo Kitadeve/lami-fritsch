@@ -25,9 +25,11 @@ function menuMobile() {
 // Mise à jour de la hauteur du menu burger
 function updateBurgerHeight() {
   const headerHeight = document.querySelector("header").offsetHeight;
-  const burgerOverlap = document.querySelector(".burger-overlap");
+  // const burgerOverlap = document.querySelector(".burger-overlap");
   const burgerHeight = window.innerHeight - headerHeight;
-  burgerOverlap.style.height = `${burgerHeight}px`;
+  const root = document.documentElement;
+  // burgerOverlap.style.height = `${burgerHeight}px`;
+  root.style.setProperty("--burger-height", `${burgerHeight}px`);
 }
 
 // Mise à jour de la hauteur du header
