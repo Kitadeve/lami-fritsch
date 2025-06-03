@@ -442,7 +442,9 @@ body.no-scroll {
     display: none;
   }
 
-.burger-overlap {         /* pour assurer que l'overlap ne puisse pas être affiché en desktop */
+ /* affichage du menu de navigation du burger mais en version desktop   */
+ 
+.burger-overlap {         
   opacity: 1;
   flex: none;
   justify-content: center;
