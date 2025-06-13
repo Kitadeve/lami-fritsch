@@ -275,7 +275,7 @@ p.sides {
   
   .filtre button.active {
     text-decoration: underline;
-    font-weight: bold; 
+    font-weight: 600; 
   }
 
   .filtre button:focus-visible {

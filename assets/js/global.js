@@ -3,9 +3,9 @@
 
 // Gestion du menu mobile
 function menuMobile() {
-  const btn = document.querySelector(".burger");
+  const btn = document.querySelector("#burger");
   const header = document.querySelector("header");
-  const links = document.querySelectorAll(".burger-overlap a");
+  const links = document.querySelectorAll("#burger-overlap a");
   const body = document.body;
 
   

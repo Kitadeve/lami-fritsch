@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58.69 54.52">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-linecap: square;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="Calque_1-2" data-name="Calque 1">
+    <path class="cls-2" d="M15.12,53.36c0-23.4,2.52-42.5,14.22-42.5"/>
+    <path class="cls-2" d="M43.55,53.36c0-23.4-2.5-42.5-14.21-42.5"/>
+    <circle class="cls-2" cx="29.35" cy="5.93" r="4.93"/>
+    <path class="cls-2" d="M1,53.36C1,31.9,3.29,14.97,14.02,14.97"/>
+    <path class="cls-2" d="M19.88,17.76c-1.72-1.89-3.2-2.79-5.86-2.79"/>
+    <circle class="cls-2" cx="14.02" cy="10.45" r="4.52"/>
+    <path class="cls-2" d="M38.71,17.38c1.65-1.66,3.48-2.41,5.96-2.41"/>
+    <path class="cls-2" d="M57.69,53.36c0-21.45-2.29-38.39-13.02-38.39"/>
+    <circle class="cls-2" cx="44.67" cy="10.45" r="4.52"/>
+    <line class="cls-1" x1="1" y1="53.52" x2="57.69" y2="53.52"/>
+  </g>
+</svg>
