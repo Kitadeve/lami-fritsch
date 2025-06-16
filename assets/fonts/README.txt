@@ -14,8 +14,8 @@ that aren’t available as static fonts. Not all apps support variable fonts, an
 in those cases you can use the static font files for Dancing Script:
   static/DancingScript-Regular.ttf
   static/DancingScript-Medium.ttf
-  static/DancingScript-SemiBold.ttf
-  static/DancingScript-Bold.ttf
+  static/DancingScript-Semi600.ttf
+  static/DancingScript-600.ttf
 
 Get started
 -----------
