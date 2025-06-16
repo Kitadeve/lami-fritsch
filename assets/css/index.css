@@ -10,7 +10,7 @@
     position: relative;
     height: calc(100vh - var(--header-height, 50px));
     width: 100vw;
-    background-image: url(../img/index-hero1.jpg);
+    background-image: url(../img/index-hero1.webp);
     background-repeat: no-repeat;
     overflow: hidden;
   }
@@ -142,7 +142,7 @@
     }
 
     .hero{
-      background-image: url(../img/index-hero2.jpg);
+      background-image: url(../img/index-hero2.webp);
     }
   }
 
@@ -158,7 +158,7 @@
     /* hero */
    
     .hero {
-      background-image: url(../img/index-hero3.jpg);
+      background-image: url(../img/index-hero3.webp);
       background-position: 0px -200px;
     }
   

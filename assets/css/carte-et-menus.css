@@ -51,7 +51,7 @@ h1 {
   gap: 20px;
   border-radius: 10px;
   overflow: hidden;
-  background-image: url("../img/bg-carte-et-menus.jpg");
+  background-image: url("../img/bg-carte-et-menus.webp");
   background-size: cover;
   background-position: 50% 50%;
   box-shadow: var(--box-shadow);
