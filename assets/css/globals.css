@@ -58,6 +58,7 @@ address {
 a {
   display: inline-block;
   text-decoration: none;
+  color: white;
 }
 
   a:focus-visible {
@@ -120,14 +121,14 @@ p {
 }
 
 
-#logo-mobile{
+.logo-mobile{
   width: 140px;
   margin: 0 24px 0 24px ;
   border-radius: 0;
   box-shadow: none;
 }
 
-#logo-desktop {
+.logo-desktop {
   display: none;
   border-radius: 0;
   box-shadow: none;
@@ -194,13 +195,13 @@ p {
     display: block;
   }
 
-#logo-mobile{
+.logo-mobile{
   display: none;
   border-radius: 0;
   box-shadow: none;
 }
 
-#logo-desktop {
+.logo-desktop {
   display: block;
   width: 200px;
   border-radius: 0;
@@ -271,7 +272,7 @@ header {
   z-index: 5;
 } 
 
-nav img {
+ header nav img {
   display: none;
 }
 
@@ -339,14 +340,14 @@ body.no-scroll {
   transition: all 0.4s ease-out;
 }
 
-nav {
+header nav {
   width: 60%;
   margin: 0 auto;
   padding-bottom: 24px;
   border-bottom: 2px solid black;
 }
 
-nav ul {
+header nav ul {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -354,17 +355,17 @@ nav ul {
   gap: 30px;
 }
 
-nav li {
+header nav li {
   text-align: center;
 }
 
-nav a {
+header nav a {
   color: #000;
   font-size: var(--menu-nav-mobile-font-size);
   text-transform: uppercase;
 }
 
-header .contact-container {
+#contact-container {
   width: 60%;
   margin: 0 auto;
   padding: 24px 0 24px 0;
@@ -376,7 +377,7 @@ header .cta {
   width: auto;
 }
 
-#socials {
+.socials {
   display: flex;
   width: 60%;
   justify-content: center;
@@ -384,7 +385,7 @@ header .cta {
   margin: 24px auto 0 auto;
 }
 
-#socials li {
+.socials li {
   border-radius: 50px;
   background-color: var(--bleu-moyen);
   padding: 8px;
@@ -392,7 +393,7 @@ header .cta {
   transition: all 0.3s ease-out;
 }
 
-#socials li img {
+.socials li img {
   box-shadow: none;
   width: 25px;
   height: 25px;
@@ -400,22 +401,18 @@ header .cta {
   transition: all 0.3s ease-out;
 }
 
-#socials li:hover {
+.socials li:hover {
   transform: scale(1.1);
   transition: all 0.6s ease-out;
   background-color: var(--bleu-moyen);
 }
 
-#socials li:hover img {
+.socials li:hover img {
   filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
 }
 
 .menu-navigation {
   display: none;
-}
-
-.logo-desktop-top {
-  display: none
 }
 
 /************************** burger and menu animations *****************************/
@@ -454,8 +451,8 @@ header {
 }
 
 header address,
-header .contact-container,
-header #socials {
+header #contact-container,
+header .socials {
   display: none;
 }
 
@@ -466,10 +463,8 @@ header #socials {
   opacity: 1;
   justify-content: center;
   align-items: flex-end;
-  /* width: auto; */
   overflow: hidden;
   left: 0;
-  /* flex: 1; */
   position: relative;
   background: none;
   height: auto;
@@ -477,42 +472,39 @@ header #socials {
   transition: none;
 }
 
-nav {
+header nav {
   width: auto;
   margin: 0;
   padding: 0;
   border: none;
 }
 
-nav img {
+header nav img {
   display: inline-block;
   border-radius: 0;
   box-shadow: none;
   margin-right: 8px;
-  width: 24px;
+  width: 18px;
 }
 
-nav ul {
+header nav ul {
   display: flex;
   flex: 1;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 80px;
-  gap:16px;
-  padding: 0 8px;
-  border-left: 2px solid white;
-  border-right: 2px solid white;
-
-}
-
-#separator {
-  border-right: 2px solid white;
-  border-left: 2px solid white;
+  margin-right: 100px;
+  gap:32px;
   padding: 0 8px;
 }
 
-nav ul li a {
+/* #separator {
+  border-right: 2px solid white;
+  border-left: 2px solid white;
+  padding: 0 8px;
+} */
+
+header nav ul li a {
   display: flex;
   align-items: center;
 }
@@ -521,7 +513,7 @@ nav ul li a {
   display: none;
 }
 
-nav ul a {
+header nav ul a {
   color: white;
   font-size: var(--menu-nav-font-size);
 }
@@ -543,19 +535,30 @@ nav ul a {
 
 /****************** footer **********************/
 
+.logo-desktop-bottom-wrapper{
+  display: none;
+}
+
+footer p,
+footer a {
+  font-size: 14px;
+}
 footer {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 48px 0 20px 0;
+  gap: 32px;
+  padding: 34px 0 20px 0;
   width: 100vw;
+  padding: 40px 20px;
   background-color: var(--bleu-fritsch);
   color: white;
   text-align: center;
 }
 
-footer p {
-    font-size: 14px;
+footer .horaires-cards > p {
+    margin-bottom: 32px;
 }
 
 footer img {
@@ -563,149 +566,97 @@ footer img {
   max-width: 100%;
 }
 
-footer .horaires {
-  margin-bottom: 32px;
-  align-self: stretch;
-}
 
-.logo-info { 
+footer nav {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 32px;
 }
 
-.horaires-cards {
-  display: flex;
-  flex-direction: column;
-
-}
-
-.logo-mobile-bottom-wrapper {
-  width: 100%;
-}
-
-.logo-desktop-bottom-wrapper{
-  display: none;
-}
-
-
-.cards {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 32px;
-  align-self: center;
-  max-width: 335px;
-}
-
-.contact-card {
-  text-align: center;
-  font-size: 14px;
-  display: flex;
-  flex-direction: column;
-  padding: 16px 32px;;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  align-self: stretch;
-  border-radius: 10px;
-  background: var(--bleu-moyen);
-  box-shadow: var(--deep-shadow);
-}
-
-address {
-   line-height: 1.3em;
-}
-
-address a {
-     color: white;
-}
-
-.navigation-card {
+footer nav > ul {
   display: flex;
   padding: 16px 32px;
+  justify-content: space-around;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   align-self: stretch;
   border-radius: 10px;
   background: var(--bleu-moyen);
   box-shadow: var(--deep-shadow);
 }
 
-.gauche,
-.droite {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-  flex: 1 0 0;
+nav ul > li {
+  width: 50%;
+  text-align: center;
 }
 
-.navigation-card a {
-  font-size: 14px;
-  text-decoration: none;
+nav ul ul li {
+  margin: 12px auto;
+  width: 100%;
   text-transform: uppercase;
-  color: white;
 }
 
-.navigation-card a:hover {
+nav ul ul li a:hover {
   text-decoration: underline;
   transition: all 0.3s;
 }
 
-.navigation-card li {
-  display: flex;
+footer .socials {
+  margin: auto 0;
 }
 
  /******************* footer tablettes  ********************************/
 
 @media screen and (min-width:768px) {
 
-  .cards{
+  
+
+  footer nav{
+    display: flex;
     flex-direction: row;
-    max-width: 100%;
     justify-content: space-around;
   }
 
+  footer nav > ul {
+  padding: 0;
+  }
 }
 
 /********************** footer desktop ******************************/
 
 @media screen and (min-width:1024px){
   
-  .logo-info {
-      width: 90%;
-      margin: auto;
-      align-self: stretch;
-      flex-direction: row;
-      justify-content: space-around;
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 
-  .horaires-cards{
-    max-width: 50%;
+  footer nav {
+    justify-content: center;
   }
 
-  .cards {
-    gap: 3vw;
-  }
 
-  .socials {
+  footer .logo-desktop {
     padding: 0;
-    margin-top: 5vw;
-    width: 15%;
   }
- 
- .logo-mobile-bottom-wrapper {
-  display: none;
- }
 
+  footer div {
+    max-width: 70%;
+  }
   .logo-desktop-bottom-wrapper{
     display: block;
-    width: 15%;
+    width: 200px;
+    min-width: 15%;
   }
+
+  footer .socials {
+    max-width: 15%;
+  }
+
+  footer nav > ul {
+    padding: 16px 32px;
+}
 }
 
 
