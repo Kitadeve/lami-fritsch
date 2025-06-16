@@ -10,7 +10,7 @@
     position: relative;
     height: calc(100vh - var(--header-height, 50px));
     width: 100vw;
-    background-image: url(../img/index-hero1.webp);
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../img/index-hero1.webp);
     background-repeat: no-repeat;
     overflow: hidden;
   }
@@ -99,11 +99,6 @@
   }
 
 
-  /* img {
-    max-width: 100%;
-    box-shadow: var(--box-shadow);
-  } */
-
   .texte {
     display: flex;
     flex-direction: column;
@@ -142,7 +137,8 @@
     }
 
     .hero{
-      background-image: url(../img/index-hero2.webp);
+      height: 100vh;
+      background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../img/index-hero2.webp);
     }
   }
 
@@ -158,8 +154,11 @@
     /* hero */
    
     .hero {
-      background-image: url(../img/index-hero3.webp);
-      background-position: 0px -200px;
+      height: 100vh;
+      background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../img/index-hero3.webp);
+      background-size: cover, cover;         
+      background-position: center, 0 -100px;   /*pour centre le gradient qui sert de voile et décaler l'image de fond */
+      background-repeat: no-repeat, no-repeat;
     }
   
     .hero .texte {
