@@ -343,10 +343,8 @@ body.no-scroll {
 }
 
 header nav {
-  width: 60%;
-  margin: 0 auto;
+  margin: 0 20px;
   padding-bottom: 24px;
-  border-bottom: 2px solid black;
 }
 
 header nav ul {
@@ -368,9 +366,10 @@ header nav a {
 }
 
 #contact-container {
-  width: 60%;
   margin: 0 auto;
+  max-width: 60%;
   padding: 24px 0 24px 0;
+  border-top: 2px solid black;
   border-bottom: 2px solid black;
 }
 
