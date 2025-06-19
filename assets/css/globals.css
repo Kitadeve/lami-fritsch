@@ -499,16 +499,8 @@ header nav ul {
   padding: 0 8px;
 }
 
-/* #separator {
-  border-right: 2px solid white;
-  border-left: 2px solid white;
-  padding: 0 8px;
-} */
 
-header nav ul li a {
-  display: flex;
-  align-items: center;
-}
+
 
 .mobile-only {
   display: none;
@@ -516,6 +508,8 @@ header nav ul li a {
 
 header nav ul a {
   color: white;
+  display: flex;
+  align-items: center;
   font-size: var(--menu-nav-font-size);
 }
 
@@ -586,18 +580,18 @@ footer nav > ul {
   box-shadow: var(--deep-shadow);
 }
 
-nav ul > li {
+footer nav ul > li {
   width: 50%;
   text-align: center;
 }
 
-nav ul ul li {
+footer nav ul ul li {
   margin: 12px auto;
   width: 100%;
   text-transform: uppercase;
 }
 
-nav ul ul li a:hover {
+footer nav ul ul li a:hover {
   text-decoration: underline;
   transition: all 0.3s;
 }

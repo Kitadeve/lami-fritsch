@@ -33,6 +33,7 @@
 
 :root {
     --bleu-fritsch: rgba(51, 66, 100, 1);
+    --bleu-fritsch-carte: rgba(51, 66, 100, 0.8);
     --bleu-moyen: rgba(99, 126, 169, 1);
     --bleu-clair: rgba(153, 175, 212, 1);
     --bleu-pale: rgba(191, 205, 229, 1);

@@ -41,7 +41,7 @@ h1 {
   flex: 1;
   color: white;
   text-align: center;
-  background-color: #334264f2;
+  background-color: var(--bleu-fritsch-carte);
 }
 
 .plats-du-jour,
@@ -60,7 +60,7 @@ h1 {
 .plats-du-jour .bord,
 .carte-suggestions .bord {
   width: 20px;
-  background-color: #334264f2;
+  background-color: var(--bleu-fritsch-carte);
 }
 
 .plats-du-jour span {
@@ -149,7 +149,7 @@ h1 {
   flex: 1;
   flex-grow: 1;
   height: 1px;
-  border: 1px dashed;
+  border-bottom: 1px dashed;
   border-color: white;
 }
 

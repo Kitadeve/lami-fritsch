@@ -1,6 +1,6 @@
-main{
+/* main{
   align-items: center;
-}
+} */
 
 h1 {
   align-self: center;
@@ -10,34 +10,21 @@ h2 {
   margin: 16px;
 }
 
-.resa {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  max-width: 600px;
-}
 
 .intro {
-  margin: 0 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px; 
+  padding: 0 20px;
 }
 
-span.desktop {
-  display: none;
-}
 
 .plugin-placeholder {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin: 0 20px;
+  margin: 0 auto;
+  margin-top: 48px;
   padding: 0 20px;
-  background-color: rgba(0, 0, 0, 0.2);
-  max-width: 600px;
-  border: 1px solid black;
+  /* max-width: 600px; */
   border-radius: 10px;
 }
 
@@ -64,6 +51,7 @@ input {
   width: 100%;
   border-radius: 10px;
   padding: 5px 10px;
+  box-shadow: var(--box-shadow)
 }
 
 h2 {
@@ -89,14 +77,13 @@ p.plugin-info {
 .dash {
   align-self: stretch;
   width: 100%;
-  border-color: #313131;
+  border: 1px solid black;
 }
 
 .plugin-cta {
-  color:  black;
-  background-color: white;
-  width: 90%;
+  color:  white;
   margin-top: 16px;
+  width: 100%;
 }
 
 .plugin-cta:hover {
@@ -152,24 +139,26 @@ p.plugin-info {
 
 
 @media screen and (min-width: 1024px) {
-  .resa {
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 100%;
-  }
 
-  .intro {
-   align-self: center;
-  }
+.bas {
+  display: flex;
+  gap: 34px;
+}
 
-  span.mobile {
-    display: none;
-  }
+.carousel {
+  width: 50%;
+}
 
-  span.desktop {
-    display: inline;
-  }
+.carousel img {
+    height: 100%;
+
+}
+
+.plugin-placeholder {
+  width: 50%;
+}
+
+
 }
 
 @media screen and (min-width: 1400px) {

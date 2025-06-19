@@ -21,50 +21,52 @@
 
       <h1>Réservations</h1>
 
-      <section class="resa">
-        <div class="intro">
+      <section class="intro">
           <p>
-            Pour votre réservation, merci d’utiliser le formulaire <span class="mobile">ci-dessous</span><span class="desktop">ci-contre</span>.
+            Pour votre réservation, merci d’utiliser le formulaire ci-dessous.
           </p>
           <p>
             Pour vos événements, ou groupe de plus de 15 personnes, 
             merci de vous diriger vers la page “groupe”.
           </p>
+      </section>
+      
+      <section class="bas">
+        <div class="carousel">
+          <div class="carousel-track">
+            <img src="./assets/img/tarte-abricots-800.webp" alt="Photo de tarte aux abricots">
+            <img src="./assets/img/salade-pissenlit-800.webp" alt="Photo d'une salade de pissenlit">
+            <img src="./assets/img/taglietelles-saumon-800.webp" alt="Photo de taglietelles aux saumon">
+            <img src="./assets/img/tarte-abricots-800.webp" alt="Photo de tarte aux abricots" aria-hidden="true">
+          </div>
         </div>
 
         <div class="plugin-placeholder">
-          <div class="header">
-            <h2>L'ami Fritsch</h2>
-            <p class="condition">Afin de pouvoir satisfaire tout le monde, nous nous permettons, sans nouvelles de votre part, de redonner la table après 15 mn de retard. Merci de votre compréhension</p>
+            <div class="header">
+              <h2>L'ami Fritsch</h2>
+              <p class="condition">Afin de pouvoir satisfaire tout le monde, nous nous permettons, sans nouvelles de votre part, de redonner la table après 15 mn de retard. Merci de votre compréhension</p>
+            </div>
+
+            <!-- ce formulaire sert uniquement à montrer ce à quoi pourrait 
+            ressembler le site avec un plug-in externe de réservation,
+              il n'a pas vocation à être fonctionnel -->
+
+            <form action="" class="formulaire">
+              <label for=""></label>
+              <input type="text" placeholder="couverts">
+              <label for=""></label>
+              <input type="date" value="2025-07-08">
+              <label for=""></label>
+              <input type="time" value="18:45">
+              <input class="plugin-cta cta" type="submit" value="Réserver">
+              <div class="info-plugin">
+                <div class="dash"></div>
+                <p class="plugin-info">Généré par “...”</p>
+              </div>  
+            </form>
           </div>
-
-          <!-- ce formulaire sert uniquement à montrer ce à quoi pourrait 
-          ressembler le site avec un plug-in externe de réservation,
-            il n'a pas vocation à être fonctionnel -->
-
-          <form class="formulaire">
-            <label for=""></label>
-            <input type="text" placeholder="couverts">
-            <label for=""></label>
-            <input type="date" value="2025-07-08">
-            <label for=""></label>
-            <input type="time" value="18:45">
-            <input class="plugin-cta cta" type="submit" value="Réserver">
-            <div class="info-plugin">
-              <div class="dash"></div>
-              <p class="plugin-info">Généré par “...”</p>
-            </div>  
-          </form>
-        </div>
       </section>
-      <section class="carousel">
-        <div class="carousel-track">
-          <img src="./assets/img/tarte-abricots-800.webp" alt="Photo de tarte aux abricots">
-          <img src="./assets/img/salade-pissenlit-800.webp" alt="Photo d'une salade de pissenlit">
-          <img src="./assets/img/taglietelles-saumon-800.webp" alt="Photo de taglietelles aux saumon">
-          <img src="./assets/img/tarte-abricots-800.webp" alt="Photo de tarte aux abricots" aria-hidden="true">
-        </div>
-      </section>
+
     </main>   
 
       <!----------------- footer -------------------->
