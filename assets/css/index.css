@@ -13,6 +13,7 @@
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../img/index-hero1.webp);
     background-repeat: no-repeat;
     overflow: hidden;
+    max-height: 1380px;
   }
 
   .hero .texte {
@@ -139,6 +140,7 @@
     .hero{
       height: 100vh;
       background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../img/index-hero2.webp);
+      max-height: 770px;
     }
   }
 
@@ -159,7 +161,10 @@
       background-size: cover, cover;         
       background-position: center, 0 -100px;   /*pour centre le gradient qui sert de voile et décaler l'image de fond */
       background-repeat: no-repeat, no-repeat;
+      max-height: 1590px;
+
     }
+
   
     .hero .texte {
       width: 50%;
