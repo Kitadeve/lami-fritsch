@@ -98,9 +98,6 @@ textarea:focus {
 }
 
 textarea {
-  box-shadow: var(--box-shadow);
-  border: 0px;
-  font-size: var(--paragraphes-mobile-font-size);
   resize: none;
 }
 

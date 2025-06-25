@@ -42,10 +42,6 @@ form {
   gap: 16px;
 }
 
-label {
-  display: none;
-}
-
 input {
   border-top: none;
   width: 100%;

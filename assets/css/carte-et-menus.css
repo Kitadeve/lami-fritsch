@@ -193,32 +193,6 @@ p.sides {
 
 @media screen and (min-width: 1024px) {
 
-/* animation en css pour palier au manque de js (pas pertinent et génant, a cause des filtres) */
- 
-/* .plats-du-jour h2 {
-  opacity: 0;
-  animation: appear 2s ease-out 1s forwards;
-}
-
-.plats-du-jour span {
-  opacity: 0;
-  animation: appear 2s ease-out 1s forwards;
-}
-
-.plats-du-jour .jour-un {
-  opacity: 0;
-  animation: appear 2s ease-out 1.5s forwards;
-}
-
-.plats-du-jour .jour-deux {
-  opacity: 0;
-  animation: appear 2s ease-out 2s forwards;
-}
-
-.plats-du-jour .jour-trois {
-  opacity: 0;
-  animation: appear 2s ease-out 2.5s forwards;
-} */
 
  .mobile {
   display: none;   /*pour empécher l'affichage des titres de section de carte sans filtre*/
@@ -231,9 +205,6 @@ p.sides {
   align-self: stretch;
 }
 
-  /* .bord{
-    display: none;
-  } */
 
   main {
     margin: auto 200px;
@@ -248,8 +219,8 @@ p.sides {
   .centre h2 {
   text-align: center;
   }
- 
- .filtre button {
+
+  .filtre button {
   /* Reset du style natif du bouton */
   background: none;
   border: none;
@@ -268,11 +239,11 @@ p.sides {
   -webkit-appearance: none;
   -moz-appearance: none;
   }
-  
+
   .filtre button:hover {
     text-decoration: underline;
   }
-  
+
   .filtre button.active {
     text-decoration: underline;
     font-weight: 600; 
@@ -282,7 +253,7 @@ p.sides {
     outline: 2px solid white;
     border: 3px solid var(--cta);
   }
-   
+    
   .plats-filtre,
   .tartes-flambees,
   .desserts{
