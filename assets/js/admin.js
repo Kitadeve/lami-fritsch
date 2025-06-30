@@ -1,4 +1,4 @@
-  const motDePasse = prompt("Mot de passe pour accéder à l'administration :");
+const motDePasse = prompt("Mot de passe pour accéder à l'administration :");
   if (motDePasse !== "1234") {
     alert("Mot de passe incorrect !");
     window.location.href = "index.html"; // ou une autre page
@@ -41,33 +41,45 @@ window.addEventListener("DOMContentLoaded", function () {
 })
 
 
-const reload = document.querySelector("#reload")
+const reload = document.querySelector("#reload");
+
+const API_KEY = "live_PeZJ564McjPA1Z5n6JJ62FmBu8ByoVb5LnYqOlblTbLZZXxnKQYvxNmJs7MC6JBG"; // Remplace par ta vraie clé
 
 function getCat() {
-  const chats = document.querySelector(".chats");
-
-  fetch("./assets/php/cat-proxy.php")
+  fetch("https://api.thecatapi.com/v1/images/search?size=med&mime_types=jpg&format=json&has_breeds=true&order=RANDOM&page=0&limit=1", {
+    headers: {
+      "x-api-key": API_KEY
+    }
+  })
     .then(response => response.json())
     .then(result => {
+      const chats = document.querySelector(".chats");
       chats.innerHTML = "";
       const catData = result[0];
       const img = document.createElement("img");
       img.src = catData.url;
       img.alt = "Photo de chat aléatoire";
 
-      const breedInfo = catData.breeds[0];
-      const breedName = document.createElement("h3");
-      breedName.textContent = `Race : ${breedInfo.name}`;
+      if (catData.breeds && catData.breeds.length > 0) {
+        const breedInfo = catData.breeds[0];
+        const breedName = document.createElement("h3");
+        breedName.textContent = `Race : ${breedInfo.name}`;
 
-      const temperament = document.createElement("p");
-      temperament.textContent = `Tempérament : ${breedInfo.temperament}`;
+        const temperament = document.createElement("p");
+        temperament.textContent = `Tempérament : ${breedInfo.temperament}`;
 
-      chats.appendChild(img);
-      chats.appendChild(breedName);
-      chats.appendChild(temperament);
+        chats.appendChild(img);
+        chats.appendChild(breedName);
+        chats.appendChild(temperament);
+      } else {
+        chats.appendChild(img);
+        const noInfo = document.createElement("p");
+        noInfo.textContent = "Aucune information sur la race.";
+        chats.appendChild(noInfo);
+      }
     })
     .catch(error => console.log('error', error));
 }
 
-window.addEventListener("DOMContentLoaded", getCat)
-reload.addEventListener("click",getCat)
+window.addEventListener("DOMContentLoaded", getCat);
+reload.addEventListener("click", getCat);
