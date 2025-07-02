@@ -7,10 +7,9 @@
   margin:0;
   padding:0;
   border:0;
-  font-size:100%;
   font:inherit;
   vertical-align:baseline;
-  line-height: 1.05em;
+  line-height: 1.5em;
 }
 
 *::selection {
@@ -101,23 +100,23 @@ img {
 h1 {
   font-family: "Gothique";
   font-size: var(--h1-mobile-font-size);
-  font-weight: var(--h1-mobile-font-weight);
+  font-weight: var(--h1-font-weight);
   text-align: center;
 }
 
 h2 {
   font-size: var(--h2-mobile-font-size);
-  font-weight: var(--h2-mobile-font-weight);
+  font-weight: var(--h2-font-weight);
 }
 
 h3 {
   font-size: var(--h3-mobile-font-size);
-  font-weight: var(--h3-mobile-font-weight);
+  font-weight: var(--h3-font-weight);
 }
 
 p {
   font-size: var(--paragraphes-mobile-font-size);
-  line-height: 1.5em;
+  /* line-height: 1.5em; */
 }
 
 .img-desktop {
@@ -142,16 +141,16 @@ p {
 
 @media screen and (min-width:768px) {
   h1 {
-    font-size: 2.25em;
+    font-size: var(--h1-tablet-font-size);
     text-align: center;
   }
 
   h2 {
-    font-size: 1.75em;
+    font-size: var(--h2-tablet-font-size);
   }
 
   h3 {
-    font-size: 1.375em;
+    font-size: var(--h3-tablet-font-size);
   }
 
   p {
@@ -173,17 +172,14 @@ p {
   h1{
 	  align-self: center;
 		font-size: var(--h1-font-size);
-    font-weight: var(--h1-font-weight);
 	}
 
   h2 {
     text-align: left;
     font-size: var(--h2-font-size);
-    font-weight: var(--h2-font-weight);
   }
   
   h3 { 
-    font-weight: var(--h3-font-weight);
     font-size: var(--h3-font-size);
   }
 

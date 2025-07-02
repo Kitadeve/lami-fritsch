@@ -133,6 +133,10 @@ p.plugin-info {
   100%  { transform: translateX(-300%); }  /* reste sur la copie, puis reset */
 }
 
+.map {
+    width: 100%;
+    padding: 20px;
+}
 
 @media screen and (min-width: 1024px) {
 
@@ -152,6 +156,11 @@ p.plugin-info {
 
 .plugin-placeholder {
   width: 50%;
+}
+
+ .map {
+    width: 50%;
+    padding: 20px;
 }
 
 
