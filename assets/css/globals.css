@@ -28,7 +28,10 @@ html {
 body {
   height: 100%;
   font-family: var(--main-font-family);
-  background: linear-gradient(180deg, #FFF -20%, #BFCDE5 58.47%, #FFF 120%);  
+  min-height: 100vh;
+  background: linear-gradient(180deg, white -20%, var(--bleu-pale), white 120%);
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* This makes the gradient cover the whole page as you scroll */
 }
 
 main {
