@@ -6,7 +6,7 @@
   padding-top: var(--header-height, 55px);
   }
 
-  .hero{
+  #hero{
     position: relative;
     height: calc(100vh - var(--header-height, 50px));
     width: 100vw;
@@ -16,7 +16,7 @@
     max-height: 1380px;
   }
 
-  .hero .texte {
+  #hero .texte {
     color: white;
     margin-top: 16px;
     margin-bottom: 32px;
@@ -33,7 +33,7 @@
     margin-top: 7vh;
   }
 
-  .hero .texte .cta {
+  #hero .texte .cta {
     width: auto;
     z-index: 2;
     margin: 0px;
@@ -50,16 +50,17 @@
     animation: appear 2s ease-out 2s forwards;
   }
 
-  h1 {
+  #hero h1 {
     font-family: "Gothique";
     font-size: 7vh;
     color: white;
     padding-top: 3vh;
     padding-bottom: 3vh;
+    line-height: 1.05em;
     animation: slideInFromLeft 1s linear;
   }
 
-  .hero .texte h2 {
+  #hero .texte h2 {
     font-size: 4vh;
     padding: 2vh 2vh;
     text-align: center;
@@ -67,7 +68,7 @@
     animation: slideInFromRight 1s linear;
   }
 
-  .hero .texte p {
+  #hero .texte p {
     opacity: 0;
     font-size: 2.5vh;
     text-align: center;
@@ -137,7 +138,7 @@
       margin: 0;
     }
 
-    .hero{
+    #hero{
       height: 100vh;
       background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../img/index-hero2.webp);
       max-height: 770px;
@@ -155,7 +156,7 @@
 
     /* hero */
    
-    .hero {
+    #hero {
       height: calc(100vh - var(--header-height));
       background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../img/index-hero3.webp);
       background-size: cover, cover;         
@@ -165,7 +166,7 @@
 
     }
 
-    .hero .texte {
+    #hero .texte {
       width: 50%;
       display: flex;
       align-items: center;
