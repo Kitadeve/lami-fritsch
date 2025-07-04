@@ -390,6 +390,10 @@ header .cta {
 .socials li {
   border-radius: 50px;
   background-color: var(--bleu-moyen);
+  width: 41px; 
+  height: 41px;
+  min-width: 41px;
+  min-height: 41px;
   padding: 8px;
   box-shadow: var(--deep-shadow);
   transition: all 0.3s ease-out;
