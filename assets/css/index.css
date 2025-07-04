@@ -144,6 +144,10 @@
       background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../img/index-hero2.webp);
       max-height: 770px;
     }
+
+    .texte {
+      max-height: 100%;
+    }
   }
 
   /* laptop */
