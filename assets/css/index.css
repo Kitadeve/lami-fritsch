@@ -80,9 +80,9 @@
   .cigogne {
     opacity: 0;
     width: 100%;
-    z-index: 1;
     transform: translate(50vw, -50vh );
     animation: appear 1s linear 2.5s forwards;
+    box-shadow: none;
   }
   
   /* main aprés hero */
@@ -191,7 +191,7 @@
 
     .texte {
       align-items: flex-start;
-      padding: 24px 24px;
+      padding: 0 24px;
       order:0 ;
     }
     
@@ -201,15 +201,15 @@
     }
 
     .texte h2 {
-      padding: 24px 24px;
+      margin-bottom: 24px;
     }
-  
+
     .texte p {
-      padding: 16px 24px;
+      margin-bottom: 12px;
     }
-  
+   
     .texte .cta {
-      margin-top: 32px;
+      margin-top: 24px;
     }
 
     .reservations img,
