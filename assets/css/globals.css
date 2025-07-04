@@ -31,7 +31,7 @@ body {
   min-height: 100vh;
   background: linear-gradient(180deg, white -20%, var(--bleu-pale), white 120%);
   background-repeat: no-repeat;
-  background-attachment: fixed; /* This makes the gradient cover the whole page as you scroll */
+  background-attachment: fixed;
 }
 
 main {

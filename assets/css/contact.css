@@ -63,7 +63,8 @@ input[type=number],
 input[type=email],
 input[type=tel],
 input[type=datetime-local],
-textarea {
+textarea,
+select {
   width: 100%;
   box-shadow: var(--box-shadow);
   border: 0px;
