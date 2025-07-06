@@ -297,6 +297,20 @@ input[type="checkbox"]:checked::after {
 }
 
 @media screen and (min-width: 1400px) {
+  .texte {
+    display: flex;
+    gap: 24px;
+  }
+
+  .gauche,
+  .droite {
+    max-width: 50%;
+  }
+
+  .intro p {
+    margin-bottom: 16px;
+  }
+
   form {
     width: 100%;
     max-width: 33%;
