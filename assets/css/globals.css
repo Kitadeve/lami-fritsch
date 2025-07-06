@@ -92,7 +92,6 @@ img {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
   border: 0;
   white-space: nowrap;
 }
@@ -119,7 +118,6 @@ h3 {
 
 p {
   font-size: var(--paragraphes-mobile-font-size);
-  /* line-height: 1.5em; */
 }
 
 .img-desktop {
@@ -541,6 +539,7 @@ header nav ul a {
 
 footer p,
 footer a {
+  max-width: 100%;
   font-size: 14px;
 }
 footer {
