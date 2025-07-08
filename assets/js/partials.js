@@ -11,7 +11,6 @@ function loadHeader() {
     .then(response => response.text())
     .then(data => {
       document.querySelector("header").innerHTML = data;
-      const header = document.querySelector("header");
       //Expression ternaire, si le header existe (si il est chargé), img prend la valeur du querySelector, sinon, elle est null
       // const img = header ? header.querySelector("img") : null;
       const img = header.querySelector("img")

@@ -193,11 +193,6 @@ p.sides {
 
 @media screen and (min-width: 1024px) {
 
-
- .mobile {
-  display: none;   /*pour empécher l'affichage des titres de section de carte sans filtre*/
-  }
-
   .filtre {
   display: flex;
   align-items: center;
@@ -246,7 +241,7 @@ p.sides {
 
   .filtre button.active {
     text-decoration: underline;
-    font-weight: 600; 
+    transform: scale(1.05);
   }
 
   .filtre button:focus-visible {
