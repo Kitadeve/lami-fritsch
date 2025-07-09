@@ -32,7 +32,6 @@ function isValidEmail (email) {
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
-
     // On récupère les valeurs brutes
     const lastNameRaw = form.lastName.value.trim();
     const firstNameRaw = form.firstName.value.trim();
@@ -56,7 +55,7 @@ form.addEventListener('submit', function(e){
 
     // Validation des champs sur la donnée brute
     if (lastNameRaw === "" || !isValidName(lastNameRaw) || lastNameRaw.length > 50) {
-        errorMessage = "Veuillez entrer un nom valide (lettres, espaces, tirets, apostrophes).";
+        errorMessage = "Veuillez entrer un nom valide (lettres, espaces, tirets, apostrophes, moins de 50 caractères).";
     } 
     else if (firstNameRaw === "" || !isValidName(firstNameRaw) || firstNameRaw.length > 50) {
         errorMessage = "Veuillez entrer un prénom valide (lettres, espaces, tirets, apostrophes).";
@@ -123,7 +122,6 @@ form.addEventListener('submit', function(e){
     if (validationTimeout) {
         clearTimeout(validationTimeout);
     }
-
     validationTimeout = setTimeout(function () {
         validation.innerText = "";
         popUp.classList.remove("validation-error");
