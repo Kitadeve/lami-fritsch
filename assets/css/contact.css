@@ -158,7 +158,7 @@ input[type="checkbox"]:checked::after {
   padding: 32px 24px;
   gap: 16px;
   position: fixed;
-  max-width: 50%;
+  width: 80%;
   height: auto;
   border-radius: 10px;
   background-color: rgba(51, 66, 100, 0.8);
@@ -173,6 +173,8 @@ input[type="checkbox"]:checked::after {
   align-items: center;
   transition: all 0.5s ease-out;
 }
+
+
 
 /* Erreur : rouge vif + glow + shake */
 .validation-error.validation-card {
@@ -256,6 +258,11 @@ input[type="checkbox"]:checked::after {
   form{
     width: 100%;
     max-width: 80%;
+  }
+
+  .validation-card {
+    width: auto;
+    max-width: 50%;
   }
 }
 

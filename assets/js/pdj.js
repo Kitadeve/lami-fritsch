@@ -13,9 +13,6 @@
       récupérée dans le localStorage.  */
       if (platsDuJour[jour]) {
 
-        // //destructuration d'objet, créé 2 variables, en une seule ligne. J'ai préféré l'écrire en détails en dessous carr mieux maitrisé
-        // const { entree, plat } = platsDuJour[jour];
-
         const entree = platsDuJour[jour].entree; 
         const plat = platsDuJour[jour].plat;
         const frame = card.querySelector(".frame");        

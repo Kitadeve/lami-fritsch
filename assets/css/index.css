@@ -42,30 +42,32 @@
 
   #un {
     opacity: 0;
-    animation: appear 2s ease-out 1.5s forwards;
+    animation: appear 2s ease-out 2s forwards;
   }
 
   #deux {
     opacity: 0;
-    animation: appear 2s ease-out 2s forwards;
+    animation: appear 2s ease-out 2.5s forwards;
   }
 
   #hero h1 {
+    opacity: 0;
     font-family: "Gothique";
     font-size: 7vh;
     color: white;
     padding-top: 3vh;
     padding-bottom: 3vh;
     line-height: 1.05em;
-    animation: slideInFromLeft 1s linear;
+    animation: slideInFromLeft 1s linear 0.5s forwards;
   }
 
   #hero .texte h2 {
+    opacity: 0;
     font-size: 4vh;
     padding: 2vh 2vh;
     text-align: center;
     align-self: center;
-    animation: slideInFromRight 1s linear;
+    animation: slideInFromRight 1s linear 0.5s forwards;
   }
 
   #hero .texte p {
@@ -74,14 +76,14 @@
     text-align: center;
     align-self: center;
     padding: 0  20px;
-    animation: appear 1s ease-out 1s forwards;
+    animation: appear 1s ease-out 1.5s forwards;
   }
  
   .cigogne {
     opacity: 0;
     width: 100%;
     transform: translate(50vw, -50vh );
-    animation: appear 1s linear 2.5s forwards;
+    animation: appear 1s linear 3s forwards;
     box-shadow: none;
   }
   
@@ -107,7 +109,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    order: 2;
+    order: 1;
    
   }
   .texte p,

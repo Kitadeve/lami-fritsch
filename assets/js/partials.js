@@ -11,13 +11,10 @@ function loadHeader() {
     .then(response => response.text())
     .then(data => {
       document.querySelector("header").innerHTML = data;
-      const header = document.querySelector("header");
-      //Expression ternaire, si le header existe (si il est chargé), img prend la valeur du querySelector, sinon, elle est null
-      // const img = header ? header.querySelector("img") : null;
+ 
       const img = header.querySelector("img")
-  
+      
         if (img.complete) {
-
           menuMobile();
           updateHeaderHeight();
           updateBurgerHeight();
@@ -46,7 +43,7 @@ function loadFooter() {
   fetch('./assets/partials/footer.html')
     .then(response => response.text())
     .then(data => {
-      document.querySelector("footer").innerHTML = data;
+      footer.innerHTML = data;
     })
     .catch(error => console.error("Erreur lors du chargement du footer :", error));
 }
