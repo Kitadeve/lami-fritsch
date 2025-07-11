@@ -9,7 +9,7 @@
   #hero{
     position: relative;
     height: calc(100vh - var(--header-height, 50px));
-    width: 100vw;
+    width: 100%;
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../img/index-hero1.webp);
     background-repeat: no-repeat;
     overflow: hidden;
@@ -60,7 +60,7 @@
     line-height: 1.05em;
     animation: slideInFromLeft 1s linear 0.5s forwards;
   }
-
+  
   #hero .texte h2 {
     opacity: 0;
     font-size: 4vh;

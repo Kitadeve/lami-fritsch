@@ -2,6 +2,7 @@ const form = document.querySelector("form");
 const validation = document.querySelector(".validation");
 const popUp = document.querySelector(".validation-card");
 const btn = document.querySelector(".validation-confirm");
+const body = document.body;
 
 let validationTimeout = null
 
@@ -42,7 +43,7 @@ form.addEventListener('submit', function(e){
     const eventTypeRaw = form.eventType.value.trim();
     const messageRaw = form.message.value.trim();
     const subscribeNews = form.subscribeNews.checked;
-
+    
     const groupSize = parseInt(groupSizeRaw, 10);
 
     // Réinitialisation des flags
@@ -68,22 +69,23 @@ form.addEventListener('submit', function(e){
     }
     else if (isNaN(groupSize) || groupSize < 16 || groupSize > 100) {
         errorMessage = "Le nombre de convives doit être compris entre 16 et 100.";
-        // console.log(groupSize); 
     }
     else if (messageRaw.length > 1000) {
       errorMessage = "Votre message est trop long."
     }
     
 
-    // si il n'y pas de message d'erreur, il n'y a pas d'erreur et on peut enregistrer le contenu du formulaire
+    // Si il n'y pas de message d'erreur, il n'y a pas d'erreur et on peut enregistrer le contenu du formulaire
 
     if (errorMessage === "") {
         form.classList.add("active")
         validation.innerText = "Formulaire envoyé, merci !";
         popUp.classList.add("validation-succes");
         popUp.classList.remove("validation-error");
-        // Ici, tu peux envoyer le formulaire via AJAX si besoin
+        body.classList.add("no-scroll");
 
+        // Envoie vers le localStorage pour silumer la prise d'information
+        
           // On sanitize uniquement pour l'affichage ou l'envoi
         const contact = {
              lastName: sanitizeInput(lastNameRaw),
@@ -115,6 +117,7 @@ form.addEventListener('submit', function(e){
         validation.innerText = errorMessage;
         popUp.classList.add("validation-error");
         popUp.classList.remove("validation-succes");
+        body.classList.add("no-scroll");
     }
 
   // reset de la valeur 
@@ -127,6 +130,7 @@ form.addEventListener('submit', function(e){
         popUp.classList.remove("validation-error");
         popUp.classList.remove("validation-succes");
         form.classList.remove("active");
+        body.classList.remove("no-scroll")
     }, 4000);
 });
 
@@ -138,6 +142,7 @@ btn.addEventListener("click", function(){
     validation.innerText = "";
     popUp.classList.remove("validation-error");
     popUp.classList.remove("validation-succes");
+    body.classList.remove("no-scroll")
     console.log(btn, validationTimeout)
     if (validationTimeout) {
         clearTimeout(validationTimeout);
