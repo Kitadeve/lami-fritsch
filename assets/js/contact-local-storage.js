@@ -186,3 +186,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //     dateTimeInput.value = formatted;
 //   }
 // });
+
+
+const messages = JSON.parse(localStorage.getItem('contactMessages'))
+console.log(messages);

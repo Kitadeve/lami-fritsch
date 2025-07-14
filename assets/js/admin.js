@@ -16,7 +16,6 @@ function sanitizeInput(input) {
 window.addEventListener("DOMContentLoaded", function () {
   const formulairePdj = document.querySelector("form")
   const resetLocalStorage = document.getElementById("reset")
-  console.log(formulairePdj);
   
 
   formulairePdj.addEventListener("submit", function (e) {
@@ -33,6 +32,8 @@ window.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("platsDuJour", JSON.stringify(platsDuJour));
     alert(`Plat du jour pour ${jour} enregistré !`);
     this.reset();
+    console.log(platsDuJour);
+
   });
   
   resetLocalStorage.addEventListener("click", function() {
@@ -83,3 +84,6 @@ function getCat() {
 
 window.addEventListener("DOMContentLoaded", getCat);
 reload.addEventListener("click", getCat);
+
+const platsDuJour = JSON.parse(localStorage.getItem("platsDuJour"));
+console.log(platsDuJour);
